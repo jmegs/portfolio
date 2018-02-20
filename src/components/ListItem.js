@@ -8,7 +8,7 @@ import Box from './Box'
 
 const ListItem = props => {
   return (
-    <Container mb={24}>
+    <Box mb={24}>
       <Flex alignItems="center">
         <Mono mr={8}>{props.number}</Mono>
         <Line />
@@ -16,7 +16,7 @@ const ListItem = props => {
       <Link to={`/${props.slug}`}>
         <Text f={[16, 20, 16, 20]}>{props.name}</Text>
       </Link>
-    </Container>
+    </Box>
   )
 }
 
@@ -36,11 +36,6 @@ const Line = styled.span`
   height: 2px;
   background: black;
   width: 72px;
-  transition: width 1s ease;
-
-  ${Container}:hover & {
-    width: 128px;
-  }
 `
 
 export default ListItem

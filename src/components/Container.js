@@ -2,9 +2,11 @@
 import styled from 'styled-components'
 import { space, maxWidth } from 'styled-system'
 
-// Display inline block so margins within don't collapse
+// width 100vw is overridden by max width but prevents container from
+// collapsing past the margins
 
 const Container = styled.div`
+  width: 100vw;
   background: #ffffff;
   margin: auto;
   font-family: ${props => props.theme.font};
@@ -16,12 +18,13 @@ const Container = styled.div`
   }
 
   @media (min-width: ${props => props.theme.breakpoints[1]}) {
-    margin: auto;
     max-width: 1280px;
+    margin: ${props => (props.project ? '6vw auto' : 'auto')};
   }
 
   @media (min-width: ${props => props.theme.breakpoints[2]}) {
     max-width: 1376px;
+    margin: ${props => (props.project ? '6vw auto' : 'auto')};
   }
 `
 
