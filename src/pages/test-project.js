@@ -6,6 +6,7 @@ import Text from '../components/Text'
 import Heading from '../components/TestHeading'
 import Paragraph from '../components/Paragraph'
 import Content from '../components/ContentFactory'
+import AssetLink from '../components/AssetLink'
 
 const TestProject = ({ data }) => {
   let { name, intro, content } = data.testProject.edges[0].node
@@ -67,6 +68,10 @@ export const query = graphql`
                 provider
                 providerUid
               }
+            }
+            ... on DatoCmsLink {
+              label
+              url
             }
           }
         }

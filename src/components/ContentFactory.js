@@ -3,6 +3,7 @@ import Paragraph from './Paragraph'
 import Image from './Image'
 import Box from '../components/Box'
 import Video from '../components/Video'
+import AssetLink from '../components/AssetLink'
 
 const ContentFactory = props => {
   let { content } = props
@@ -36,6 +37,8 @@ const ContentFactory = props => {
               <Video id={id} provider={provider} />
             </Box>
           )
+        } else if (item.__typename == 'DatoCmsLink') {
+          return <AssetLink url={item.url} label={item.label} />
         } else {
           return null
         }

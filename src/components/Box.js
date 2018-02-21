@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { space, width, fontSize, color, height } from 'styled-system'
+import { space, width, fontSize, color, height, maxWidth } from 'styled-system'
 
 // Add styled-system functions to your component
 const Box = styled.div`
@@ -8,5 +8,6 @@ const Box = styled.div`
   ${fontSize}
   ${color}
   ${height}
+  ${maxWidth}
 `
 export default Box
