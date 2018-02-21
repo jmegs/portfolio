@@ -3,7 +3,6 @@ import Paragraph from './Paragraph'
 import Image from './Image'
 import Box from '../components/Box'
 import Video from '../components/Video'
-import getVideoId from 'get-video-id'
 
 const ContentFactory = props => {
   let { content } = props
@@ -31,11 +30,10 @@ const ContentFactory = props => {
             />
           )
         } else if (item.__typename == 'DatoCmsVideo') {
-          let id = getVideoId(item.videoUrl.url).id
-          console.log(id)
+          let { provider, providerUid: id } = item.videoUrl
           return (
-            <Box mx={[0, null, 64]} my={[32, null, 64]} height="100%">
-              <Video key={idx} id={id} provider={item.videoUrl.provider} />
+            <Box key={idx} mx={[0, null, 64]} my={[32, null, 64]} height="100%">
+              <Video id={id} provider={provider} />
             </Box>
           )
         } else {

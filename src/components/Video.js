@@ -20,8 +20,7 @@ const Video = props => {
     embed = (
       <iframe
         src={`https://www.youtube.com/embed/${props.id}?rel=0&amp;showinfo=0`}
-        frameborder="0"
-        allow="autoplay; encrypted-media"
+        frameBorder="0"
         allowFullScreen
       />
     )

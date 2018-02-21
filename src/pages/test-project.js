@@ -9,7 +9,6 @@ import Content from '../components/ContentFactory'
 
 const TestProject = ({ data }) => {
   let { name, intro, content } = data.testProject.edges[0].node
-  console.log(name)
   return (
     <Container project>
       <Flex flexDirection="column">
@@ -67,7 +66,6 @@ export const query = graphql`
                 height
                 provider
                 providerUid
-                thumbnailUrl
               }
             }
           }

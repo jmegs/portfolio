@@ -39,6 +39,13 @@ injectGlobal`
     color: inherit;
   }
 
+  iframe {
+    border-width: 0;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+  }
+
   body {
     background: #f9f9f9;
     transition: width 0.15s, height 0.15s, margin 0.15s padding 0.15s;
