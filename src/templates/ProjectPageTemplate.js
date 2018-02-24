@@ -8,8 +8,8 @@ import Paragraph from '../components/Paragraph'
 import Content from '../components/ContentFactory'
 import AssetLink from '../components/AssetLink'
 
-const TestProject = ({ data }) => {
-  let { name, intro, content } = data.testProject.edges[0].node
+export default ({ data }) => {
+  let { name, intro, content } = data.project.edges[0].node
   return (
     <Container project>
       <Flex flexDirection="column">
@@ -33,11 +33,9 @@ const TestProject = ({ data }) => {
   )
 }
 
-export default TestProject
-
 export const query = graphql`
-  query TestProjectQuery {
-    testProject: allDatoCmsProject(limit: 1) {
+  query ProjectQuery($id: String!) {
+    project: allDatoCmsProject(filter: { id: { eq: $id } }) {
       edges {
         node {
           name

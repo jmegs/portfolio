@@ -13,7 +13,7 @@ const ListItem = props => {
         <Mono mr={8}>{props.number}</Mono>
         <Line />
       </Flex>
-      <Link to={`/${props.slug}`}>
+      <Link to={props.url}>
         <Text f={[16, 20, 16, 20]}>{props.name}</Text>
       </Link>
     </Box>

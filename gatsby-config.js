@@ -6,10 +6,6 @@ module.exports = {
     title: `John Meguerian`,
     description:
       'John Meguerian is a designer, strategist, and technologist based in Brooklyn, NY',
-    labsInfo: {
-      name: 'Sites & Experiments',
-      slug: '#',
-    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

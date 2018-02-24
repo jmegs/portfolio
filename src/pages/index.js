@@ -10,19 +10,20 @@ import Image from 'gatsby-image'
 
 import indexToNumber from '../utils/index-to-number'
 
-const TEST_PROJECTS = [
-  { name: 'Samsung Entertainment Experience', slug: '#' },
-  { name: 'Future of Mobility', slug: '#' },
-  { name: 'Samsung.com Redesign', slug: '#' },
-  { name: 'Work & Experiments', slug: '#' },
-]
+// const TEST_PROJECTS = [
+//   { name: 'Samsung Entertainment Experience', slug: '#' },
+//   { name: 'Future of Mobility', slug: '#' },
+//   { name: 'Samsung.com Redesign', slug: '#' },
+//   { name: 'Work & Experiments', slug: '#' },
+// ]
+
+const Labs = { name: 'Sites & Experiments', slug: 'labs' }
 
 const Home = ({ data }) => {
   const { home, projectEdges } = data
   let { heading, photo } = home
-  let labs = data.site.siteMetadata.labsInfo
   let projects = projectEdges.edges.map(e => e.node)
-  projects.push(labs)
+  projects.push(Labs)
   return (
     <Container>
       <SplitGrid>
@@ -37,7 +38,7 @@ const Home = ({ data }) => {
                 key={idx}
                 number={indexToNumber(idx)}
                 name={e.name}
-                slug={e.slug}
+                url={`/${e.slug}`}
               />
             ))}
           </Box>
@@ -64,14 +65,6 @@ export const query = graphql`
     projectEdges: allDatoCmsProject(sort: { fields: [order] }) {
       edges {
         node {
-          name
-          slug
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        labsInfo {
           name
           slug
         }

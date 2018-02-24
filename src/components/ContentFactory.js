@@ -4,6 +4,7 @@ import Image from './Image'
 import Box from '../components/Box'
 import Video from '../components/Video'
 import AssetLink from '../components/AssetLink'
+import getId from 'get-video-id'
 
 const ContentFactory = props => {
   let { content } = props
@@ -31,7 +32,8 @@ const ContentFactory = props => {
             />
           )
         } else if (item.__typename == 'DatoCmsVideo') {
-          let { provider, providerUid: id } = item.videoUrl
+          let { provider, url } = item.videoUrl
+          let id = getId(url).id
           return (
             <Box key={idx} mx={[0, null, 64]} my={[32, null, 64]} height="100%">
               <Video id={id} provider={provider} />
