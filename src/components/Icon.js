@@ -1,27 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import Box from './Box'
 
-const Icon = props => {
+const Frame = styled.div`
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+`
+
+export default props => {
   const src = `https:icon.now.sh/${props.name}/${
     props.color ? `props.color` : '000000'
   }`
-  if (props.url) {
-    return (
-      <Box width={16} height={16} mx={8}>
-        <Link to={props.url}>
-          <img src={src} alt={`${props.name} icon`} />
-        </Link>
-      </Box>
-    )
-  } else {
-    return (
-      <Box width={16} height={16} mx={8}>
-        <img src={src} alt={`${props.name} icon`} />
-      </Box>
-    )
-  }
-}
 
-export default Icon
+  return (
+    <Frame>
+      <img src={src} alt={`${props.name} icon`} />
+    </Frame>
+  )
+}

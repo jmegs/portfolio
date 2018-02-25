@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Body } from './TextComponents'
 import Image from './Image'
-import Video from '../components/Video'
-import AssetLink from '../components/AssetLink'
+import Video from './Video'
+import AssetLink from './AssetLink'
 import getId from 'get-video-id'
 
 const VideoContainer = styled.div`

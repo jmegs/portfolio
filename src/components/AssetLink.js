@@ -1,29 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
 import Icon from './Icon'
-import Mono from './Mono'
+import { Mono } from './TextComponents'
 import Box from './Box'
 import Link from 'gatsby-link'
 
 const AssetLink = props => {
   return (
     <a href={props.url} target="_blank">
-      <Container
+      <Button
         maxWidth={[288, 576]}
         mx="auto"
+        mb={[40, null, 80]}
         height={80}
         pl={[16, 32]}
         pr={[24, 40]}
       >
         <Mono>{props.label}</Mono>
         <Icon name="external" />
-      </Container>
+      </Button>
     </a>
   )
 }
 export default AssetLink
 
-const Container = Box.extend`
+const Button = Box.extend`
   width: 100%;
   border-radius: 4px;
   background: whitesmoke;

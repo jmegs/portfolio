@@ -1,7 +1,7 @@
 import React from 'react'
+import styled from 'styled-components'
 import List from './List'
 import GatsbyImage from 'gatsby-image'
-import styled from 'styled-components'
 import GatsbyLink from 'gatsby-link'
 import indexToNumber from '../utils/index-to-number'
 

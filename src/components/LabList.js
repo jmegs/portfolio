@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Body, LabHeading, Mono } from './TextComponents'
+import List from './List'
 import { breakpoints, mono } from '../theme'
 
 const Container = styled.div`
@@ -16,25 +17,23 @@ const Container = styled.div`
   }
 `
 
-const Tech = styled.div`
-  margin-top: 24px;
-  font-family: ${mono};
-`
-
 export default props => {
   return (
-    <Container>
-      {props.items.map((i, idx) => {
-        return (
-          <div>
-            <a href={i.url}>
-              <LabHeading>{i.name}</LabHeading>
-            </a>
-            <Body>{i.desc}</Body>
-            <Mono mt={32}>{i.tech}</Mono>
-          </div>
-        )
-      })}
-    </Container>
+    <div>
+      <List number="04" name="Sites & Experiments" />
+      <Container>
+        {props.items.map((i, idx) => {
+          return (
+            <div>
+              <a href={i.url}>
+                <LabHeading>{i.name}</LabHeading>
+              </a>
+              <Body>{i.desc}</Body>
+              <Mono mt={32}>{i.tech}</Mono>
+            </div>
+          )
+        })}
+      </Container>
+    </div>
   )
 }

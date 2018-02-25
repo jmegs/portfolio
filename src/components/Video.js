@@ -1,8 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space } from 'styled-system'
 
-const Video = props => {
+const AspectRatio = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`
+
+export default props => {
   let embed = null
   if (props.provider == 'vimeo') {
     embed = (
@@ -25,25 +41,5 @@ const Video = props => {
       />
     )
   }
-  return <Container>{embed}</Container>
+  return <AspectRatio>{embed}</AspectRatio>
 }
-
-export default Video
-
-const Container = styled.div`
-  ${space};
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-
-  iframe,
-  object,
-  embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-`
