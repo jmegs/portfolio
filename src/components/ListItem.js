@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import Mono from './Mono'
 import Flex from './Flex'
 import Link from 'gatsby-link'
@@ -22,15 +22,15 @@ const ListItem = props => {
 
 const Container = styled(Box)``
 
-const lineFill = keyframes`
-	from {
-		width: 0;
-	}
+// const lineFill = keyframes`
+// 	from {
+// 		width: 0;
+// 	}
 
-	to {
-		width: 72px;
-	}
-`
+// 	to {
+// 		width: 72px;
+// 	}
+// `
 
 const Line = styled.span`
   height: 2px;

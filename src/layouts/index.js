@@ -47,15 +47,11 @@ injectGlobal`
   }
 
   body {
-    background: #f9f9f9;
     transition: width 0.15s, height 0.15s, margin 0.15s padding 0.15s;
     min-height: 100vh;
     min-width: 100vw;
-    @media (min-width: 1280px) {
-      justify-content: center;
-        align-items: center;
-        display: flex;
-    }
+    overflow-x: hidden;
+    font-family: ${theme.font};
   }
 `
 

@@ -1,10 +1,14 @@
 import React from 'react'
-import Paragraph from './Paragraph'
+import styled from 'styled-components'
+import { Body } from './TextComponents'
 import Image from './Image'
-import Box from '../components/Box'
 import Video from '../components/Video'
 import AssetLink from '../components/AssetLink'
 import getId from 'get-video-id'
+
+const VideoContainer = styled.div`
+  height: 100%;
+`
 
 const ContentFactory = props => {
   let { content } = props
@@ -13,7 +17,7 @@ const ContentFactory = props => {
       {content.map((item, idx) => {
         if (item.__typename == 'DatoCmsText') {
           return (
-            <Paragraph
+            <Body
               key={idx}
               children={item.content}
               maxWidth={512}
@@ -24,20 +28,15 @@ const ContentFactory = props => {
           )
         } else if (item.__typename == 'DatoCmsImage') {
           return (
-            <Image
-              key={idx}
-              sizes={item.image.sizes}
-              mx={[0, null, 64]}
-              my={[32, null, 64]}
-            />
+            <Image key={idx} sizes={item.image.sizes} my={[32, null, 64]} />
           )
         } else if (item.__typename == 'DatoCmsVideo') {
           let { provider, url } = item.videoUrl
           let id = getId(url).id
           return (
-            <Box key={idx} mx={[0, null, 64]} my={[32, null, 64]} height="100%">
+            <VideoContainer key={idx}>
               <Video id={id} provider={provider} />
-            </Box>
+            </VideoContainer>
           )
         } else if (item.__typename == 'DatoCmsLink') {
           return <AssetLink url={item.url} label={item.label} />

@@ -1,34 +1,31 @@
 import React from 'react'
 import Container from '../components/Container'
-import Flex from '../components/Flex'
 import Nav from '../components/Nav'
 import Text from '../components/Text'
-import Heading from '../components/TestHeading'
-import Paragraph from '../components/Paragraph'
 import Content from '../components/ContentFactory'
 import AssetLink from '../components/AssetLink'
+
+import system from 'system-components'
+import { Heading, Body } from '../components/TextComponents'
+
+const Intro = system({
+  display: 'flex',
+  flexDirection: ['column', null, 'row'],
+  justifyContent: 'space-between',
+  alignItems: 'baseline',
+  mb: 72,
+})
 
 export default ({ data }) => {
   let { name, intro, content } = data.project.edges[0].node
   return (
-    <Container project>
-      <Flex flexDirection="column">
-        <Nav />
-        <Flex
-          flexDirection={['column', null, 'row']}
-          justifyContent="space-between"
-          alignItems="baseline"
-          mb={72}
-        >
-          <Heading is="h1" width={[3 / 4, null, 1 / 4]} mb={32}>
-            {name}
-          </Heading>
-          <Paragraph maxWidth={512} mx={[24, 40, 64]} f={[16, 18, 16, 18]}>
-            {intro}
-          </Paragraph>
-        </Flex>
-        <Content content={content} />
-      </Flex>
+    <Container>
+      <Nav />
+      <Intro>
+        <Heading>{name}</Heading>
+        <Body maxWidth={512}>{intro}</Body>
+      </Intro>
+      <Content content={content} />
     </Container>
   )
 }

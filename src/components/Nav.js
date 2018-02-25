@@ -1,21 +1,34 @@
 import React from 'react'
-import Mono from './Mono'
-import Flex from './Flex'
+import styled from 'styled-components'
+import { Mono } from './TextComponents'
 import Link from 'gatsby-link'
 import Icon from './Icon'
 
-const Nav = () => (
-  <Flex justifyContent="space-between" mx={[24, 40, 64]} mt={56}>
-    <Link to="/">
-      <Mono f={14}>&mdash; JM </Mono>
-    </Link>
-    <Flex justifyContent="space-between">
-      <Icon name="info_outline" url="/page-2/" />
-      <Icon name="twitter" url="http://twitter.com/jmegs" />
-      <Icon name="instagram" url="http://instagram.com/johnmeguerian" />
-      <Icon name="github" url="http://github.com/jmegs" />
-    </Flex>
-  </Flex>
-)
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
 
-export default Nav
+export default props => {
+  return (
+    <Container>
+      <Link to="/">
+        <Mono>&mdash; JM</Mono>
+      </Link>
+      <Container>
+        <Link to="/about">
+          <Icon name="info_outline" />
+        </Link>
+        <a href="http://twitter.com/jmegs">
+          <Icon name="twitter" />
+        </a>
+        <a href="http://instagram.com/johnmeguerian">
+          <Icon name="instagram" />
+        </a>
+        <a href="http://github.com/jmegs">
+          <Icon name="github" />
+        </a>
+      </Container>
+    </Container>
+  )
+}
