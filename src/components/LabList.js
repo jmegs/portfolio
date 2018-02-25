@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Body, LabHeading, Mono } from './TextComponents'
-import List from './List'
+import Heading from './NumberedHeading'
 import { breakpoints, mono } from '../theme'
 
 const Container = styled.div`
@@ -20,7 +20,7 @@ const Container = styled.div`
 export default props => {
   return (
     <div>
-      <List number="04" name="Sites & Experiments" />
+      <Heading number="04" name="Sites & Experiments" />
       <Container>
         {props.items.map((i, idx) => {
           return (

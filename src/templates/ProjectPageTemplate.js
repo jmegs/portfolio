@@ -2,7 +2,6 @@ import React from 'react'
 import system from 'system-components'
 import Container from '../components/Container'
 import Nav from '../components/Nav'
-import Text from '../components/Text'
 import Content from '../components/ContentFactory'
 import AssetLink from '../components/AssetLink'
 

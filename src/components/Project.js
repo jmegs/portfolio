@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import List from './List'
+import Heading from './NumberedHeading'
 import GatsbyImage from 'gatsby-image'
 import GatsbyLink from 'gatsby-link'
 import indexToNumber from '../utils/index-to-number'
@@ -42,7 +42,7 @@ export default props => {
   let number = indexToNumber(index)
   return (
     <Container>
-      <List number={number} name={name} />
+      <Heading number={number} name={name} />
       <GatsbyLink to={slug}>
         <Image sizes={imageSizes} />
       </GatsbyLink>
