@@ -7,7 +7,7 @@ import { space, maxWidth } from 'styled-system'
 
 const Container = styled.div`
   width: 100vw;
-  background: #ffffff;
+  background: ${props => (props.dark ? '#141414' : '#ffffff')};
   margin: auto;
   font-family: ${props => props.theme.font};
   font-weight: ${props => props.theme.weights.normal};

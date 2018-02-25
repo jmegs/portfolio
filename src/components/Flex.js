@@ -6,6 +6,7 @@ import {
   flexWrap,
   flex,
   space,
+  minHeight,
 } from 'styled-system'
 
 export default styled.div`
@@ -16,4 +17,5 @@ export default styled.div`
   ${flexWrap};
   ${flex};
   ${space};
+  ${minHeight};
 `
