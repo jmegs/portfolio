@@ -16,9 +16,9 @@ export default props => {
         <Mono>&mdash; JM</Mono>
       </Link>
       <Container>
-        {/* <Link to="/about">
+        <Link to="/about">
           <Icon name="info_outline" />
-        </Link> */}
+        </Link>
         <a href="http://twitter.com/jmegs">
           <Icon name="twitter" />
         </a>
