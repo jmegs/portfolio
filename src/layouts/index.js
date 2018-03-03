@@ -22,7 +22,6 @@ injectGlobal`
   body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
-    font-weight: normal;
   }
 
   ol, ul {
@@ -66,7 +65,18 @@ const TemplateWrapper = ({
           <title>{title}</title>
           <meta name="description" content={description} />
           {/* @TODO Social Graph tags */}
-          {/* @TODO Favicons */}
+          <link
+            rel="icon"
+            type="image/png"
+            href="favicon-32x32.png"
+            sizes="32x32"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="favicon-16x16.png"
+            sizes="16x16"
+          />
         </Helmet>
         {children()}
       </div>

@@ -14,7 +14,7 @@ export default ({ data }) => {
   return (
     <Container>
       <Nav />
-      <Heading>{home.heading}</Heading>
+      <Heading is='h1'>{home.heading}</Heading>
       {projects.map((p, idx) => {
         return (
           <Project

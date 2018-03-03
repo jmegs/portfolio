@@ -22,7 +22,7 @@ export default ({ data }) => {
     <Container>
       <Nav />
       <Intro>
-        <Heading pr={128}>{name}</Heading>
+        <Heading is='h1' pr={128}>{name}</Heading>
         <Body
           maxWidth={512} pr={24}
           dangerouslySetInnerHTML={

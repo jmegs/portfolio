@@ -11,7 +11,6 @@ export const Mono = system(
 )
 
 export const Heading = system({
-  is: 'h1',
   fontSize: [24, 32],
   fontWeight: 300,
   maxWidth: 512,
