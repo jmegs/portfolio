@@ -16,13 +16,19 @@ const Intro = system({
 })
 
 export default ({ data }) => {
-  let { name, intro, content } = data.project.edges[0].node
+  let { name, introNode, content } = data.project.edges[0].node
+  let introHtml = introNode.childMarkdownRemark.html
   return (
     <Container>
       <Nav />
       <Intro>
-        <Heading>{name}</Heading>
-        <Body maxWidth={512}>{intro}</Body>
+        <Heading pr={128}>{name}</Heading>
+        <Body
+          maxWidth={512} pr={24}
+          dangerouslySetInnerHTML={
+            { __html: introNode.childMarkdownRemark.html }
+          }
+        />
       </Intro>
       <Content content={content} />
     </Container>
@@ -36,11 +42,20 @@ export const query = graphql`
         node {
           name
           slug
-          intro
+          introNode {
+            childMarkdownRemark {
+              html
+            }
+          }
           content {
             __typename
             ... on DatoCmsText {
               content
+              contentNode {
+							  childMarkdownRemark {
+                  html
+                }
+              }
             }
             ... on DatoCmsImage {
               image {

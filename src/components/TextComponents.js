@@ -14,7 +14,7 @@ export const Heading = system({
   is: 'h1',
   fontSize: [24, 32],
   fontWeight: 300,
-  maxWidth: 448,
+  maxWidth: 512,
   mb: 80,
   mt: [40, 72],
   lineHeight: 1.5,
@@ -27,15 +27,22 @@ export const ListHeading = system({
   lineHeight: 1,
 })
 
-export const Body = system(
+const BodyBase = system(
   {
-    is: 'p',
-    fontSize: 18,
+    fontSize: 16,
     lineHeight: 1.66,
   },
   'space',
   'maxWidth'
 )
+
+// If body has multiple paragraphs, give them space
+
+export const Body = BodyBase.extend`
+  > p + p {
+    margin-top: 32px;
+  }
+`
 
 export const LabHeading = Body.extend`
   text-decoration: underline;

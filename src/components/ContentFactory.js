@@ -16,14 +16,17 @@ const ContentFactory = props => {
     <div>
       {content.map((item, idx) => {
         if (item.__typename == 'DatoCmsText') {
+          let html = item.contentNode.childMarkdownRemark.html
+          console.log(`content: ${item.content}`)
           return (
             <Body
               key={idx}
-              children={item.content}
+              // children={item.content}
+              dangerouslySetInnerHTML={{ __html: html }}
               maxWidth={512}
               mx="auto"
-              mt={[32, null, 64]}
-              mb={[40, null, 80]}
+              mt={[64, null, 128]}
+              mb={[80, null, 160]}
             />
           )
         } else if (item.__typename == 'DatoCmsImage') {
