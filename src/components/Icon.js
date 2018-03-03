@@ -9,9 +9,9 @@ const Frame = styled.div`
 `
 
 export default props => {
-  const src = `https:icon.now.sh/${props.name}/${
+  const src = `https://icon.now.sh/${props.name}/${
     props.color ? `props.color` : '000000'
-  }`
+    }`
 
   return (
     <Frame>
