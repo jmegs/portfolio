@@ -15,31 +15,44 @@ const Flex = styled.div`
 `
 
 const AboutPage = ({ data }) => {
-  return <Container>
+  let { blurb, image, tech } = data.datoCmsAbout
+  return (
+    <Container>
       <Nav dark />
-      <Heading maxWidth={900}>
-        John is an experience designer in NYC. <br />
-        He’s interested in the collision between design and technology.<br />
-        He’s constantly learning.<br />
-        He definitely thinks designers should code.
-      </Heading>
-      <Image sizes={data.datoCmsHome.photo.sizes} maxWidth={720} />
+      <Heading
+        maxWidth={900}
+        dangerouslySetInnerHTML={{ __html: blurb.childMarkdownRemark.html }}
+      />
+
+      <Image sizes={image.sizes} maxWidth={720} />
       <Flex>
-        <Heading ml="auto" maxWidth={720} mt={128}>
-          This site is lovingly handcrafted with an entirely unnecessary technology stack including <a href="http://gatsbyjs.org">
-            Gatsby
-          </a>, <a href="http://styled-components.com">Styled Components</a> and <a href="https://github.com/jxnblk/styled-system">Styled System</a>, and <a href="http://datocms.com">DatoCMS</a>. It’s hosted on <a href="http://netlify.com">Netlify</a> and the source code is available on <a href="http://github.com/jmegs/portfolio">Github</a>.
-        </Heading>
+        <Heading
+          ml="auto"
+          maxWidth={720}
+          mt={128}
+          dangerouslySetInnerHTML={{ __html: tech.childMarkdownRemark.html }}
+        />
       </Flex>
     </Container>
+  )
 }
 
 export default AboutPage
 
 export const query = graphql`
   query AboutQuery {
-    datoCmsHome {
-      photo {
+    datoCmsAbout {
+      blurb: blurbNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      tech: techBlurbNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      image {
         sizes(maxWidth: 720, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
