@@ -13,20 +13,24 @@ const Flex = styled.div`
     text-decoration: underline;
   }
 `
-
+const Words = Heading.extend`
+  p + p {
+    margin-top: 32px;
+  }
+`
 const AboutPage = ({ data }) => {
   let { blurb, image, tech } = data.datoCmsAbout
   return (
     <Container>
       <Nav dark />
-      <Heading
+      <Words
         maxWidth={900}
         dangerouslySetInnerHTML={{ __html: blurb.childMarkdownRemark.html }}
       />
 
       <Image sizes={image.sizes} maxWidth={720} />
       <Flex>
-        <Heading
+        <Words
           ml="auto"
           maxWidth={720}
           mt={128}
