@@ -22,7 +22,7 @@ export default props => {
         <a href="http://twitter.com/jmegs">
           <Icon name="twitter" />
         </a>
-        <a href="http://instagram.com/johnmeguerian">
+        <a href="http://instagram.com/jmegs_">
           <Icon name="instagram" />
         </a>
         <a href="http://github.com/jmegs">
