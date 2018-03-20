@@ -1,8 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Mono } from './TextComponents'
-import Link from 'gatsby-link'
-import Icon from './Icon'
+import React from "react"
+import styled from "styled-components"
+import { Mono } from "./TextComponents"
+import Link from "gatsby-link"
+import Icon from "./Icon"
+import logOutbound from "../utils/log-outbound-link"
 
 const Container = styled.div`
   display: flex;
@@ -19,13 +20,19 @@ export default props => {
         <Link to="/about">
           <Icon name="info_outline" />
         </Link>
-        <a href="http://twitter.com/jmegs">
+        <a
+          href="http://twitter.com/jmegs"
+          onClick={() => logOutbound("twitter")}
+        >
           <Icon name="twitter" />
         </a>
-        <a href="http://instagram.com/jmegs_">
+        <a
+          href="http://instagram.com/jmegs_"
+          onClick={() => logOutbound("instagram")}
+        >
           <Icon name="instagram" />
         </a>
-        <a href="http://github.com/jmegs">
+        <a href="http://github.com/jmegs" onClick={() => logOutbound("github")}>
           <Icon name="github" />
         </a>
       </Container>

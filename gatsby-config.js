@@ -1,11 +1,11 @@
 // Read environment variables into file
-require('dotenv').config()
+require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
     title: `John Meguerian`,
     description:
-      'John Meguerian is a designer, strategist, and technologist based in Brooklyn, NY',
+      "John Meguerian is a designer, strategist, and technologist based in Brooklyn, NY"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,8 +16,14 @@ module.exports = {
     {
       resolve: `gatsby-source-datocms`,
       options: {
-        apiToken: process.env.DATO_API_TOKEN,
-      },
+        apiToken: process.env.DATO_API_TOKEN
+      }
     },
-  ],
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID
+      }
+    }
+  ]
 }
