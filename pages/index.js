@@ -41,7 +41,7 @@ const HomePage = () => {
           font-family: halyard-display, system-ui;
           font-size: 2.7vmax;
           line-height: 1.5;
-          max-width: 14.2857142857em;
+          // max-width: 14.2857142857em;
           align-self: center;
         }
 
