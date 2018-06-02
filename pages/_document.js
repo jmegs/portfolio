@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
           <style jsx global>{`
-            * {
+            body {
               margin: 0;
               padding: 0;
               box-sizing: border-box;

@@ -33,15 +33,13 @@ const HomePage = () => {
           padding: 8.888888889vh 8.333333333vw;
           display: grid;
           grid-template-columns: 100%;
-          gap: 2.7vmax;
-          min-height: calc(100vh - 60px);
+          gap: 3vmax;
         }
 
         .text {
           font-family: halyard-display, system-ui;
           font-size: 2.7vmax;
           line-height: 1.5;
-          // max-width: 14.2857142857em;
           align-self: center;
         }
 
