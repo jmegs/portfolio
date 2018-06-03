@@ -2,91 +2,37 @@ import React from 'react'
 import projects from '../data/projects.json' // local JSON file from contentful
 import Markdown from 'markdown-to-jsx'
 import Image from '../components/ProjectImage'
+import styled from 'styled-components'
 
 const Project = ({ project }) => (
-  <>
-    <main>
-      <header>
-        <aside>
-          <h1>{project.name}</h1>
-          <dl>
-            <dt>Role:</dt>
-            {project.role.map(r => <dd key={r}>{r}</dd>)}
-            {project.agency != null && (
-              <>
-                <dt>Agency</dt>
-                <dd>{project.agency}</dd>
-              </>
-            )}
-          </dl>
-          {project.link && (
-            <a href={project.link} className="out-link">
-              Go See It
-            </a>
+  <Main>
+    <Header>
+      <Sidebar>
+        <Title>{project.name}</Title>
+        <Meta>
+          <Term>Role:</Term>
+          {project.role.map(r => <Def key={r}>{r}</Def>)}
+          {project.agency != null && (
+            <>
+              <Term>Agency</Term>
+              <Def>{project.agency}</Def>
+            </>
           )}
-        </aside>
-        <article>
-          <Markdown>{project.intro}</Markdown>
-        </article>
-      </header>
-      <section className="images">
-        {project.images.map(i => <Image image={i} key={i.alt} />)}
-      </section>
-    </main>
-    <style jsx>{`
-      main {
-        max-width: 1440px;
-        margin: auto;
-        padding: 10vh 8.333333333vw;
-      }
-
-      header {
-        margin-bottom: 14.22222222vh;
-      }
-
-      aside {
-        margin-bottom: 2rem;
-      }
-
-      h1 {
-        font-family: halyard-display, system-ui;
-        font-size: 2rem;
-        line-height: 1.1;
-        margin-bottom: 2rem;
-      }
-
-      dl {
-        font-family: halyard-micro, monospace;
-        font-size: 0.75rem;
-        line-height: 1.8;
-        color: #505050;
-        margin-bottom: 2rem;
-      }
-
-      dd {
-        margin-bottom: 1.25rem;
-      }
-
-      article {
-        font-family: halyard-text, system-ui;
-        font-size: 1.125rem;
-        line-height: 1.666666667;
-        max-width: 28em;
-        justify-self: center;
-      }
-
-      article p + p {
-        margin-top: 27px;
-      }
-
-      @media (min-width: 960px) {
-        header {
-          display: grid;
-          grid-template-columns: 1fr 3fr;
-        }
-      }
-    `}</style>
-  </>
+        </Meta>
+        {project.link && (
+          <a href={project.link} className="out-link">
+            Go See It
+          </a>
+        )}
+      </Sidebar>
+      <Intro>
+        <Markdown>{project.intro}</Markdown>
+      </Intro>
+    </Header>
+    <section>
+      {project.images.map(i => <Image image={i} key={i.alt} />)}
+    </section>
+  </Main>
 )
 
 Project.getInitialProps = async ({ pathname, query }) => {
@@ -95,3 +41,55 @@ Project.getInitialProps = async ({ pathname, query }) => {
 }
 
 export default Project
+
+const Main = styled.main`
+  max-width: 1440px;
+  margin: auto;
+  padding: 10vh 8.333333333vw;
+`
+
+const Header = styled.header`
+  margin-bottom: 14.22222222vh;
+
+  @media (min-width: 960px) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+`
+
+const Sidebar = styled.aside`
+  margin-bottom: 2rem;
+`
+
+const Title = styled.h1`
+  font-family: halyard-display, system-ui;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+`
+
+const Meta = styled.dl`
+  font-family: halyard-micro, monospace;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: #505050;
+  margin-bottom: 2rem;
+`
+
+const Term = styled.dt``
+
+const Def = styled.dd`
+  margin-bottom: 1.25rem;
+`
+
+const Intro = styled.article`
+  font-family: halyard-text, system-ui;
+  font-size: 1.125rem;
+  line-height: 1.666666667;
+  max-width: 28em;
+  justify-self: center;
+
+  p + p {
+    margin-top: 1.25rem;
+  }
+`

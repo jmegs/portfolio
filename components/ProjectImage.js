@@ -1,31 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const ProjectImage = props => {
   const { alt, caption, url } = props.image
   return (
-    <>
-      <figure>
-        <img src={url} alt={alt} />
-        {caption && <figcaption>{caption}</figcaption>}
-      </figure>
-      <style jsx>{`
-        figure {
-          margin-bottom: 8.333333333vmax;
-        }
-        figcaption {
-          font-family: halyard-micro, monospace;
-          font-size: 0.75rem;
-          color: #505050;
-          text-align: center;
-          margin-top: 1.25rem;
-        }
-      `}</style>
-    </>
+    <Figure>
+      <img src={url} alt={alt} />
+      {caption && <Caption>{caption}</Caption>}
+    </Figure>
   )
 }
 
-ProjectImage.PropTypes = {
+ProjectImage.propTypes = {
   image: PropTypes.shape({
     alt: PropTypes.string,
     caption: PropTypes.string,
@@ -34,3 +21,15 @@ ProjectImage.PropTypes = {
 }
 
 export default ProjectImage
+
+const Figure = styled.figure`
+  margin-bottom: 8.3333333vmax;
+`
+
+const Caption = styled.figcaption`
+  font-family: halyard-micro, monospace;
+  font-size: 0.75rem;
+  color: #505050;
+  text-align: center;
+  margin-top: 1.25rem;
+`

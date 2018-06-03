@@ -1,13 +1,15 @@
-// _document is only rendered on the server side and not on the client side
-// Event handlers like onClick can't be added to this file
-
 // ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet()
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />)
+    )
+    const styleTags = sheet.getStyleElement()
+    return { ...page, styleTags }
   }
 
   render() {
@@ -17,32 +19,11 @@ export default class MyDocument extends Document {
           <title>Hello World</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://use.typekit.net/orr0eqr.css" />
+          {this.props.styleTags}
         </Head>
         <body>
           <Main />
           <NextScript />
-          <style jsx global>{`
-            html {
-              box-sizing: border-box;
-              font-family: halyard-text, system-ui;
-            }
-            *,
-            *:before,
-            *:after {
-              box-sizing: inherit;
-              margin: 0;
-              padding: 0;
-              font-weight: normal;
-            }
-            ul,
-            ol {
-              list-style: none;
-            }
-            img {
-              width: 100%;
-              height: auto;
-            }
-          `}</style>
         </body>
       </html>
     )
