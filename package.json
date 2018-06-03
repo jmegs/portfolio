@@ -13,8 +13,11 @@
   "dependencies": {
     "contentful": "^6.1.1",
     "dotenv": "^6.0.0",
+    "markdown-to-jsx": "^6.6.6",
     "next": "^6.0.3",
+    "prop-types": "^15.6.1",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "react-markdown": "^3.3.2"
   }
 }
