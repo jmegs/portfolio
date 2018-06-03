@@ -39,6 +39,7 @@ const getAllContent = async () => {
         slug: item.slug,
         role: item.role,
         agency: item.agency,
+        link: item.link,
         intro: item.description,
         images: item.images.map(i => {
           return {
