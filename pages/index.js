@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const HomePage = () => {
   return (
@@ -8,18 +9,25 @@ const HomePage = () => {
         <p>John Meguerian is a product designer and developer in NYC.</p>
         <p>
           He’s recently made a <a href="">personal training app</a> for Equinox
-          and an interactive retail experience and ecommerce website for
+          and an interactive{' '}
+          <Link href="/project/samsung-retail">retail experience</Link> and{' '}
+          <Link href="/project/samsung-dotcom">ecommerce website</Link> for
           Samsung.
         </p>
 
         <p>
-          He also works on development projects like Static Starter, CSS
-          Posters, and his personal website.
+          He also works on development projects like{' '}
+          <a href="https://github.com/jmegs/static-starter">Static Starter</a>,{' '}
+          <a href="https://codepen.io/collection/XRKYmK/">CSS Posters</a>, and
+          his <a href="https://github.com/jmegs/portfolio">personal website</a>.
         </p>
 
         <p>
-          Find out more about him, check out more work on dribbble and github,
-          or say hi on twitter or instagram.
+          Find out more about him, check out more work on{' '}
+          <a href="https://dribbble.com/jmegs">dribbble</a> and{' '}
+          <a href="https://github.com/jmegs">github</a>, or say hi on{' '}
+          <a href="https://twitter.com/jmegs">twitter</a> or{' '}
+          <a href="https://instagram.com/jmegs_">instagram</a>.
         </p>
       </Text>
       <PhotoWrap>
