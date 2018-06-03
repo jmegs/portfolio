@@ -50,6 +50,7 @@ const Main = styled.main`
 
 const Header = styled.header`
   margin-bottom: 14.22222222vh;
+  align-items: baseline;
 
   @media (min-width: 960px) {
     display: grid;
