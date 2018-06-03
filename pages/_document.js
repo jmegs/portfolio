@@ -22,10 +22,25 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
           <style jsx global>{`
-            body {
+            html {
+              box-sizing: border-box;
+              font-family: halyard-text, system-ui;
+            }
+            *,
+            *:before,
+            *:after {
+              box-sizing: inherit;
               margin: 0;
               padding: 0;
-              box-sizing: border-box;
+              font-weight: normal;
+            }
+            ul,
+            ol {
+              list-style: none;
+            }
+            img {
+              width: 100%;
+              height: auto;
             }
           `}</style>
         </body>
