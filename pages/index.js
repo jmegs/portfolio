@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
+import { fadeInFwd } from '../components/animations'
 
 class HomePage extends Component {
   state = {
@@ -130,7 +131,7 @@ const Text = styled.article`
   font-size: 2.7vmax;
   line-height: 1.5;
   align-self: center;
-
+  ${fadeInFwd(1200)};
   a {
     // do something cooler
     color: inherit;
@@ -164,6 +165,7 @@ const PhotoWrap = styled.div`
   align-self: center;
   display: grid;
   grid-template: 100% / 100%;
+  ${fadeInFwd(1500)};
 `
 
 const Image = styled.img`
@@ -188,16 +190,4 @@ const OverlayImage = Image.extend`
   align-self: center;
   justify-self: center;
   width: 128%;
-  animation: ${fadeInFwd} 4000ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
-`
-
-const fadeInFwd = keyframes`
- 0% {
-    transform: translateZ(-80px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateZ(0);
-    opacity: 1;
-  }
 `

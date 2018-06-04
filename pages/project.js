@@ -3,6 +3,7 @@ import projects from '../data/projects.json' // local JSON file from contentful
 import Markdown from 'markdown-to-jsx'
 import Image from '../components/ProjectImage'
 import styled from 'styled-components'
+import { fadeInUp } from '../components/animations'
 
 const Project = ({ project }) => (
   <Main>
@@ -60,6 +61,7 @@ const Header = styled.header`
 
 const Sidebar = styled.aside`
   margin-bottom: 2rem;
+  ${fadeInUp(600)};
 `
 
 const Title = styled.h1`
@@ -89,6 +91,7 @@ const Intro = styled.article`
   line-height: 1.666666667;
   max-width: 28em;
   justify-self: center;
+  ${fadeInUp(800)};
 
   p + p {
     margin-top: 1.25rem;
