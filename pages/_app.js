@@ -15,6 +15,12 @@ injectGlobal`
     padding: 0;
     font-weight: normal;
   }
+
+  body {
+    min-height: 100vh;
+    border: 8px solid #0d0d0d;
+  }
+  
   ul,
   ol {
     list-style: none;
