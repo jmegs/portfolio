@@ -3,10 +3,25 @@ import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
 import { fadeInFwd } from '../components/animations'
 
+const previews = {
+  retail: '/static/retail-preview.jpg',
+  dotcom: '/static/dotcom-preview.jpg',
+  eqx: '/static/eqx-preview.jpg'
+}
+
 class HomePage extends Component {
   state = {
     swapped: false,
     overlay: ''
+  }
+
+  componentWillMount() {
+    // preload images for hover effect
+    Object.keys(previews).map(p => {
+      let img = new Image()
+      img.onload = console.log(`${p} loaded`)
+      img.src = previews[p]
+    })
   }
 
   swap = img => {
@@ -25,12 +40,6 @@ class HomePage extends Component {
   }
 
   render() {
-    const previews = {
-      retail: '/static/retail-preview.jpg',
-      dotcom: '/static/dotcom-preview.jpg',
-      eqx: '/static/eqx-preview.jpg'
-    }
-
     const eqxLink = (
       <Link href="#">
         <a
@@ -102,7 +111,9 @@ class HomePage extends Component {
           </p>
         </Text>
         <PhotoWrap>
-          <OverlayImage src={this.state.overlay} alt="" />
+          {this.state.swapped && (
+            <OverlayImage src={this.state.overlay} alt="" />
+          )}
           <BaseImage
             src="/static/john.jpg"
             alt="Photo of John"
@@ -180,7 +191,7 @@ const BaseImage = Image.extend`
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
   opacity: ${props => (props.fade ? 0.2 : 1)};
-  transition: opacity 250ms ease;
+  transition: opacity 125ms ease;
 `
 
 const OverlayImage = Image.extend`
