@@ -23,7 +23,7 @@ ProjectImage.propTypes = {
 export default ProjectImage
 
 const Figure = styled.figure`
-  margin-bottom: 8.3333333vmax;
+  margin-bottom: 5.5vmax;
 `
 
 const Caption = styled.figcaption`

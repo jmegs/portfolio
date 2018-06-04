@@ -66,7 +66,7 @@ const Sidebar = styled.aside`
 
 const Title = styled.h1`
   font-family: halyard-display, system-ui;
-  font-size: 2rem;
+  font-size: 3.5rem;
   line-height: 1.1;
   margin-bottom: 2rem;
 `
@@ -89,6 +89,7 @@ const Intro = styled.article`
   font-family: halyard-text, system-ui;
   font-size: 1.125rem;
   line-height: 1.666666667;
+  margin-top: calc(3.5rem + 1em);
   max-width: 28em;
   justify-self: center;
   ${fadeInUp(800)};
