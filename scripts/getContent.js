@@ -34,14 +34,16 @@ const getAllContent = async () => {
     // gives us a nice object with key of the project slug and only
     // the values we need directly.
     items.forEach(item => {
+      console.log(`🛠  Processing ${item.name}...`)
       projects[item.slug] = {
         name: item.name,
         slug: item.slug,
-        role: item.role,
-        agency: item.agency,
+        role: item.role, //array
+        results: item.results, //array
         link: item.link,
-        intro: item.description,
+        intro: item.description, // markdown
         images: item.images.map(i => {
+          // returns an array of objects
           return {
             alt: i.fields.title,
             caption: i.fields.description,
@@ -58,7 +60,7 @@ const getAllContent = async () => {
       path.join(__dirname, '..', 'data', 'projects.json'),
       JSON.stringify(projects)
     )
-    console.log(`👍  Success`)
+    console.log(`👍  Success. Have a nice content.`)
     return true
   } catch (error) {
     console.error(error)

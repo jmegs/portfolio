@@ -13,12 +13,8 @@ const Project = ({ project }) => (
         <Meta>
           <Term>Role:</Term>
           {project.role.map(r => <Def key={r}>{r}</Def>)}
-          {project.agency != null && (
-            <>
-              <Term>Agency</Term>
-              <Def>{project.agency}</Def>
-            </>
-          )}
+          <Term>Results:</Term>
+          {project.results.map(r => <Def key={r}>{r}</Def>)}
         </Meta>
         {project.link && (
           <a href={project.link} className="out-link">
@@ -36,6 +32,8 @@ const Project = ({ project }) => (
   </Main>
 )
 
+// Where the magic happens
+//=============================================
 Project.getInitialProps = async ({ pathname, query }) => {
   let project = projects[`${query.slug}`] // grab the correct key:value pair
   return { project }
@@ -43,6 +41,8 @@ Project.getInitialProps = async ({ pathname, query }) => {
 
 export default Project
 
+// Styles
+//=============================================
 const Main = styled.main`
   max-width: 1440px;
   margin: auto;
@@ -72,17 +72,21 @@ const Title = styled.h1`
 `
 
 const Meta = styled.dl`
-  font-family: halyard-micro, monospace;
-  font-size: 0.75rem;
-  line-height: 1.8;
-  color: #505050;
+  font-family: halyard-text, system-ui;
+  font-size: 1rem;
+  color: #0d0d0d;
   margin-bottom: 2rem;
 `
 
-const Term = styled.dt``
+const Term = styled.dt`
+  font-weight: bold;
+  :not(:first-child) {
+    margin-top: 1.5rem;
+  }
+`
 
 const Def = styled.dd`
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.25em;
 `
 
 const Intro = styled.article`
