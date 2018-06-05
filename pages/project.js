@@ -45,8 +45,8 @@ export default Project
 //=============================================
 const Main = styled.main`
   max-width: 1440px;
-  margin: auto;
-  padding: 10vh 8.333333333vw;
+  margin: 10vh auto 10vh auto;
+  padding: 0 4vw;
 `
 
 const Header = styled.header`
@@ -55,7 +55,9 @@ const Header = styled.header`
 
   @media (min-width: 960px) {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: min-content minmax(420px, 1fr);
+    grid-column-gap: 5.5rem;
+    padding: 0 5.5rem;
   }
 `
 
@@ -95,7 +97,7 @@ const Intro = styled.article`
   line-height: 1.666666667;
   margin-top: calc(3.5rem + 1em);
   max-width: 28em;
-  justify-self: center;
+  justify-self: end;
   ${fadeInUp(800)};
 
   p + p {
