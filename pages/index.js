@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
-import { fadeInFwd } from '../components/animations'
+import { fadeInFwd, fadeInUp } from '../components/animations'
 
 const previews = {
   retail: '/static/retail-preview.jpg',
@@ -138,11 +138,12 @@ const Main = styled.main`
   }
 `
 const Text = styled.article`
-  font-family: halyard-display, system-ui;
-  font-size: 2.7vmax;
+  font-family: halyard-text, system-ui;
+  font-size: 4.8vw;
   line-height: 1.5;
   align-self: center;
-  ${fadeInFwd(1200)};
+  ${fadeInUp(600)};
+
   a {
     // do something cooler
     color: inherit;
@@ -162,8 +163,8 @@ const Text = styled.article`
     margin-bottom: 20px;
   }
 
-  @media (min-width: 1280px) {
-    font-size: 1.944444444vw;
+  @media (min-width: 960px) {
+    font-size: 1.8vw;
     max-width: 27.77777778vw;
 
     p {
@@ -176,7 +177,7 @@ const PhotoWrap = styled.div`
   align-self: center;
   display: grid;
   grid-template: 100% / 100%;
-  ${fadeInFwd(1500)};
+  ${fadeInUp(800)};
 `
 
 const Image = styled.img`
