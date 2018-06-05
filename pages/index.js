@@ -15,10 +15,10 @@ class HomePage extends Component {
     overlay: ''
   }
 
-  componentWillMount() {
+  componentDidMount() {
     // preload images for hover effect
     Object.keys(previews).map(p => {
-      let img = new Image()
+      let img = document.createElement('img')
       img.onload = console.log(`${p} loaded`)
       img.src = previews[p]
     })
