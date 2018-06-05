@@ -40,6 +40,8 @@ class HomePage extends Component {
   }
 
   render() {
+    // This giant list makes the writing down below actually readable.
+    // =====================================================================
     const eqxLink = (
       <Link href="#">
         <a
@@ -70,6 +72,56 @@ class HomePage extends Component {
         />
       </Link>
     )
+    const staticStarter = (
+      <a
+        href="https://github.com/jmegs/static-starter"
+        className="out"
+        children="Static Starter"
+      />
+    )
+
+    const cssPosters = (
+      <a
+        href="https://codepen.io/collection/XRKYmK/"
+        className="out"
+        children="CSS Posters"
+      />
+    )
+
+    const portfolio = (
+      <a
+        href="https://github.com/jmegs/portfolio"
+        className="out"
+        children="personal website"
+      />
+    )
+
+    const github = (
+      <a href="https://github.com/jmegs" className="out" children="Github" />
+    )
+
+    const dribbble = (
+      <a
+        href="https://dribbble.com/jmegs"
+        className="out"
+        children="Dribbble"
+      />
+    )
+
+    const instagram = (
+      <a
+        href="https://instagram.com/jmegs_"
+        className="out"
+        children="Instagram"
+      />
+    )
+
+    const twitter = (
+      <a href="https://twitter.com/jmegs" className="out" children="Twitter" />
+    )
+
+    // Page starts here. Yikes 👀
+    // =====================================================================
     return (
       <Main>
         <Text>
@@ -80,34 +132,13 @@ class HomePage extends Component {
           </p>
 
           <p>
-            He also works on development projects like{' '}
-            <a href="https://github.com/jmegs/static-starter" className="out">
-              Static Starter
-            </a>,{' '}
-            <a href="https://codepen.io/collection/XRKYmK/" className="out">
-              CSS Posters
-            </a>, and his{' '}
-            <a href="https://github.com/jmegs/portfolio" className="out">
-              personal website
-            </a>.
+            He also works on development projects like {staticStarter},{' '}
+            {cssPosters}, and his {portfolio}.
           </p>
 
           <p>
-            Find out more about him, check out more work on{' '}
-            <a href="https://dribbble.com/jmegs" className="out">
-              dribbble
-            </a>{' '}
-            and{' '}
-            <a href="https://github.com/jmegs" className="out">
-              github
-            </a>, or say hi on{' '}
-            <a href="https://twitter.com/jmegs" className="out">
-              twitter
-            </a>{' '}
-            or{' '}
-            <a href="https://instagram.com/jmegs_" className="out">
-              instagram
-            </a>.
+            Find out more about him, check out more work on {dribbble} and{' '}
+            {github}, or say hi on {twitter} or {instagram}.
           </p>
         </Text>
         <PhotoWrap>
