@@ -46,7 +46,9 @@ export default Project
 const Main = styled.main`
   max-width: 1440px;
   margin: 10vh auto 10vh auto;
-  padding: 0 4vw;
+  @media (max-width: 960px) {
+    padding: 0 4vw;
+  }
 `
 
 const Header = styled.header`
@@ -55,7 +57,7 @@ const Header = styled.header`
 
   @media (min-width: 960px) {
     display: grid;
-    grid-template-columns: min-content minmax(420px, 1fr);
+    grid-template-columns: 300px minmax(420px, 1fr);
     grid-column-gap: 5.5rem;
     padding: 0 5.5rem;
   }
