@@ -1,7 +1,7 @@
 {
-  "name": "lets-do-this",
-  "version": "1.0.0",
-  "description": "",
+  "name": "johnmeguerian.com",
+  "version": "7.0.0",
+  "description": "john meguerian's personal site",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -10,8 +10,8 @@
     "content": "node scripts/getContent.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "jmegs",
+  "license": "MIT",
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
     "contentful": "^6.1.1",

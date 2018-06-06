@@ -1,10 +1,8 @@
 # John's Personal Site
 
-This site runs on [nextjs](http://nextjs.org) and fetches content from [Contentful](https://contentful.com) at build time.
+This site is built with [nextjs](http://nextjs.org) and fetches content from [Contentful](https://contentful.com) at build time.
 
 ## Setup
-
-### Installation
 
 ```sh
 # clone the repo
@@ -21,9 +19,19 @@ cd portfolio
 npm i
 ```
 
-### Environment Variables
+## Workflow
 
-#### For Development
+Run `npm run dev` to boot up the development environment.
+
+To pull content changes from contentful `npm run content`.
+
+Static routes are defined in `next.config.js` which work on both client and server.
+
+To output a static site, use `npm run build`. This will run the `content` script first to ensure we have the latest changes.
+
+## Environment Variables
+
+### For Development
 
 Create a `.env` file at the root of the project containing the following. This will be ignored by git.
 
@@ -32,7 +40,7 @@ CONTENTFUL_SPACE=<your-space-id>
 CONTENTFUL_TOKEN=<your-access-token>
 ```
 
-#### For Production
+### For Production
 
 If you are deploying to Netlify, create the following in Settings > Build and Deploy > Build Environment Variables.
 
@@ -43,7 +51,3 @@ GA_TRACKING_ID=<your-google-analytics-id>
 ```
 
 If using another host, refer to their documentation for how to handle secret variables.
-
-### Workflow
-
-Run `npm run dev` to boot up the development environment

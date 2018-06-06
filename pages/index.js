@@ -19,17 +19,17 @@ class HomePage extends Component {
     // preload images for hover effect
     Object.keys(previews).map(p => {
       let img = document.createElement('img')
-      img.onload = console.log(`${p} loaded`)
+      // img.onload = console.log(`${p} loaded`)
       img.src = previews[p]
     })
   }
 
   swap = img => {
-    console.log(`hi ${img}`)
     this.setState({
       swapped: true,
       overlay: img
     })
+    // console.log(`hi ${img}`)
   }
 
   reset = () => {
@@ -137,8 +137,8 @@ class HomePage extends Component {
           </p>
 
           <p>
-            Find out more about him, check out more work on {dribbble} and{' '}
-            {github}, or say hi on {twitter} or {instagram}.
+            You can check out more work on {dribbble} and {github}, or say hi on{' '}
+            {twitter} or {instagram}.
           </p>
         </Text>
         <PhotoWrap>
