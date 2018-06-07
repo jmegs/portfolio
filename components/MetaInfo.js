@@ -14,6 +14,7 @@ export default () => (
     <meta property="og:image" content="/static/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@jmegs" />
+    <meta name="twitter:image" content="/static/og-image.jpg" />
     <link
       rel="icon"
       type="image/png"
