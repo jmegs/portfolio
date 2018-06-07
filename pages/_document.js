@@ -1,6 +1,7 @@
 // ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import MetaInfo from '../components/MetaInfo'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -16,7 +17,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Hello World</title>
+          <MetaInfo />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://use.typekit.net/orr0eqr.css" />
           {this.props.styleTags}

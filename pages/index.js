@@ -169,7 +169,7 @@ const Main = styled.main`
   }
 `
 const Text = styled.article`
-  font-family: halyard-text, system-ui;
+  font-family: halyard-display, system-ui;
   font-size: 4.8vw;
   line-height: 1.5;
   align-self: center;
@@ -196,7 +196,7 @@ const Text = styled.article`
 
   @media (min-width: 960px) {
     font-size: 1.8vw;
-    max-width: 27.77777778vw;
+    max-width: 25vw;
 
     p {
       margin-bottom: 2.2222222vh;
