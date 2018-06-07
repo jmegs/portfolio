@@ -1,29 +1,26 @@
 {
-  "name": "johnmeguerian",
-  "description": "portfolio",
-  "version": "6.0",
-  "license": "MIT",
+  "name": "johnmeguerian.com",
+  "version": "7.0.0",
+  "description": "john meguerian's personal site",
+  "main": "index.js",
   "scripts": {
-    "dev": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
+    "dev": "next",
+    "prebuild": "npm run content",
+    "build": "next build && next export",
+    "content": "node scripts/getContent.js"
   },
+  "keywords": [],
+  "author": "jmegs",
+  "license": "MIT",
   "dependencies": {
-    "dotenv": "^5.0.0",
-    "gatsby": "^1.9.202",
-    "gatsby-image": "^1.0.37",
-    "gatsby-link": "^1.6.37",
-    "gatsby-plugin-google-analytics": "^1.0.19",
-    "gatsby-plugin-react-helmet": "^2.0.5",
-    "gatsby-plugin-sharp": "^1.6.30",
-    "gatsby-plugin-styled-components": "^2.0.7",
-    "gatsby-source-datocms": "^1.0.26",
-    "gatsby-transformer-remark": "^1.7.33",
-    "gatsby-transformer-sharp": "^1.6.19",
-    "get-video-id": "^3.0.0",
-    "react-helmet": "^5.2.0",
-    "styled-components": "^3.1.6",
-    "styled-system": "^2.1.0",
-    "system-components": "^2.0.1"
+    "babel-plugin-styled-components": "^1.5.1",
+    "contentful": "^6.1.1",
+    "dotenv": "^6.0.0",
+    "markdown-to-jsx": "^6.6.6",
+    "next": "^6.0.3",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "styled-components": "^3.3.0"
   }
 }
