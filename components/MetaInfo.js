@@ -11,10 +11,10 @@ export default () => (
       property="og:description"
       content="John Meguerian is a product designer and developer in NYC"
     />
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="/static/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@jmegs" />
-    <meta name="twitter:image" content="/static/og-image.jpg" />
     <link
       rel="icon"
       type="image/png"
