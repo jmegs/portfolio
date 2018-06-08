@@ -3,9 +3,28 @@ import React from 'react'
 import { injectGlobal } from 'styled-components'
 
 injectGlobal`
+
+  @font-face {
+    font-family: atto;
+    src: url('/static/fonts/atto.woff2') format('woff2'),
+         url('/static/fonts/atto.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+      font-family: atto;
+      src: url('/static/fonts/atto_bold.woff2') format('woff2'),
+          url('/static/fonts/atto_bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+
+  }
+  
   html {
       box-sizing: border-box;
-      font-family: halyard-text, system-ui;
+      font-family: atto, system-ui;
     }
   *,
   *:before,
