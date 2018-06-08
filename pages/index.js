@@ -169,9 +169,9 @@ const Main = styled.main`
   }
 `
 const Text = styled.article`
-  font-family: halyard-display, system-ui;
+  /* font-family: halyard-display, system-ui; */
   font-size: 4.8vw;
-  line-height: 1.5;
+  line-height: 1.75;
   align-self: center;
   ${fadeInUp(600)};
 
@@ -195,8 +195,8 @@ const Text = styled.article`
   }
 
   @media (min-width: 960px) {
-    font-size: 1.8vw;
-    max-width: 25vw;
+    font-size: 1.6667vw;
+    max-width: 27.7778vw;
 
     p {
       margin-bottom: 2.2222222vh;
