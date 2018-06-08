@@ -17,9 +17,9 @@ const Project = ({ project }) => (
           {project.results.map(r => <Def key={r}>{r}</Def>)}
         </Meta>
         {project.link && (
-          <a href={project.link} className="out-link">
+          <Button href={project.link} className="out-link">
             Go See It
-          </a>
+          </Button>
         )}
       </Sidebar>
       <Intro>
@@ -69,37 +69,52 @@ const Sidebar = styled.aside`
 `
 
 const Title = styled.h1`
-  font-family: halyard-display, system-ui;
+  /* font-family: halyard-display, system-ui; */
   font-size: 3.5rem;
-  line-height: 1.1;
+  line-height: 1.25;
+  font-weight: bold;
   margin-bottom: 2rem;
 `
 
 const Meta = styled.dl`
-  font-family: halyard-text, system-ui;
   font-size: 1rem;
+  line-height: 1.75;
   color: #0d0d0d;
   margin-bottom: 2rem;
 `
 
 const Term = styled.dt`
   font-weight: bold;
+  margin-bottom: 0.5em;
   :not(:first-child) {
     margin-top: 1.5rem;
   }
 `
 
 const Def = styled.dd`
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
+`
+
+const Button = styled.a`
+  display: inline-block;
+  border: 1px solid #505050;
+  padding: 0.5em;
+  width: 8rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    border-color: #0d0d0d;
+  }
 `
 
 const Intro = styled.article`
-  font-family: halyard-text, system-ui;
   font-size: 1.125rem;
-  line-height: 1.666666667;
-  margin-top: calc(3.5rem + 1em);
+  line-height: 1.75;
+  /* margin-top: calc(4rem + 1em); */
   max-width: 28em;
-  justify-self: end;
+  justify-self: center;
   ${fadeInUp(800)};
 
   p + p {

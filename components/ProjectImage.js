@@ -27,9 +27,9 @@ const Figure = styled.figure`
 `
 
 const Caption = styled.figcaption`
-  font-family: halyard-micro, monospace;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: #505050;
   text-align: center;
-  margin-top: 1.25rem;
+  max-width: 75%;
+  margin: 1.25rem auto 0 auto;
 `
