@@ -19,7 +19,6 @@ export default class MyDocument extends Document {
         <Head>
           <MetaInfo />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="stylesheet" href="https://use.typekit.net/orr0eqr.css" />
           {this.props.styleTags}
         </Head>
         <body>
