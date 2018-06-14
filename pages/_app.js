@@ -38,6 +38,7 @@ injectGlobal`
   body {
     min-height: 100vh;
     border: 8px solid #0d0d0d;
+    border-image: linear-gradient(0deg, #F2C94C 5.52%, #EB5757 40.33%, #2F80ED 96.13%) 8;
   }
   
   ul,

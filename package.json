@@ -1,6 +1,6 @@
 {
   "name": "johnmeguerian.com",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "john meguerian's personal site",
   "main": "index.js",
   "scripts": {
