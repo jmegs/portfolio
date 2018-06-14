@@ -46,9 +46,7 @@ export default Project
 const Main = styled.main`
   max-width: 1440px;
   margin: 10vh auto 10vh auto;
-  @media (max-width: 960px) {
-    padding: 0 4vw;
-  }
+  padding: 0 4vw;
 `
 
 const Header = styled.header`
