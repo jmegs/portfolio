@@ -114,7 +114,7 @@ const Intro = styled.article`
   line-height: 1.75;
   /* margin-top: calc(4rem + 1em); */
   max-width: 28em;
-  justify-self: center;
+  justify-self: end;
   ${fadeInUp(800)};
 
   p + p {
