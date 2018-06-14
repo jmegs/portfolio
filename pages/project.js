@@ -69,10 +69,8 @@ const Sidebar = styled.aside`
 `
 
 const Title = styled.h1`
-  /* font-family: halyard-display, system-ui; */
   font-size: 3.5rem;
   line-height: 1.25;
-  font-weight: bold;
   margin-bottom: 2rem;
 `
 
