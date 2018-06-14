@@ -95,15 +95,17 @@ const Def = styled.dd`
 
 const Button = styled.a`
   display: inline-block;
-  border: 1px solid #505050;
-  padding: 0.5em;
+  background: #f1f1f1;
+  padding: 16px 24px;
+  border-radius: 4px;
   width: 8rem;
   text-align: center;
   text-decoration: none;
   color: inherit;
+  transition: background 250ms ease;
 
   &:hover {
-    border-color: #0d0d0d;
+    background: rgba(241, 241, 241, 0.6);
   }
 `
 
