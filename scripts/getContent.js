@@ -41,6 +41,7 @@ const getAllContent = async () => {
         role: item.role, //array
         results: item.results, //array
         link: item.link,
+        case: item.caseStudy, // link to video on dropbox
         intro: item.description, // markdown
         images: item.images.map(i => {
           // returns an array of objects

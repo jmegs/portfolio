@@ -21,6 +21,11 @@ const Project = ({ project }) => (
             Go See It
           </Button>
         )}
+        {project.case && (
+          <Button href={project.case} className="out-link">
+            Watch Case Study
+          </Button>
+        )}
       </Sidebar>
       <Intro>
         <Markdown>{project.intro}</Markdown>
