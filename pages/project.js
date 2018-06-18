@@ -101,7 +101,8 @@ const Button = styled.a`
   background: #f1f1f1;
   padding: 16px 24px;
   border-radius: 4px;
-  width: 8rem;
+  margin-right: auto;
+  margin-bottom: 1rem;
   text-align: center;
   text-decoration: none;
   color: inherit;
