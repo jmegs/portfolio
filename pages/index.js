@@ -43,12 +43,12 @@ class HomePage extends Component {
     // This giant list makes the writing down below actually readable.
     // =====================================================================
     const eqxLink = (
-      <Link href="#">
+      <Link href="https://johnmeguerianfor.squarespace.com/">
         <a
           onMouseEnter={() => this.swap(previews.eqx)}
           onMouseLeave={this.reset}
           children="personal training app"
-          className="disabled"
+          className="out"
         />
       </Link>
     )
@@ -88,12 +88,8 @@ class HomePage extends Component {
       />
     )
 
-    const portfolio = (
-      <a
-        href="https://github.com/jmegs/portfolio"
-        className="out"
-        children="personal website"
-      />
+    const tpl = (
+      <a href="https://github.com/jmegs/tpl" className="out" children="TPL" />
     )
 
     const github = (
@@ -127,13 +123,13 @@ class HomePage extends Component {
         <Text>
           <p>John Meguerian is a product designer and developer in NYC.</p>
           <p>
-            He’s recently made a {eqxLink} for Equinox and an interactive{' '}
+            His recent work includes a {eqxLink} for Equinox and an interactive{' '}
             {retailLink} and {dotcomLink} for Samsung.
           </p>
 
           <p>
-            He also works on development projects like {staticStarter},{' '}
-            {cssPosters}, and his {portfolio}.
+            He also works on development projects like {tpl}, {staticStarter},
+            and {cssPosters}.
           </p>
 
           <p>
@@ -169,7 +165,6 @@ const Main = styled.main`
   }
 `
 const Text = styled.article`
-  /* font-family: halyard-display, system-ui; */
   font-size: 4.8vw;
   line-height: 1.75;
   align-self: center;
@@ -196,7 +191,7 @@ const Text = styled.article`
 
   @media (min-width: 960px) {
     font-size: 1.6667vw;
-    max-width: 27.7778vw;
+    max-width: 29vw;
 
     p {
       margin-bottom: 2.2222222vh;
