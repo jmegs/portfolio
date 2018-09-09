@@ -43,7 +43,7 @@ class HomePage extends Component {
     // This giant list makes the writing down below actually readable.
     // =====================================================================
     const eqxLink = (
-      <Link href="https://johnmeguerianfor.squarespace.com/">
+      <Link href="https://johnmeguerianfor.squarespace.com/equinox-training">
         <a
           onMouseEnter={() => this.swap(previews.eqx)}
           onMouseLeave={this.reset}
