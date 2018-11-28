@@ -1,4 +1,4 @@
-// Fonts
+/* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poppins:300');
 
 @font-face {
@@ -7,7 +7,7 @@
     url('./fonts/recoleta-regular.woff') format('woff');
 }
 
-// Micro Reset
+/* Micro Reset */
 *,
 *:before,
 *:after {
@@ -35,15 +35,69 @@ img {
 }
 
 .big-serif {
+  max-width: 80%;
+
   font-family: Recoleta, serif;
   font-weight: 400;
+  font-size: responsive 25px 64px; /* min-size, max-size */
+  font-range: 420px 1600px; /* viewport widths between which */
 
   color: inherit;
 }
 
-main.dark-bg {
+main {
   height: 100vh;
+  padding: 3vmax;
+}
 
-  background: #0a0a0a;
-  color: #fff;
+nav {
+  margin-top: 50px;
+}
+
+nav a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+
+  transition: transform 400ms;
+}
+
+nav a .date {
+  color: #545454;
+
+  font-family: Poppins;
+}
+
+header {
+  padding-bottom: 124px;
+}
+
+header > img {
+  height: 24px;
+  width: 24px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: minmax(auto, 1fr) minmax(auto, 60ch) minmax(auto, 1fr);
+}
+
+.project-container h1 {
+  grid-column: 2;
+  margin-bottom: 32px;
+
+  font-size: responsive 40px 55px; /* min-size, max-size */
+  font-range: 375px 1600px; /* viewport widths between which */
+  font-family: Recoleta;
+}
+
+.project-container p {
+  grid-column: 2;
+  margin-bottom: 84px;
+  line-height: 1.8;
+}
+
+.project-container img {
+  grid-column: 1 / -1;
+  margin-bottom: 3vmax;
 }
