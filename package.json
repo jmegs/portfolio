@@ -1,26 +1,19 @@
 {
   "name": "johnmeguerian.com",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "description": "john meguerian's personal site",
-  "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "prebuild": "npm run content",
-    "build": "next build && next export",
-    "content": "node scripts/getContent.js"
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
   },
-  "keywords": [],
   "author": "jmegs",
   "license": "MIT",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.5.1",
-    "contentful": "^6.1.1",
-    "dotenv": "^6.0.0",
-    "markdown-to-jsx": "^6.6.6",
-    "next": "^6.0.3",
-    "prop-types": "^15.6.1",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "styled-components": "^3.3.0"
+    "parcel-bundler": "latest",
+    "autoprefixer": "latest",
+    "postcss-preset-env": "latest"
+  },
+  "devDependencies": {
+    "pug": "latest"
   }
 }
