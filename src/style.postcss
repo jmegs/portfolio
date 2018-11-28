@@ -1,0 +1,40 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:300');
+
+@font-face {
+  font-family: 'Recoleta';
+  src: url('./fonts/recoleta-regular.woff2') format('woff2'),
+    url('./fonts/recoleta-regular.woff') format('woff');
+}
+
+// Micro Reset
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+
+  font-size: 20px;
+  font-family: Poppins, system-ui, sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.big-serif {
+  font-family: Recoleta, serif;
+  font-weight: 400;
+}
