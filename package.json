@@ -11,7 +11,8 @@
   "dependencies": {
     "parcel-bundler": "latest",
     "autoprefixer": "latest",
-    "postcss-preset-env": "latest"
+    "postcss-preset-env": "latest",
+    "postcss-responsive-type": "latest"
   },
   "devDependencies": {
     "pug": "latest"
