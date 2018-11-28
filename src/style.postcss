@@ -39,15 +39,22 @@ img {
 
   font-family: Recoleta, serif;
   font-weight: 400;
-  font-size: responsive 25px 64px; /* min-size, max-size */
-  font-range: 420px 1600px; /* viewport widths between which */
+  font-size: responsive 25px 55px;
+  font-range: 375px 1600px;
 
   color: inherit;
 }
 
 main {
   height: 100vh;
+}
+
+.home-container {
+  color: #fff;
+  background: #0a0a0a;
+
   padding: 3vmax;
+  height: 100vh;
 }
 
 nav {
@@ -69,10 +76,10 @@ nav a .date {
 }
 
 header {
-  padding-bottom: 124px;
+  padding: 3vmax 3vmax 124px 3vmax;
 }
 
-header > img {
+header > a > img {
   height: 24px;
   width: 24px;
 }
@@ -80,21 +87,22 @@ header > img {
 .project-container {
   display: grid;
   grid-template-columns: minmax(auto, 1fr) minmax(auto, 60ch) minmax(auto, 1fr);
+
+  padding: 3vmax;
+  min-height: 100vh;
 }
 
 .project-container h1 {
   grid-column: 2;
   margin-bottom: 32px;
-
-  font-size: responsive 40px 55px; /* min-size, max-size */
-  font-range: 375px 1600px; /* viewport widths between which */
-  font-family: Recoleta;
 }
 
 .project-container p {
   grid-column: 2;
   margin-bottom: 84px;
   line-height: 1.8;
+  font-size: responsive 16px 20px; /* min-size, max-size */
+  font-range: 375px 1600px; /* viewport widths between which */
 }
 
 .project-container img {
