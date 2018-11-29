@@ -12,7 +12,7 @@ const images = [
 
 const SamsungProject = props => {
   return (
-    <ProjectGrid>
+    <ProjectGrid title="Samsung">
       <h1 className="big-serif">Samsung Entertainment Experience</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea

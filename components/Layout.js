@@ -1,11 +1,19 @@
+import Head from 'next/head'
+
 const Layout = props => (
   <div>
+    <Head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>{props.title ? `${props.title} | ` : ``}John Meguerian</title>
+    </Head>
     {props.children}
 
     <style jsx>{`
       div {
-        color: ${'dark' in props ? 'white' : '#0a0a0a'};
-        background: ${'dark' in props ? '#0a0a0a' : 'white'};
+        color: ${props.dark ? 'white' : '#0a0a0a'};
+        background: ${props.dark ? '#0a0a0a' : 'white'};
       }
     `}</style>
 

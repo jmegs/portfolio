@@ -3,7 +3,7 @@ import Back from './Back'
 
 const ProjectGrid = ({ children, ...props }) => {
   return (
-    <Layout>
+    <Layout title={props.title} dark={props.dark}>
       <Back />
       <div className="project">{children}</div>
       <style jsx>

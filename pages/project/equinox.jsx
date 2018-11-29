@@ -13,7 +13,7 @@ const images = [
 
 const EquinoxProject = props => {
   return (
-    <ProjectGrid>
+    <ProjectGrid title="Equinox">
       <h1 className="big-serif">Equinox Trainer App</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea
