@@ -3,19 +3,14 @@
   "version": "8.0.0",
   "description": "john meguerian's personal site",
   "scripts": {
-    "dev": "parcel src/index.pug",
-    "build": "parcel build src/index.pug"
+    "dev": "next",
+    "build": "next build && next export"
   },
   "author": "jmegs",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "latest",
-    "lazysizes": "^4.1.4",
-    "parcel-bundler": "latest",
-    "postcss-preset-env": "latest",
-    "postcss-responsive-type": "latest"
-  },
-  "devDependencies": {
-    "pug": "latest"
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   }
 }

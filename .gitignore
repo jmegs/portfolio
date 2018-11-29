@@ -4,9 +4,9 @@
 # Modules
 node_modules/
 
-# Build Specific
-.cache/
-dist/
+# Framework Specific
+.next/
+out/
 
 # Logs
 *.log
