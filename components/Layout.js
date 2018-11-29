@@ -17,6 +17,14 @@ const Layout = props => (
     `}</style>
 
     <style jsx global>{`
+      @import url('https://fonts.googleapis.com/css?family=Poppins:300');
+
+      @font-face {
+        font-family: 'Recoleta';
+        src: url('/static/fonts/recoleta-regular.woff2') format('woff2'),
+          url('/static/fonts/recoleta-regular.woff') format('woff');
+      }
+
       *,
       *:before,
       *:after {
