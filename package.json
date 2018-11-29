@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "next": "^7.0.2",
+    "next-page-transitions": "^1.0.0-alpha.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-lazyload": "^2.3.0",
