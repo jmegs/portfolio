@@ -1,4 +1,15 @@
 import ProjectGrid from '../../components/ProjectGrid'
+import ImageGallery from '../../components/ImageGallery'
+
+const images = [
+  '/static/equinox/eqx-home.jpg',
+  '/static/equinox/eqx-list.jpg',
+  '/static/equinox/eqx-cal.jpg',
+  '/static/equinox/eqx-mobile.jpg',
+  '/static/equinox/eqx-cards-small.jpg',
+  '/static/equinox/eqx-card-expanded.jpg',
+  '/static/equinox/eqx-goals.jpg'
+]
 
 const EquinoxProject = props => {
   return (
@@ -9,7 +20,7 @@ const EquinoxProject = props => {
         libero neque. Tempora fuga ipsa, dicta optio provident sed sunt.
         Voluptate porro deserunt ullam harum ratione modi expedita sint illum!
       </p>
-      <img src="https://via.placeholder.com/1440x880" alt="" />
+      <ImageGallery images={images} />
     </ProjectGrid>
   )
 }

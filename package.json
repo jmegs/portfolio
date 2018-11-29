@@ -11,6 +11,8 @@
   "dependencies": {
     "next": "^7.0.2",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "react-lazyload": "^2.3.0",
+    "react-reveal": "^1.2.2"
   }
 }

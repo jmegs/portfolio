@@ -44,11 +44,6 @@ const ProjectGrid = ({ children, ...props }) => {
               font-size: 16px;
             }
           }
-
-          .project img {
-            grid-column: 1 / -1;
-            margin-bottom: 3vmax;
-          }
         `}
       </style>
     </Layout>

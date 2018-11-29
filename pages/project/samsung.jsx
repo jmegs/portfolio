@@ -1,4 +1,14 @@
 import ProjectGrid from '../../components/ProjectGrid'
+import ImageGallery from '../../components/ImageGallery'
+
+const images = [
+  '/static/samsung/see-home.jpg',
+  '/static/samsung/see-stores.jpg',
+  '/static/samsung/see-analytics.jpg',
+  '/static/samsung/see-content.jpg',
+  '/static/samsung/see-touchscreen-home.jpg',
+  '/static/samsung/see-touchscreen-story.jpg'
+]
 
 const SamsungProject = props => {
   return (
@@ -9,7 +19,7 @@ const SamsungProject = props => {
         libero neque. Tempora fuga ipsa, dicta optio provident sed sunt.
         Voluptate porro deserunt ullam harum ratione modi expedita sint illum!
       </p>
-      <img src="https://via.placeholder.com/1440x880" alt="" />
+      <ImageGallery images={images} />
     </ProjectGrid>
   )
 }
