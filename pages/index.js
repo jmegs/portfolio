@@ -11,6 +11,13 @@ const HomePage = () => {
       </h1>
       <Projects />
       <Social />
+      <style jsx>
+        {`
+          h1 {
+            max-width: 40ch;
+          }
+        `}
+      </style>
     </Layout>
   )
 }
