@@ -14,12 +14,14 @@ const images = [
 const EquinoxProject = props => {
   return (
     <ProjectGrid title="Equinox">
-      <h1 className="big-serif">Equinox Trainer App</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea
-        libero neque. Tempora fuga ipsa, dicta optio provident sed sunt.
-        Voluptate porro deserunt ullam harum ratione modi expedita sint illum!
-      </p>
+      <header>
+        <h1 className="big-serif">Equinox Trainer App</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea
+          libero neque. Tempora fuga ipsa, dicta optio provident sed sunt.
+          Voluptate porro deserunt ullam harum ratione modi expedita sint illum!
+        </p>
+      </header>
       <ImageGallery images={images} />
     </ProjectGrid>
   )

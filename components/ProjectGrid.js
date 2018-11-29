@@ -19,16 +19,16 @@ const ProjectGrid = ({ children, ...props }) => {
       </style>
       <style jsx global>
         {`
-          .project h1,
-          .project p {
+          .project header {
             grid-column: 2;
+            margin-bottom: 64px;
           }
           .project h1 {
             margin-bottom: 32px;
           }
 
           .project p {
-            margin-bottom: 84px;
+            margin-bottom: 48px;
             font-size: calc(16px + 4 * ((100vw - 375px) / 1225));
             line-height: 1.8;
           }
