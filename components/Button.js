@@ -8,6 +8,8 @@ const Button = ({ children, href, ...props }) => {
           a {
             height: 56px;
             padding: 0px 64px;
+            margin-top: 12px;
+            margin-bottom: 12px;
             margin-left: 12px;
 
             background: white;

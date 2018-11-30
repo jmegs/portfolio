@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { easeOut } from './helpers/timing'
 
 const Back = () => {
   return (
@@ -21,14 +22,14 @@ const Back = () => {
               margin-right: 20px;
             }
             span {
-              font-size: 20px;
+              font-size: 18px;
               opacity: 0;
-              transform: translateX(-12px);
-              transition: all 500ms;
+              transform: translateX(-12px) scale(0.95);
+              transition: all 500ms ${easeOut};
               pointer-events: none;
             }
             a:hover span {
-              transform: translateX(0);
+              transform: translateX(0) scale(1);
               opacity: 1;
               pointer-events: all;
             }

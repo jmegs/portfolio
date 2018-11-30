@@ -1,3 +1,5 @@
+import { easeOut } from './helpers/timing'
+
 const AnimatedAnchor = props => {
   return (
     <a {...props}>
@@ -8,28 +10,31 @@ const AnimatedAnchor = props => {
           position: relative;
           color: inherit;
           text-decoration: none;
+          transform: scale(1) rotateZ(0);
+          transform-origin: left center;
+          transition: all 500ms ${easeOut};
+        }
+
+        a:hover {
+          transform: scale(1.06) rotateZ(-2deg);
         }
         a:before {
           content: '';
           position: absolute;
           height: 2px;
-          bottom: 0;
+          bottom: 8px;
           left: 0;
           background-color: white;
           visibility: hidden;
-          width: 1%;
-           {
-            /* transform: translateX(-100%); */
-          }
-          transition: all 300ms ease-in-out;
+          width: 100%;
+          transform: scaleX(0);
+          transition: all 500ms ${easeOut};
         }
 
         a:hover:before {
           visibility: visible;
           width: 100%;
-           {
-            /* transform: translateX(0); */
-          }
+          transform: scaleX(1);
         }
       `}</style>
     </a>

@@ -21,6 +21,14 @@ const SamsungProject = props => {
           libero neque. Tempora fuga ipsa, dicta optio provident sed sunt.
           Voluptate porro deserunt ullam harum ratione modi expedita sint illum!
         </p>
+        <small>
+          <ul>
+            Team
+            <li>Ben Downard – Design Director</li>
+            <li>Monica Jones – Product Manager</li>
+            <li>Frank Yandolink – Tech Lead</li>
+          </ul>
+        </small>
         <Button href="http://google.com">Visit</Button>
         <Button href="http://google.com">Other Button</Button>
       </header>

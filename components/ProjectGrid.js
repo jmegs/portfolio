@@ -21,14 +21,14 @@ const ProjectGrid = ({ children, ...props }) => {
         {`
           .project header {
             grid-column: 2;
-            margin-bottom: 64px;
+            margin-bottom: 48px;
           }
           .project h1 {
             margin-bottom: 32px;
           }
 
           .project p {
-            margin-bottom: 48px;
+            margin-bottom: 32px;
             font-size: calc(16px + 4 * ((100vw - 375px) / 1225));
             line-height: 1.8;
           }
@@ -43,6 +43,16 @@ const ProjectGrid = ({ children, ...props }) => {
             .project p {
               font-size: 16px;
             }
+          }
+
+          .project small {
+            font-size: 13px;
+            line-height: 22px;
+            color: #545454;
+          }
+
+          .project small ul {
+            margin-bottom: 32px;
           }
         `}
       </style>
