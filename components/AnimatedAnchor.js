@@ -13,6 +13,7 @@ const AnimatedAnchor = props => {
           transform: scale(1) rotateZ(0);
           transform-origin: left center;
           transition: all 500ms ${easeOut};
+          cursor: pointer;
         }
 
         a:hover {
