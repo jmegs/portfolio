@@ -1,15 +1,17 @@
 import Link from 'next/link'
+import AnimatedAnchor from './AnimatedAnchor'
 
 const ProjectLink = ({ href, label, date, ...props }) => {
   return (
     <Link href={href} prefetch>
-      <a>
+      <AnimatedAnchor>
         <span>{label}</span>
         <date>{date}</date>
         <style jsx>
           {`
             a {
               display: table;
+              position: relative;
               color: inherit;
               text-decoration: none;
             }
@@ -22,7 +24,7 @@ const ProjectLink = ({ href, label, date, ...props }) => {
             }
           `}
         </style>
-      </a>
+      </AnimatedAnchor>
     </Link>
   )
 }

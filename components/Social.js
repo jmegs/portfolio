@@ -1,5 +1,7 @@
+import AnimatedAnchor from './AnimatedAnchor'
+
 const ExternalLink = ({ href, label }) => (
-  <a href={href}>
+  <AnimatedAnchor href={href}>
     {label}
     <style jsx>{`
       a {
@@ -8,7 +10,7 @@ const ExternalLink = ({ href, label }) => (
         text-decoration: none;
       }
     `}</style>
-  </a>
+  </AnimatedAnchor>
 )
 
 const Social = () => (

@@ -14,7 +14,7 @@ const HomePage = () => {
       <style jsx>
         {`
           h1 {
-            max-width: 40ch;
+            max-width: 27ch;
           }
         `}
       </style>
