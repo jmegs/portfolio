@@ -1,11 +1,21 @@
 import Layout from './Layout'
 import Back from './Back'
+import Elevator from './Elevator'
+
+const scrollToTop = () => {
+  window.scroll({
+    top: 2500,
+    left: 0,
+    behavior: 'smooth'
+  })
+}
 
 const ProjectGrid = ({ children, ...props }) => {
   return (
     <Layout title={props.title} dark={props.dark}>
       <Back />
       <div className="project">{children}</div>
+      <Elevator />
       <style jsx>
         {`
           .project {
