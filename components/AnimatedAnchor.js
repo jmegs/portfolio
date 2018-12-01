@@ -15,27 +15,28 @@ const AnimatedAnchor = props => {
           transition: all 500ms ${easeOut};
           cursor: pointer;
         }
+        @media (min-width: 768px) {
+          a:hover {
+            transform: scale(1.06) rotateZ(-2deg);
+          }
+          a:before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            bottom: 8px;
+            left: 0;
+            background-color: white;
+            visibility: hidden;
+            width: 100%;
+            transform: scaleX(0);
+            transition: all 500ms ${easeOut};
+          }
 
-        a:hover {
-          transform: scale(1.06) rotateZ(-2deg);
-        }
-        a:before {
-          content: '';
-          position: absolute;
-          height: 2px;
-          bottom: 8px;
-          left: 0;
-          background-color: white;
-          visibility: hidden;
-          width: 100%;
-          transform: scaleX(0);
-          transition: all 500ms ${easeOut};
-        }
-
-        a:hover:before {
-          visibility: visible;
-          width: 100%;
-          transform: scaleX(1);
+          a:hover:before {
+            visibility: visible;
+            width: 100%;
+            transform: scaleX(1);
+          }
         }
       `}</style>
     </a>
