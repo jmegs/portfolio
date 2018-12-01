@@ -1,7 +1,5 @@
 import ProjectGrid from '../../components/ProjectGrid'
 import ImageGallery from '../../components/ImageGallery'
-// import Button from '../../components/Button'
-import ButtonBlock from '../../components/ButtonBlock'
 
 const images = [
   '/static/samsung/see-home.jpg',
@@ -19,8 +17,8 @@ const SamsungProject = props => {
         <h1 className="big-serif">Samsung Entertainment Experience</h1>
         <p>
           An interactive retail experience and custom analytics platform for
-          Samsung TVs deployed at 700+ stores. Doubled consumer understanding of
-          product features while maintaining 98% uptime.
+          Samsung TVs deployed at 1000+ stores nationwide. Doubled consumer
+          understanding of product features while maintaining 98% uptime.
         </p>
         <small>
           <ul>
