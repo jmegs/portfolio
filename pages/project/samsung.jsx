@@ -1,6 +1,7 @@
 import ProjectGrid from '../../components/ProjectGrid'
 import ImageGallery from '../../components/ImageGallery'
-import Button from '../../components/Button'
+// import Button from '../../components/Button'
+import ButtonBlock from '../../components/ButtonBlock'
 
 const images = [
   '/static/samsung/see-home.jpg',
@@ -29,8 +30,12 @@ const SamsungProject = props => {
             <li>Frank Yandolink – Tech Lead</li>
           </ul>
         </small>
-        <Button href="http://google.com">Visit</Button>
-        <Button href="http://google.com">Other Button</Button>
+        <ButtonBlock
+          items={[
+            { href: 'https://google.com', label: 'Google' },
+            { href: 'https://squarespace.com', label: 'Squarespace' }
+          ]}
+        />
       </header>
       <ImageGallery images={images} />
     </ProjectGrid>
