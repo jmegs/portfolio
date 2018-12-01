@@ -4,7 +4,7 @@
 # Modules
 node_modules/
 
-# Next Specific
+# Framework Specific
 .next/
 out/
 

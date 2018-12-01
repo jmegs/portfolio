@@ -1,53 +1,17 @@
-# John's Personal Site
+# johnmeguerian.com
 
-This site is built with [nextjs](http://nextjs.org) and fetches content from [Contentful](https://contentful.com) at build time.
+Welcome to the innards of my website.
 
-## Setup
+# The Stack
 
-```sh
-# clone the repo
-git clone https://github.com/jmegs/portfolio.git
-```
+- Next.js - React app exported as a static website.
+- styled-jsx – CSS in JS solution that comes for free with Next.
+- Netlify – Miraculously easy, miraculously free hosting.
 
-```sh
-# cd into it
-cd portfolio
-```
+# Running Locally
 
 ```sh
-# install dependencies
-npm i
+yarn install # install deps
+yarn dev # run site locally
+yarn build # export static assets to out/
 ```
-
-## Workflow
-
-Run `npm run dev` to boot up the development environment.
-
-To pull content changes from contentful `npm run content`.
-
-Static routes are defined in `next.config.js` which work on both client and server.
-
-To output a static site, use `npm run build`. This will run the `content` script first to ensure we have the latest changes.
-
-## Environment Variables
-
-### For Development
-
-Create a `.env` file at the root of the project containing the following. This will be ignored by git.
-
-```
-CONTENTFUL_SPACE=<your-space-id>
-CONTENTFUL_TOKEN=<your-access-token>
-```
-
-### For Production
-
-If you are deploying to Netlify, create the following in Settings > Build and Deploy > Build Environment Variables.
-
-```
-CONTENTFUL_SPACE=<your-space-id>
-CONTENTFUL_TOKEN=<your-access-token>
-GA_TRACKING_ID=<your-google-analytics-id>
-```
-
-If using another host, refer to their documentation for how to handle secret variables.
