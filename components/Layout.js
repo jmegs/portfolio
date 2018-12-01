@@ -7,6 +7,10 @@ const Layout = props => (
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <title>{props.title ? `${props.title} | ` : ``}John Meguerian</title>
+      <meta
+        name="description"
+        content="Product designer and occasional developer in NYC. Currently working at Squarespace. Formerly Experience Design at R/GA."
+      />
     </Head>
     {props.children}
 
