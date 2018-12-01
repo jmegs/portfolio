@@ -18,24 +18,19 @@ const SamsungProject = props => {
       <header>
         <h1 className="big-serif">Samsung Entertainment Experience</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea
-          libero neque. Tempora fuga ipsa, dicta optio provident sed sunt.
-          Voluptate porro deserunt ullam harum ratione modi expedita sint illum!
+          An interactive retail experience and custom analytics platform for
+          Samsung TVs deployed at 700+ stores. Doubled consumer understanding of
+          product features while maintaining 98% uptime.
         </p>
         <small>
           <ul>
             Team
-            <li>Ben Downard – Design Director</li>
-            <li>Monica Jones – Product Manager</li>
-            <li>Frank Yandolink – Tech Lead</li>
+            <li>Kai Tier – Tech Lead</li>
+            <li>Liz Watts – Project Manager</li>
+            <li>Jodha Kandola – QA Lead</li>
+            <li>James Dick – Content Lead</li>
           </ul>
         </small>
-        <ButtonBlock
-          items={[
-            { href: 'https://google.com', label: 'Google' },
-            { href: 'https://squarespace.com', label: 'Squarespace' }
-          ]}
-        />
       </header>
       <ImageGallery images={images} />
     </ProjectGrid>

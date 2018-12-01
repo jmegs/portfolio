@@ -50,8 +50,8 @@ const Button = ({ href, label, ...props }) => (
 const ButtonBlock = ({ items }) => {
   return (
     <div>
-      {items.map(item => (
-        <Button href={item.href} label={item.label} />
+      {items.map((item, idx) => (
+        <Button href={item.href} label={item.label} key={idx} />
       ))}
       <style jsx>
         {`

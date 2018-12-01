@@ -17,16 +17,17 @@ const EquinoxProject = props => {
       <header>
         <h1 className="big-serif">Equinox Trainer App</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea
-          libero neque. Tempora fuga ipsa, dicta optio provident sed sunt.
-          Voluptate porro deserunt ullam harum ratione modi expedita sint illum!
+          A personal training management platform, getting Equinox trainers off
+          of spreadsheets and onto a custom built progressive web app where they
+          can set schedules, build fitness programs, and set and track client
+          goals.
         </p>
         <small>
           <ul>
             Team
             <li>Ben Downard – Design Director</li>
             <li>Monica Jones – Product Manager</li>
-            <li>Frank Yandolink – Tech Lead</li>
+            <li>Frank Yandolino – Tech Lead</li>
           </ul>
         </small>
       </header>
