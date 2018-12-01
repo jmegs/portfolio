@@ -11,6 +11,7 @@ const Layout = props => (
         name="description"
         content="Product designer and occasional developer in NYC. Currently working at Squarespace. Formerly Experience Design at R/GA."
       />
+      <link rel="icon" href="/static/emoji.png" type="image/png" />
     </Head>
     {props.children}
 
