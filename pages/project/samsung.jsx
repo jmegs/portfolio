@@ -17,8 +17,10 @@ const SamsungProject = props => {
         <h1 className="big-serif">Samsung Entertainment Experience</h1>
         <p>
           An interactive retail experience and custom analytics platform for
-          Samsung TVs deployed at 1000+ stores nationwide. Doubled consumer
-          understanding of product features while maintaining 98% uptime.
+          Samsung TVs deployed at 1000+ stores nationwide. The projected
+          involved a unique mix of interface design in both hardware and
+          software. The new experience doubled consumer understanding of product
+          features while maintaining 98% uptime.
         </p>
         <small>
           <ul>
