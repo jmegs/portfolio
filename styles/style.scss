@@ -1,0 +1,88 @@
+// Animation Timing Curves
+$easeIn: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOut: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOut: cubic-bezier(1, 0, 0, 1);
+
+$black: #0a0a0a;
+$white: white;
+
+// Page Transition
+.page-transition-enter {
+  opacity: 0;
+}
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 800ms $easeInOut;
+}
+.page-transition-exit {
+  opacity: 1;
+}
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 800ms $easeInOut;
+}
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:300');
+
+@font-face {
+  font-family: 'Recoleta';
+  src: url('/static/fonts/recoleta-regular.woff2') format('woff2'),
+    url('/static/fonts/recoleta-regular.woff') format('woff');
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 20px;
+  font-family: Poppins, system-ui;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.big-serif {
+  font-family: Recoleta, serif;
+  font-weight: 400;
+  font-size: calc(25px + 30 * ((100vw - 375px) / 1225));
+  color: inherit;
+}
+
+@media screen and (min-width: 1600px) {
+  .big-serif {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .big-serif {
+    font-size: 25px;
+  }
+}
+
+.layout {
+  min-height: 100vh;
+  padding: 3vmax;
+  color: $black;
+  background: $white;
+}
+
+.layout.dark {
+  color: $white;
+  background: $black;
+}
