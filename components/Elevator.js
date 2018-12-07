@@ -1,5 +1,4 @@
 import { Component } from 'react'
-import { easeOut } from './helpers/timing'
 
 const Icon = () => (
   <svg
@@ -22,53 +21,9 @@ class Elevator extends Component {
   render() {
     return (
       <div className="elevator" onClick={this.scrollToTop}>
-        <span className="before">Scroll</span>
+        <span className="elevator__before">Scroll</span>
         <Icon />
-        <span className="after">to Top</span>
-        <style jsx>
-          {`
-            .elevator {
-              display: grid;
-              grid-template-columns: 1fr 24px 1fr;
-              grid-column-gap: 12px;
-
-              cursor: pointer;
-
-              font-size: 18px;
-              text-align: center;
-            }
-
-            span.before {
-              justify-self: end;
-            }
-
-            span.after {
-              justify-self: start;
-            }
-
-            @media (min-width: 768px) {
-              span.before {
-                opacity: 0;
-                transform: translateX(12px) scale(0.95);
-                transition: all 500ms ${easeOut};
-                pointer-events: none;
-              }
-
-              span.after {
-                opacity: 0;
-                transform: translateX(-12px) scale(0.95);
-                transition: all 500ms ${easeOut};
-                pointer-events: none;
-              }
-
-              .elevator:hover span {
-                transform: translateX(0) scale(1);
-                opacity: 1;
-                pointer-events: all;
-              }
-            }
-          `}
-        </style>
+        <span className="elevator__after">to Top</span>
       </div>
     )
   }

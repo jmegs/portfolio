@@ -5,19 +5,12 @@ import Social from '../components/Social'
 const HomePage = () => {
   return (
     <Layout dark>
-      <h1 className="big-serif">
+      <h1 className="big-serif home-title">
         John Meguerian is a product designer and occasional developer in NYC.
         Currently at Squarespace.
       </h1>
       <Projects />
       <Social />
-      <style jsx>
-        {`
-          h1 {
-            max-width: 27ch;
-          }
-        `}
-      </style>
     </Layout>
   )
 }
