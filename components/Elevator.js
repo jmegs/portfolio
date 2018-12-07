@@ -1,5 +1,4 @@
 import { Component } from 'react'
-import { easeOut } from './helpers/timing'
 
 const Icon = () => (
   <svg

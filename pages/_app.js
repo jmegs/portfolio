@@ -1,7 +1,6 @@
 import App, { Container } from 'next/app'
 import React from 'react'
 import { PageTransition } from 'next-page-transitions'
-import { easeInOut } from '../components/helpers/timing'
 
 import '../styles/style.scss'
 
