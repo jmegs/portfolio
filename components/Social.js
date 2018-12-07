@@ -1,5 +1,3 @@
-import AnimatedAnchor from './AnimatedAnchor'
-
 const ExternalLink = ({ href, label }) => (
   <a className="animated-anchor social-link" href={href}>
     {label}
