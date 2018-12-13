@@ -24,12 +24,12 @@ $mid-gray: #545454;
 }
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Poppins:300');
+@import url("https://fonts.googleapis.com/css?family=Poppins:300");
 
 @font-face {
-  font-family: 'Recoleta';
-  src: url('/static/fonts/recoleta-regular.woff2') format('woff2'),
-    url('/static/fonts/recoleta-regular.woff') format('woff');
+  font-family: "Recoleta";
+  src: url("/static/fonts/recoleta-regular.woff2") format("woff2"),
+    url("/static/fonts/recoleta-regular.woff") format("woff");
 }
 
 *,
@@ -99,17 +99,13 @@ h1.home-title {
   position: relative;
   color: inherit;
   text-decoration: none;
-  transform: scale(1) rotateZ(0);
-  transform-origin: left center;
+
   transition: all 500ms $easeOut;
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  .animated-anchor:hover {
-    transform: scale(1.06) rotateZ(-2deg);
-  }
   .animated-anchor:before {
-    content: '';
+    content: "";
     position: absolute;
     height: 2px;
     bottom: 8px;
