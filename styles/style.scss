@@ -5,7 +5,7 @@ $easeInOut: cubic-bezier(1, 0, 0, 1);
 
 $black: #0a0a0a;
 $white: white;
-$mid-gray: #545454;
+$mid-gray: #808080;
 
 // Page Transition
 .page-transition-enter {
@@ -28,6 +28,7 @@ $mid-gray: #545454;
 
 @font-face {
   font-family: "Recoleta";
+  font-display: swap;
   src: url("/static/fonts/recoleta-regular.woff2") format("woff2"),
     url("/static/fonts/recoleta-regular.woff") format("woff");
 }
