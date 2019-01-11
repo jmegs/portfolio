@@ -1,7 +1,7 @@
 @import '_reset.css';
 
 :root {
-  --unit: 9vmin;
+  --unit: 10vmin;
 }
 
 body {
