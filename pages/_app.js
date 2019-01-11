@@ -16,12 +16,24 @@ export default class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps, router } = this.props
+
+    // adds each component of the pathname as a class on the page
+    const isHome = router.pathname === '/'
+    const pageClasses = isHome
+      ? 'home'
+      : router.pathname
+          .split('/')
+          .splice(1)
+          .join(' ')
+
     return (
       <Container>
-        <PageTransition timeout={400} classNames="page-transition">
-          <Component {...pageProps} />
-        </PageTransition>
+        <div className={pageClasses}>
+          <PageTransition timeout={240} classNames="page-transition">
+            <Component {...pageProps} />
+          </PageTransition>
+        </div>
       </Container>
     )
   }
