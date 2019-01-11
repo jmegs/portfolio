@@ -2,7 +2,7 @@ import App, { Container } from 'next/app'
 import React from 'react'
 import { PageTransition } from 'next-page-transitions'
 
-import '../styles/style.scss'
+import '../styles/style.css'
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
