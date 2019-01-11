@@ -1,6 +1,8 @@
-const withCSS = require('@zeit/next-css')
+const withPlugins = require('next-compose-plugins')
+const css = require('@zeit/next-css')
+const mdx = require('@zeit/next-mdx')({ extension: /\.mdx?$/ })
 
-module.exports = withCSS({
+const nextConfig = {
   webpack: config => {
     // Fixes npm packages that depend on 'fs' module
     config.node = {
@@ -8,5 +10,8 @@ module.exports = withCSS({
     }
 
     return config
-  }
-})
+  },
+  pageExtensions: ['js', 'jsx', 'mdx']
+}
+
+module.exports = withPlugins([mdx, css], nextConfig)
