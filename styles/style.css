@@ -35,5 +35,8 @@ p {
 }
 
 .elevator {
+  display: block;
+  text-decoration: underline;
+  margin-top: calc(var(--unit) / 4);
   cursor: pointer;
 }
