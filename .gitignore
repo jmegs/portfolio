@@ -4,12 +4,12 @@
 # Modules
 node_modules/
 
-# Framework Specific
-.next/
-out/
+# Output
+dist/
 
 # Logs
 *.log
+npm-debug.log*
 
 # Secrets
 .env
