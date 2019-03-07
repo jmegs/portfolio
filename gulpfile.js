@@ -63,7 +63,7 @@ function fonts() {
 }
 
 function generate() {
-  return exec("'eleventy' --input=src --output=dist", error => {
+  return exec('eleventy', (error, stdout, stderr) => {
     if (error) {
       console.error(error)
       return
