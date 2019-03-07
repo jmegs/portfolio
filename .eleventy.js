@@ -8,6 +8,7 @@ module.exports = function(config) {
 
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.html')
+  config.addLayoutAlias('project', 'layouts/project.html')
 
   // return the config object
   return {
