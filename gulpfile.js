@@ -18,6 +18,14 @@ const input = {
   site: `src/**/*`
 }
 
+const output = {
+  js: `dist/js`,
+  css: `dist/css`,
+  fonts: `dist/fonts`,
+  img: `dist/img`,
+  site: `dist`
+}
+
 // clean the output directory
 function clean() {
   return del([`dist`])
@@ -26,7 +34,7 @@ function clean() {
 // @TODO decide on script strategy
 function scripts() {
   return src(input.js)
-    .pipe(dest(`dist/js`))
+    .pipe(dest(output.js))
     .pipe(bs.stream())
 }
 
@@ -36,7 +44,7 @@ function styles() {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([cssEnv({ stage: 0 })]))
-    .pipe(dest(`dist/css`))
+    .pipe(dest(output.css))
     .pipe(bs.stream())
 }
 
@@ -45,13 +53,13 @@ function images() {
     src(input.img)
       // @TODO Minify
       .pipe(plumber())
-      .pipe(dest(`dist/img`))
+      .pipe(dest(output.img))
       .pipe(bs.stream())
   )
 }
 
 function fonts() {
-  return src(input.fonts).pipe(dest(`dist/fonts`))
+  return src(input.fonts).pipe(dest(output.fonts))
 }
 
 function generate() {
@@ -63,18 +71,6 @@ function generate() {
     bs.reload()
   })
 }
-// function generate() {
-//   return exec('eleventy').on('close', code => {
-//     if (code === 0) {
-//       bs.reload()
-//       done()
-//     } else {
-//       console.error(`build failed with code ${code}`)
-//       bs.notify('build failed 😞')
-//       done()
-//     }
-//   })
-// }
 
 function serve() {
   bs.init({ server: `dist` })
@@ -85,9 +81,6 @@ function serve() {
   watch(input.site, generate)
 }
 
-// const assets = parallel(scripts, styles, fonts, images)
-// export const dev = series(clean, generate, assets, serve)
-// export const build = series(clean, generate, assets)
 exports.build = series(
   clean,
   generate,
