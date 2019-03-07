@@ -17,14 +17,16 @@ layout: default
   <img src="" alt="" />
 </section>
 <section>
-  <h2></h2>
+  <h2>Experiments and Open Source</h2>
   <ul>
     <!-- for thing in experiments -->
+    {% for entry in experiments %}
     <li>
-      <h3></h3>
-      <p></p>
-      <a href=""></a>
-      <a href=""></a>
+      <h3>{{ entry.name }}</h3>
+      <p>{{ entry.desc }}</p>
+      <a href="{{ entry.link }}">View →</a>
+      <a href="{{ entry.source }}">Source Code →</a>
     </li>
+    {% endfor %}
   </ul>
 </section>
