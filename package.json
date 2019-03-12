@@ -1,6 +1,6 @@
 {
   "name": "johnmeguerian.com",
-  "version": "9.0",
+  "version": "9.0.0",
   "description": "john meguerian's personal site",
   "scripts": {
     "dev": "gulp",
