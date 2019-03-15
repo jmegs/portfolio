@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'nav';
 
+// design tokens
 :root {
   --body: #171a27;
   --background: #ffffff;
@@ -13,8 +14,74 @@
   --light-accent: #fbf9f4;
 }
 
+@font-display: Ivymode, Ogg, Optima, system-ui;
+@font-sans: Mynor, system-ui;
+@font-mono: 'Sometype Mono', Monaco, Consolas, Menlo, monospace;
+
+.heading-xl {
+  font-family: @font-display;
+  font-size: 16.7rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.heading-lg {
+  font-family: @font-display;
+  font-size: 9.6rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.heading-md {
+  font-family: @font-display;
+  font-size: 5.6rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.heading-sm-display {
+  font-family: @font-display;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.heading-sm-sans {
+  font-family: @font-sans;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.text-body {
+  font-family: @font-sans;
+  font-size: 1.7rem;
+  line-height: 1.76;
+  color: inherit;
+}
+
+.text-meta {
+  font-family: @font-mono;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: var(--grey-dark);
+}
+
+.link-internal {
+  font-family: @font-sans;
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary);
+
+  &::after {
+    content: '→';
+    font-family: inherit;
+  }
+}
+
 body {
   padding: 5vmin;
   background: var(--background);
   color: var(--body);
+  font-family: @font-sans;
 }
