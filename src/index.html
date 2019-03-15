@@ -4,41 +4,38 @@ id: home
 ---
 
 <header>
-  <h1>John Meguerian</h1>
-  <p>
+  <h1 class="heading-xl">John Meguerian</h1>
+  <p class="text-body">
     Product designer and occasional developer, currently building tools for
     creative expression at <a href="https://squarespace.com">Squarespace</a>.
   </p>
 </header>
 <section>
-  <h2>
-    <a href="/projects/equinox">
-      Equinox Personal Training
-    </a>
+  <h2 class="heading-md">
+    Equinox Personal Training
   </h2>
-  <p>Web App<br />2018</p>
+  <p class="text-body">Web App<br />2 018</p>
+  <a href="/projects/equinox" class="link-internal">View</a>
 </section>
 <section>
-  <h2>
-    <a href="/projects/samsung">
-      Samsung Retail Experience
-    </a>
+  <h2 class="heading-md">
+    Samsung Retail Experience
   </h2>
-  <p>
+  <p class="text-body">
     In-store Experiece, Web Dashboard <br />
     2017
   </p>
+  <a href="/projects/samsung" class="link-internal">View</a>
 </section>
 <section>
-  <h2>Experiments and Open Source</h2>
   <ul>
     <!-- for thing in experiments -->
     {% for entry in experiments %}
     <li>
-      <h3>{{ entry.name }}</h3>
-      <p>{{ entry.desc }}</p>
-      <a href="{{ entry.link }}">View →</a>
-      <a href="{{ entry.source }}">Source Code →</a>
+      <h3 class="heading-sm-sans">{{ entry.name }}</h3>
+      <p class="text-body">{{ entry.desc }}</p>
+      <a href="{{ entry.link }}" class="link-internal">View</a>
+      <a href="{{ entry.source }}" class="link-internal">Source Code</a>
     </li>
     {% endfor %}
   </ul>
