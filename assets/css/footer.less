@@ -1,0 +1,31 @@
+footer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'links links'
+    'copyright scroll';
+  padding: 12.8rem 12.8rem 6.4rem;
+}
+
+.footer-social-links {
+  grid-area: links;
+  margin-bottom: 2.4rem;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.footer-copyright {
+  grid-area: copyright;
+}
+
+.footer-scroll {
+  grid-area: scroll;
+  justify-self: end;
+}

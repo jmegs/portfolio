@@ -1,92 +1,70 @@
 @import 'base';
 @import 'fonts';
+@import 'design';
 @import 'nav';
+@import 'footer';
 
-// design tokens
-:root {
-  --body: #171a27;
-  --background: #ffffff;
-  --grey-dark: #535663;
-  --grey-mid: #dddfe5;
-  --grey-light: #f8f8f9;
-  --primary: #4c67eb;
-  --dark-accent: #363017;
-  --light-accent: #fbf9f4;
+.grid-4 {
+  display: grid;
+  grid-template-columns: [outer-start col1] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [outer-end];
+  padding: 12.8rem;
 }
 
-@font-display: Ivymode, Ogg, Optima, system-ui;
-@font-sans: Mynor, system-ui;
-@font-mono: 'Sometype Mono', Monaco, Consolas, Menlo, monospace;
-
-.heading-xl {
-  font-family: @font-display;
-  font-size: 16.7rem;
-  line-height: 1;
-  color: inherit;
-  font-weight: normal;
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.heading-lg {
-  font-family: @font-display;
-  font-size: 9.6rem;
-  line-height: 1;
-  color: inherit;
-  font-weight: normal;
-}
+.bordered-grid {
+  border-top: 2px solid var(--grey-light);
+  & > * {
+    border-bottom: 2px solid var(--grey-light);
+  }
 
-.heading-md {
-  font-family: @font-display;
-  font-size: 5.6rem;
-  line-height: 1;
-  color: inherit;
-  font-weight: normal;
-}
+  & > :nth-child(odd) {
+    border-right: 2px solid var(--grey-light);
+  }
 
-.heading-sm-display {
-  font-family: @font-display;
-  font-size: 2.8rem;
-  line-height: 1;
-  color: inherit;
-  font-weight: normal;
-}
+  &--cell-lg {
+    padding: 12.8rem 8rem 12.8rem 12.8rem;
+  }
 
-.heading-sm-sans {
-  font-family: @font-sans;
-  font-size: 2.8rem;
-  line-height: 1;
-  color: inherit;
-  font-weight: 300;
-}
-
-.text-body {
-  font-family: @font-sans;
-  font-size: 1.7rem;
-  line-height: 1.76;
-  color: inherit;
-}
-
-.text-mono {
-  font-family: @font-mono;
-  font-size: 1.6rem;
-  line-height: 1.3;
-  color: var(--grey-dark);
-}
-
-.link-internal {
-  font-family: @font-sans;
-  color: var(--primary);
-  text-decoration: none;
-  border-bottom: 2px solid var(--primary);
-
-  &::after {
-    content: '→';
-    font-family: inherit;
+  &--cell {
+    padding: 8rem 8rem 8rem 12.8rem;
   }
 }
 
 body {
-  padding: 5vmin;
   background: var(--background);
   color: var(--body);
   font-family: @font-sans;
+  max-width: 136.6rem;
+  margin: 0 auto;
+}
+
+#home {
+  header h1 {
+    grid-column: col2 / outer-end;
+    margin-bottom: 8rem;
+  }
+
+  header p {
+    grid-column: col3 / col4;
+  }
+
+  .project h2 {
+    margin-bottom: 8rem;
+  }
+
+  .project p {
+    margin-bottom: 3.2rem;
+  }
+
+  .experiment h3 {
+    margin-bottom: 0.8rem;
+  }
+
+  .experiment p {
+    margin-bottom: 1.2rem;
+  }
 }

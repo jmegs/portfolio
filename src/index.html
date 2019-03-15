@@ -3,35 +3,35 @@ layout: default
 id: home
 ---
 
-<header>
+<header class="grid-4">
   <h1 class="heading-xl">John Meguerian</h1>
   <p class="text-body">
-    Product designer and occasional developer, currently building tools for
-    creative expression at <a href="https://squarespace.com">Squarespace</a>.
+    Product designer and occasional developer at
+    <a href="https://squarespace.com">Squarespace</a> NYC
   </p>
 </header>
 <section>
-  <h2 class="heading-md">
-    Equinox Personal Training
-  </h2>
-  <p class="text-body">Web App<br />2 018</p>
-  <a href="/projects/equinox" class="link-internal">View</a>
-</section>
-<section>
-  <h2 class="heading-md">
-    Samsung Retail Experience
-  </h2>
-  <p class="text-body">
-    In-store Experiece, Web Dashboard <br />
-    2017
-  </p>
-  <a href="/projects/samsung" class="link-internal">View</a>
-</section>
-<section>
-  <ul>
+  <ul class="grid-2 bordered-grid">
+    <li class="bordered-grid--cell-lg project">
+      <h2 class="heading-md">
+        Equinox Personal Training
+      </h2>
+      <p class="text-body">Web App<br />2018</p>
+      <a href="/projects/equinox" class="link-internal">View</a>
+    </li>
+    <li class="bordered-grid--cell-lg project">
+      <h2 class="heading-md">
+        Samsung Retail Experience
+      </h2>
+      <p class="text-body">
+        In-store Experiece, Web Dashboard <br />
+        2017
+      </p>
+      <a href="/projects/samsung" class="link-internal">View</a>
+    </li>
     <!-- for thing in experiments -->
     {% for entry in experiments %}
-    <li>
+    <li class="bordered-grid--cell experiment">
       <h3 class="heading-sm-sans">{{ entry.name }}</h3>
       <p class="text-body">{{ entry.desc }}</p>
       <a href="{{ entry.link }}" class="link-internal">View</a>
