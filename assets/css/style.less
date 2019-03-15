@@ -68,3 +68,35 @@ body {
     margin-bottom: 1.2rem;
   }
 }
+
+.post-header-title {
+  grid-column: outer-start / outer-end;
+  margin-bottom: 8rem;
+}
+
+.post-header-meta {
+  grid-column: col3 / col4;
+}
+
+.post-content {
+  display: grid;
+  grid-template-columns:
+    [page-start]
+    1fr
+    [main-start]
+    minmax(auto, 68.3rem)
+    [main-end]
+    1fr
+    [page-end];
+  margin: 0;
+}
+
+.post-content img {
+  grid-column: page-start / page-end;
+  margin: 3.2rem 0 6.4rem;
+}
+
+.post-content > :not(img) {
+  grid-column: main-start / main-end;
+  margin-bottom: 3.2rem;
+}

@@ -2,9 +2,16 @@
 layout: default
 ---
 
-<article>
-  <h1>
-    {{ title }}<span>{{ year }}</span>
-  </h1>
-  {{ content }}
+<article id="post {{ id }}">
+  <header class="grid-4 post-header">
+    <h1 class="post-header-title heading-lg">
+      {{ title }}
+    </h1>
+    <p class="post-header-meta text-mono">
+      {{ meta }}
+    </p>
+  </header>
+  <section class="post-content">
+    {{ content }}
+  </section>
 </article>

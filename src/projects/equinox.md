@@ -1,6 +1,7 @@
 ---
 title: A personal training management platform for Equinox
-year: 2018
+meta: Web App · 2018
+id: equinox
 ---
 
 ![bleep de bloop blop](https://ddrsspkp4lsq7.cloudfront.net/assets/case-study/n-synth/nsynth-2.jpg)
