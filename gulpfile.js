@@ -12,7 +12,7 @@ const bs = require('browser-sync')
 // where are source files
 const input = {
   js: `assets/js/**/*`,
-  css: `assets/css/**/[^_]*`,
+  css: `assets/css/**/*`,
   fonts: `assets/fonts/**/*`,
   img: `assets/img/**/*`,
   site: `src/**/*`
@@ -40,7 +40,7 @@ function scripts() {
 
 // compile styles
 function styles() {
-  return src(input.css)
+  return src([input.css, '!**/_*'])
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([cssEnv({ stage: 0 })]))
