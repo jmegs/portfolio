@@ -18,6 +18,10 @@
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 96rem) {
+    display: block;
+  }
 }
 
 .bordered-grid {
@@ -27,15 +31,25 @@
   }
 
   & > :nth-child(odd) {
-    border-right: 2px solid var(--grey-light);
+    @media (min-width: 96rem) {
+      border-right: 2px solid var(--grey-light);
+    }
   }
 
   &--cell-lg {
     padding: 12.8rem 8rem 12.8rem 12.8rem;
+
+    @media (max-width: 96rem) {
+      padding: 8vmin;
+    }
   }
 
   &--cell {
     padding: 8rem 8rem 8rem 12.8rem;
+
+    @media (max-width: 96rem) {
+      padding: 8vmin;
+    }
   }
 }
 
