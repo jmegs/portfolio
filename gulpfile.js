@@ -12,7 +12,7 @@ const bs = require('browser-sync')
 // where are source files
 const input = {
   js: `assets/js/**/*`,
-  css: `assets/css/**/*`,
+  css: `assets/css/**/[^_]*`,
   fonts: `assets/fonts/**/*`,
   img: `assets/img/**/*`,
   site: `src/**/*`
