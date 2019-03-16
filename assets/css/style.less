@@ -8,6 +8,11 @@
   display: grid;
   grid-template-columns: [outer-start col1] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [outer-end];
   padding: 12.8rem;
+
+  @media (max-width: 96rem) {
+    padding: 8vmin;
+    display: block;
+  }
 }
 
 .grid-2 {
@@ -46,6 +51,10 @@ body {
   header h1 {
     grid-column: col2 / outer-end;
     margin-bottom: 8rem;
+
+    @media (max-width: 118rem) {
+      grid-column-start: outer-start;
+    }
   }
 
   header p {
