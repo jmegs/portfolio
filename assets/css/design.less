@@ -1,13 +1,34 @@
 // design tokens
+
+@body: #171a27;
+@background: #ffffff;
+@grey-dark: #535663;
+@grey-mid: #dddfe5;
+@grey-light: #f8f8f9;
+@primary: #4c67eb;
+@dark-accent: #363017;
+@light-accent: #fbf9f4;
+
 :root {
-  --body: #171a27;
-  --background: #ffffff;
-  --grey-dark: #535663;
-  --grey-mid: #dddfe5;
-  --grey-light: #f8f8f9;
-  --primary: #4c67eb;
-  --dark-accent: #363017;
-  --light-accent: #fbf9f4;
+  --body: @body;
+  --background: @background;
+  --grey-dark: @grey-dark;
+  --grey-mid: @grey-mid;
+  --grey-light: @grey-light;
+  --primary: @primary;
+  --dark-accent: @dark-accent;
+  --light-accent: @light-accent;
+
+  --font-display: Ivymode, Ogg, Optima, system-ui;
+  --font-sans: Mynor, system-ui;
+  --font-mono: 'Sometype Mono', Monaco, Consolas, Menlo, monospace;
+}
+
+.dark-mode {
+  --body: @background;
+  --background: @body;
+  --grey-light: @grey-dark;
+  --grey-dark: @grey-light;
 }
 
 @font-display: Ivymode, Ogg, Optima, system-ui;
