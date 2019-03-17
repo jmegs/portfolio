@@ -8,7 +8,9 @@
   },
   "author": "jmegs",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "lazysizes": "^4.1.6"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.7.1",
     "del": "^4.0.0",
