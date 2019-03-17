@@ -7,11 +7,13 @@ const less = require('gulp-less')
 const postcss = require('gulp-postcss')
 const cssEnv = require('postcss-preset-env')
 
+const compiler = require('webpack')
+const webpack = require('webpack-stream')
 const bs = require('browser-sync')
 
 // where are source files
 const input = {
-  js: `assets/js/**/*`,
+  js: `assets/js/app.js`,
   css: `assets/css/**/*`,
   fonts: `assets/fonts/**/*`,
   img: `assets/img/**/*`,
@@ -31,9 +33,18 @@ function clean() {
   return del([`dist`])
 }
 
-// @TODO decide on script strategy
+// compile scripts with webpack
 function scripts() {
   return src(input.js)
+    .pipe(
+      webpack(
+        {
+          mode: 'development',
+          output: { filename: 'app.js' }
+        },
+        compiler
+      )
+    )
     .pipe(dest(output.js))
     .pipe(bs.stream())
 }
