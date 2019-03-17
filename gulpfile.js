@@ -5,10 +5,12 @@ const { exec } = require('child_process')
 
 const less = require('gulp-less')
 const postcss = require('gulp-postcss')
-const cssEnv = require('postcss-preset-env')
+const cssenv = require('postcss-preset-env')
+const cssnano = require('gulp-cssnano')
 
 const compiler = require('webpack')
 const webpack = require('webpack-stream')
+
 const bs = require('browser-sync')
 
 // where are source files
@@ -49,14 +51,40 @@ function scripts() {
     .pipe(bs.stream())
 }
 
+function prod_scripts() {
+  return src(input.js)
+    .pipe(
+      webpack(
+        {
+          mode: 'production',
+          output: { filename: 'app.js' },
+          devtool: 'source-map'
+        },
+        compiler
+      )
+    )
+    .pipe(dest(output.js))
+    .pipe(bs.stream())
+}
+
 // compile styles
 function styles() {
   return src([input.css, '!**/_*'])
     .pipe(plumber())
     .pipe(less())
-    .pipe(postcss([cssEnv({ stage: 0 })]))
+    .pipe(postcss([cssenv({ stage: 0 })]))
     .pipe(dest(output.css))
     .pipe(bs.stream())
+}
+
+// compile production styles
+function prod_styles() {
+  return src([input.css, '!**/_*'])
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([cssenv({ stage: 0 })]))
+    .pipe(cssnano())
+    .pipe(dest(output.css))
 }
 
 function images() {
@@ -95,7 +123,7 @@ function serve() {
 exports.build = series(
   clean,
   generate,
-  parallel(scripts, styles, fonts, images)
+  parallel(prod_scripts, prod_styles, fonts, images)
 )
 
 exports.default = series(
