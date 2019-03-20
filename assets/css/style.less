@@ -66,47 +66,45 @@ body {
   color: #ffffff;
 }
 
-#home {
-  header h1 {
-    grid-column: col2 / outer-end;
-    margin-bottom: 8rem;
+.banner h1 {
+  grid-column: col2 / outer-end;
+  margin-bottom: 8rem;
 
-    @media (max-width: 118rem) {
-      grid-column-start: outer-start;
-    }
-  }
-
-  header p {
-    grid-column: col3 / col4;
-  }
-
-  .project h2 {
-    margin-bottom: 8rem;
-  }
-
-  .project p {
-    margin-bottom: 3.2rem;
-  }
-
-  .experiment h3 {
-    margin-bottom: 0.8rem;
-  }
-
-  .experiment p {
-    margin-bottom: 1.2rem;
+  @media (max-width: 118rem) {
+    grid-column-start: outer-start;
   }
 }
 
-.post-header-title {
+.banner p {
+  grid-column: col3 / col4;
+}
+
+.work_project h2 {
+  margin-bottom: 8rem;
+}
+
+.work_project p {
+  margin-bottom: 3.2rem;
+}
+
+.work_experiment h3 {
+  margin-bottom: 0.8rem;
+}
+
+.work_experiment p {
+  margin-bottom: 1.2rem;
+}
+
+.post_title {
   grid-column: outer-start / outer-end;
   margin-bottom: 8rem;
 }
 
-.post-header-meta {
+.post_meta {
   grid-column: col3 / col4;
 }
 
-.post-content {
+.post_content {
   display: grid;
   grid-template-columns:
     [page-start]
@@ -124,12 +122,12 @@ body {
   }
 }
 
-.post-content img {
+.post_content img {
   grid-column: page-start / page-end;
   margin: 3.2rem 0 6.4rem;
 }
 
-.post-content > :not(img) {
+.post_content > :not(img) {
   grid-column: main-start / main-end;
   margin-bottom: 3.2rem;
 }
