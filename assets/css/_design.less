@@ -9,6 +9,10 @@
 @dark-accent: #363017;
 @light-accent: #fbf9f4;
 
+@font-display: Ivymode, Ogg, Optima, system-ui;
+@font-sans: Mynor, system-ui;
+@font-mono: 'Sometype Mono', Monaco, Consolas, Menlo, monospace;
+
 :root {
   --body: @body;
   --background: @background;
@@ -24,16 +28,14 @@
   --font-mono: 'Sometype Mono', Monaco, Consolas, Menlo, monospace;
 }
 
-.dark-mode {
-  --body: @background;
-  --background: @body;
-  --grey-light: @grey-dark;
-  --grey-dark: @grey-light;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body: @background;
+    --background: @body;
+    --grey-light: @grey-dark;
+    --grey-dark: @grey-light;
+  }
 }
-
-@font-display: Ivymode, Ogg, Optima, system-ui;
-@font-sans: Mynor, system-ui;
-@font-mono: 'Sometype Mono', Monaco, Consolas, Menlo, monospace;
 
 .heading-xl {
   font-family: @font-display;

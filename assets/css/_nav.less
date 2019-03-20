@@ -1,27 +1,23 @@
 nav {
   display: flex;
   padding: 6.4rem 3.2rem 0;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.nav-home-link {
-  /* take up 50% of the space */
-  flex: 0 0 50%;
+.nav_home-link {
   text-decoration: none;
   color: inherit;
 }
 
-.nav-tagline {
-  /* push the next thing to the end */
-  margin-right: auto;
+.nav_links li {
+  display: inline;
+  margin-left: 1.6rem;
 }
 
-.nav-darkmode-toggle {
-  height: 2.4rem;
-  width: 2.4rem;
-  cursor: pointer;
+.nav_links .disabled {
+  text-decoration: line-through;
 }
 
-.dark-mode .nav-darkmode-toggle {
-  fill: var(--body);
+.nav_links li:not(.disabled):hover {
+  border-bottom: 2px solid var(--grey-mid);
 }
