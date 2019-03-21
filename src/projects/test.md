@@ -7,10 +7,6 @@ id: test-post
 
 For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much — the wheel, New York, wars and so on — whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man — for precisely the same reasons.
 
-<!-- ![bleep de bloop blop](https://ddrsspkp4lsq7.cloudfront.net/assets/case-study/n-synth/nsynth-2.jpg) -->
-
-<!-- <img data-src="https://ddrsspkp4lsq7.cloudfront.net/assets/case-study/n-synth/nsynth-2.jpg" class="lazyload"> -->
-
 {% image "see-touch-story" "a wonderful picture" %}
 
 “It seemed to me,” said Wonko the Sane, “that any civilization that had so far lost its head as to need to include a set of detailed instructions for use in a packet of toothpicks, was no longer a civilization in which I could live and stay sane.”
