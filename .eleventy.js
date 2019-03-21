@@ -2,8 +2,11 @@ module.exports = function(config) {
   // add markdown plugins
   let markdownIt = require('markdown-it')
   let blockImagePlugin = require('markdown-it-block-image')
+  let defListPlugin = require('markdown-it-deflist')
   let options = { html: true }
-  let markdownLib = markdownIt(options).use(blockImagePlugin)
+  let markdownLib = markdownIt(options)
+    .use(blockImagePlugin)
+    .use(defListPlugin)
   config.setLibrary('md', markdownLib)
 
   // Layout aliases can make templates more portable
