@@ -10,6 +10,9 @@ module.exports = function(config) {
   config.addLayoutAlias('default', 'layouts/base.html')
   config.addLayoutAlias('project', 'layouts/project.html')
 
+  // add components to scope
+  config.addShortcode('image', require('./src/components/image.js'))
+
   // return the config object
   return {
     dir: {

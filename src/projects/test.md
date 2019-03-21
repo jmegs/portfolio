@@ -9,7 +9,9 @@ For instance, on the planet Earth, man had always assumed that he was more intel
 
 <!-- ![bleep de bloop blop](https://ddrsspkp4lsq7.cloudfront.net/assets/case-study/n-synth/nsynth-2.jpg) -->
 
-<img data-src="https://ddrsspkp4lsq7.cloudfront.net/assets/case-study/n-synth/nsynth-2.jpg" class="lazyload">
+<!-- <img data-src="https://ddrsspkp4lsq7.cloudfront.net/assets/case-study/n-synth/nsynth-2.jpg" class="lazyload"> -->
+
+{% image "see-touch-story" "a wonderful picture" %}
 
 “It seemed to me,” said Wonko the Sane, “that any civilization that had so far lost its head as to need to include a set of detailed instructions for use in a packet of toothpicks, was no longer a civilization in which I could live and stay sane.”
 
