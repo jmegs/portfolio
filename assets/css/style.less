@@ -9,7 +9,7 @@
   grid-template-columns: [outer-start col1] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [outer-end];
   padding: 12.8rem;
 
-  @media (max-width: 96rem) {
+  @media (max-width: 960px) {
     padding: 8vmin;
     display: block;
   }
@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (max-width: 96rem) {
+  @media (max-width: 960px) {
     display: block;
   }
 }
@@ -31,7 +31,7 @@
   }
 
   & > :nth-child(odd) {
-    @media (min-width: 96rem) {
+    @media (min-width: 960px) {
       border-right: 2px solid var(--grey-light);
     }
   }
@@ -39,7 +39,7 @@
   &--cell-lg {
     padding: 12.8rem 8rem 12.8rem 12.8rem;
 
-    @media (max-width: 96rem) {
+    @media (max-width: 960px) {
       padding: 8vmin;
     }
   }
@@ -47,7 +47,7 @@
   &--cell {
     padding: 8rem 8rem 8rem 12.8rem;
 
-    @media (max-width: 96rem) {
+    @media (max-width: 960px) {
       padding: 8vmin;
     }
   }
@@ -70,7 +70,7 @@ body {
   grid-column: col2 / outer-end;
   margin-bottom: 8rem;
 
-  @media (max-width: 118rem) {
+  @media (max-width: 1180px) {
     grid-column-start: outer-start;
   }
 }
