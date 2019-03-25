@@ -152,3 +152,11 @@ a:not([class]) {
   opacity: 1;
   transition: opacity 0.8s;
 }
+
+.transition-fade {
+  transition: opacity 0.4s ease-in;
+  opacity: 1;
+}
+html.is-animating .transition-fade {
+  opacity: 0;
+}
