@@ -111,6 +111,15 @@
   color: var(--grey-dark);
 }
 
+a:not([class]) {
+  border-bottom: 2px solid var(--primary);
+  text-decoration: none;
+
+  &:hover {
+    border-color: var(--grey-mid);
+  }
+}
+
 .link-internal {
   font-family: @font-sans;
   color: var(--primary);
