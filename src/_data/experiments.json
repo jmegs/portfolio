@@ -6,18 +6,6 @@
     "source": "https://github.com/jmegs/aspect-ratio"
   },
   {
-    "name": "Static Starter",
-    "desc": "Static site boilerplate for web projects",
-    "link": "https://static-starter.netlify.com",
-    "source": "https://github.com/jmegs/static-starter"
-  },
-  {
-    "name": "Tpl",
-    "desc": "Quickly start projects from example Github repos",
-    "link": "https://www.npmjs.com/package/@jmegs/tpl",
-    "source": "https://github.com/jmegs/tpl"
-  },
-  {
     "name": "Easing",
     "desc": "Easing curve reference guide",
     "link": "https://easing.netlify.com",
@@ -30,9 +18,15 @@
     "source": "https://github.com/jmegs/spacerator"
   },
   {
-    "name": "In the Beginning Was the Command Line",
-    "desc": "Modern typesetting of Neal Stephenson's classic essay",
-    "link": "https://in-the-beginning-was-the-command-line.netlify.com",
-    "source": "https://github.com/jmegs/in-the-beginning-was-the-command-line"
+    "name": "Static Starter",
+    "desc": "Static site boilerplate for web projects",
+    "link": "https://static-starter.netlify.com",
+    "source": "https://github.com/jmegs/static-starter"
+  },
+  {
+    "name": "TPL",
+    "desc": "Quickly start projects from example Github repos",
+    "link": "https://www.npmjs.com/package/@jmegs/tpl",
+    "source": "https://github.com/jmegs/tpl"
   }
 ]

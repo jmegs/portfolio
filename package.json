@@ -9,6 +9,7 @@
   "author": "jmegs",
   "license": "MIT",
   "dependencies": {
+    "fitty": "^2.2.6",
     "lazysizes": "^4.1.6",
     "swup": "^1.9.0"
   },
