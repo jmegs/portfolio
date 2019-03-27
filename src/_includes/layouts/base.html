@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/syntax.css" />
     {% endif %}
   </head>
-  <body>
+  <body {% if id %} id="{{id}}" {% endif %}>
     {% include partials/nav.html %}
     <main id="swup" class="transition-fade">
     {{ content }}

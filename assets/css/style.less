@@ -21,7 +21,7 @@ body {
 
   color: var(--mid-grey);
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     padding: 2.4rem;
   }
 }
@@ -30,9 +30,13 @@ body {
   margin-bottom: 3.2rem;
 }
 
-a.slash:after {
+a.slash:not(:last-child):after {
   content: ' / ';
   color: var(--light-grey);
+}
+
+a.slash:last-child:hover:after {
+  content: ' / ';
 }
 
 a.slash:hover:after {
@@ -48,7 +52,11 @@ h2 {
 }
 
 h1 {
-  font-size: 4.8rem;
+  font-size: 4.5vw;
+
+  @media (max-width: 768px) {
+    font-size: 8vmin;
+  }
 }
 
 h2 {
@@ -61,6 +69,10 @@ h3 {
   letter-spacing: 0.01em;
 
   margin-bottom: 1.6rem;
+}
+
+#home h3 {
+  color: var(--light-grey);
 }
 
 a:not([class]) {
@@ -127,4 +139,13 @@ footer {
 
 footer li {
   display: inline-block;
+}
+
+.transition-fade {
+  transition: opacity 0.4s ease-out;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
 }

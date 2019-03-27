@@ -28,5 +28,10 @@
     "desc": "Quickly start projects from example Github repos",
     "link": "https://www.npmjs.com/package/@jmegs/tpl",
     "source": "https://github.com/jmegs/tpl"
+  },
+  {
+    "name": "In the Beginning Was the Command Line",
+    "desc": "A modern typesetting of Neal Stephenson's classic essay",
+    "link": "https://in-the-beginning-was-the-command-line.netlify.com"
   }
 ]

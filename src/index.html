@@ -5,26 +5,17 @@ id: home
 
 <section id="projects">
   <h3>Projects</h3>
-  <ul>
-    <li>
-      <h1>
-        <a class="slash" href="/equinox">Equinox Personal Training</a>
-      </h1>
-      <h1>
-        <a class="slash" href="/samsung">Samsung Retail</a>
-      </h1>
-    </li>
-  </ul>
+  <h1>
+    <a class="slash" href="/equinox">Equinox Personal Training</a>
+    <a class="slash" href="/samsung">Samsung Retail</a>
+  </h1>
 </section>
 <section id="open-source">
   <h3>Open Source</h3>
-  <ul>
+
+  <h1>
     {% for entry in experiments %}
-    <li>
-      <h1>
-        <a class="slash" href="{{ entry.link }}">{{ entry.name }}</a>
-      </h1>
-    </li>
+    <a class="slash" href="{{ entry.link }}">{{ entry.name }}</a>
     {% endfor %}
-  </ul>
+  </h1>
 </section>
