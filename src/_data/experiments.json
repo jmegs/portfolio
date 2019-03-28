@@ -9,7 +9,8 @@
     "name": "Easing",
     "desc": "Easing curve reference guide",
     "link": "https://easing.netlify.com",
-    "source": "https://github.com/jmegs/easing-curves"
+    "source": "https://github.com/jmegs/easing-curves",
+    "disabled": true
   },
   {
     "name": "Spacerator",
@@ -30,7 +31,7 @@
     "source": "https://github.com/jmegs/tpl"
   },
   {
-    "name": "In the Beginning Was the Command Line",
+    "name": "Command Line Essay",
     "desc": "A modern typesetting of Neal Stephenson's classic essay",
     "link": "https://in-the-beginning-was-the-command-line.netlify.com"
   }
