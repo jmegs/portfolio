@@ -2,16 +2,11 @@
 layout: default
 ---
 
-<article id="post {{ id }}">
-  <header class="grid-4 post_header">
-    <h1 class="post_title heading-lg">
-      {{ title }}
-    </h1>
-    <p class="post_meta text-mono">
-      {{ meta }}
-    </p>
+<article class="project_wrapper" {% if id %} id="{{ id }}" {% endif %}>
+  <header class="project_header">
+    <p>{{ title }}</p>
+    <p>{{ what }}</p>
+    <p>{{ when }} @ {{ where }}</p>
   </header>
-  <section class="post_content">
-    {{ content }}
-  </section>
+  {{ content }}
 </article>

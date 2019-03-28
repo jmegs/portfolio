@@ -3,40 +3,33 @@ layout: default
 id: home
 ---
 
-<header class="grid-4 banner">
-  <h1 class="heading-xl">John Meguerian</h1>
-  <p class="text-body">
-    Product designer and occasional developer at
-    <a href="https://squarespace.com">Squarespace NYC</a>
-  </p>
+<header class="home_header">
+  <h1>Product Designer and Developer in NYC</h1>
 </header>
-<section class="work">
-  <ul class="grid-2 bordered-grid">
-    <li class="bordered-grid--cell-lg work_project">
-      <h2 class="heading-md">
-        Equinox Personal Training
-      </h2>
-      <p class="text-body">Web App<br />2018</p>
-      <a href="/projects/equinox" class="link-internal">View</a>
-    </li>
-    <li class="bordered-grid--cell-lg work_project">
-      <h2 class="heading-md">
-        Samsung Retail Experience
-      </h2>
-      <p class="text-body">
-        In-store Experiece, Web Dashboard <br />
-        2017
-      </p>
-      <a href="/projects/samsung" class="link-internal">View</a>
-    </li>
-    <!-- for thing in experiments -->
-    {% for entry in experiments %}
-    <li class="bordered-grid--cell work_experiment">
-      <h3 class="heading-sm-sans">{{ entry.name }}</h3>
-      <p class="text-body">{{ entry.desc }}</p>
-      <a href="{{ entry.link }}" class="link-internal">View</a>
-      <a href="{{ entry.source }}" class="link-internal">Source Code</a>
-    </li>
-    {% endfor %}
-  </ul>
+<section class="projects">
+  <a class="wrap" href="/equinox">
+    <div class="project">
+      <h1 class="project_text-wrap">
+        <span class="project_title">Equinox Personal Training</span>
+        <span class="project_slug">/equinox</span>
+      </h1>
+    </div>
+  </a>
+  <a class="wrap" href="/samsung">
+    <div class="project">
+      <h1 class="project_text-wrap">
+        <span class="project_title">Samsung Retail Experience</span>
+        <span class="project_slug">/samsung</span>
+      </h1>
+    </div>
+  </a>
+</section>
+<section class="labs">
+  {% for entry in experiments %}
+  <a class="wrap" href="{{ entry.link }}">
+    <div class="lab">
+      <h2 class="lab_title">{{ entry.name }}</h2>
+    </div>
+  </a>
+  {% endfor %}
 </section>

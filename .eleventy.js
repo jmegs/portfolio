@@ -12,9 +12,10 @@ module.exports = function(config) {
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.html')
   config.addLayoutAlias('project', 'layouts/project.html')
+  config.addLayoutAlias('post', 'layouts/post.html')
 
   // add components to scope
-  config.addShortcode('image', require('./src/components/image.js'))
+  config.addShortcode('image', require('./src/_includes/components/image.js'))
 
   // return the config object
   return {

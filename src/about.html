@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section class="about">
+  {% image "john" "a picture of John sitting outside against a brick wall" %}
+
+  <div class="about_content">
+    <p class="h2">
+      Right now I'm a Product Designer at
+      <a href="https://squarespace.com">Squarespace NYC</a> helping people make
+      their creative ideas a reality. Before that, I did experience design and
+      strategic planning at <a href="https://rga.com">R/GA</a> and other digital
+      agencies.
+    </p>
+
+    <div class="h2 about_links">
+      {% for entry in social-links %}
+
+      <a href="{{ entry.url }}">{{ entry.name }}</a>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
