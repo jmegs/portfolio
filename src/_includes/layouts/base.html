@@ -12,11 +12,30 @@
     <link rel="stylesheet" href="/css/syntax.css" />
     {% endif %}
   </head>
-  <body {% if id %} id="{{id}}" {% endif %}>
-    {% include partials/nav.html %}
+  <body {% if id %} id="{{ id }}" {% endif %}>
+    <nav>
+      <a class="nav_home" href="/">John Meguerian</a>
+      <ul class="nav_links">
+        <li><a class="nav_link disabled" href="/posts">posts</a></li>
+        <li><a class="nav_link" href="/about">about</a></li>
+        <li><a class="nav_link" href="/uses">uses</a></li>
+      </ul>
+    </nav>
     <main id="swup" class="transition-fade">
-    {{ content }}
+      {{ content }}
     </main>
-    {% include partials/footer.html %}
+    <footer>
+      <ul class="social-links">
+        {% for entry in social-links %}
+        <li>
+          <a class="social-link" href="{{ entry.url }}">{{ entry.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="colophon">
+        <p>Don't Panic.</p>
+        <p>© 2019 John Meguerian</p>
+      </div>
+    </footer>
   </body>
 </html>
