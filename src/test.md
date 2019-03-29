@@ -18,22 +18,23 @@ For instance, on the planet Earth, man had always assumed that he was more intel
 below this is an image shorcode
 {% image "see-touch-story" "a wonderful picture" %}
 
-```css
-.link-internal {
-  font-family: @font-sans;
-  color: var(--primary);
-  text-decoration: none;
-  border-bottom: 2px solid var(--primary);
-  display: inline-flex;
+```js
+letterspace = string => {
+  return (
+    string
+      // split the string into words
+      .split(' ')
 
-  &::after {
-    content: '→';
-    font-family: inherit;
-    margin-left: 0.5em;
-  }
+      // for each word split the word into chars
+      // then join them on a non-breaking space
+      .map(w => w.split('').join('\xa0'))
 
-  &:nth-child(even) {
-    margin-left: 1em;
-  }
+      // take those spaced words and join them into a sentence
+      // using a non-breaking plus and breaking space
+      .join('\xa0 ')
+
+      // then transform them to upper-case characters
+      .toUpperCase()
+  )
 }
 ```

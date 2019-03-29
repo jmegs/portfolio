@@ -223,7 +223,7 @@ article {
   display: grid;
   grid-template-columns:
     [page-start main-start]
-    minmax(auto, 68.3rem)
+    minmax(auto, 76.4rem)
     [main-end]
     1fr
     [page-end];
@@ -243,6 +243,14 @@ article > * {
 article.post_wrapper li {
   margin: 0 0 8px 1em;
   list-style: disc;
+}
+
+article.post_wrapper pre {
+  border: 2px solid var(--black);
+  padding: 48px;
+
+  font-family: 'Input', monospace;
+  font-size: 14px;
 }
 
 article.project_wrapper figure,
