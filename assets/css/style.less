@@ -1,314 +1,256 @@
 @import '_base';
 @import '_fonts';
 
-:root {
-  --black: #171a27;
-  --mid-grey: #646877;
-  --light-grey: #cbced7;
-  --primary: #4c67eb;
+@display: Ivymode, system-ui;
+@text: atto, system-ui;
+@black: #171a27;
+@mid-grey: #535663;
+
+// Typography
+
+.fz-fluid,
+h1,
+h2,
+h3 {
+  --fluid-type-min-size: 1;
+  --fluid-type-max-size: 2;
+  --fluid-type-min-screen: 20;
+  --fluid-type-max-screen: 88;
+
+  /* We multiply by 1rem to essentially stick a rem unit to a number. */
+  font-size: calc(
+    (var(--fluid-type-min-size) * 1rem) +
+      (var(--fluid-type-max-size) - var(--fluid-type-min-size)) *
+      (100vw - (var(--fluid-type-min-screen) * 1rem)) /
+      (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
+  );
+}
+
+.ff-text {
+  font-family: @text;
+}
+.ff-display {
+  font-family: @display;
+}
+
+.fz-xl {
+  line-height: 1.25;
+
+  --fluid-type-min-size: 2;
+  --fluid-type-max-size: 4;
+
+  @media (min-width: 480px) {
+    --fluid-type-min-size: 4;
+    --fluid-type-max-size: 6;
+  }
+}
+
+.fz-lg,
+h1 {
+  --fluid-type-min-size: 2;
+  --fluid-type-max-size: 4;
+}
+
+.fz-md,
+h2 {
+  --fluid-type-min-size: 1;
+  --fluid-type-max-size: 2;
+}
+
+.fz-sm,
+h3 {
+  --fluid-type-min-size: 1;
+  --fluid-type-max-size: 1.5;
+}
+
+.fz-normal {
+  font-size: 1rem;
+}
+
+.c-mid-grey {
+  color: @mid-grey;
+}
+
+.c-black {
+  color: @black;
 }
 
 body {
-  min-height: 100vh;
-
-  font-family: 'Mynor', system-ui;
-  font-size: 20px;
-  line-height: 1.65;
-  text-rendering: optimizeLegibility;
-
-  color: var(--black);
-  border: 2px solid var(--black);
+  .c-mid-grey;
+  .ff-text;
+  .fz-normal;
+  background: #fafafa;
 }
 
 h1,
-.h1 {
-  font-weight: normal;
-  line-height: normal;
-  font-size: 56px;
-}
-
 h2,
-.h2 {
+h3 {
   font-weight: normal;
-  line-height: normal;
-  font-size: 32px;
+}
+// layout
+
+body {
+  display: grid;
+  grid-template-rows: [header] auto [content] 1fr;
+  min-height: 100vh;
+  line-height: 1.875;
 }
 
-/* styles links with no class applied that aren't external */
-a:not([class]) {
-  text-decoration: underline;
-  transition: color 0.2s;
-
-  &:hover {
-    color: var(--mid-grey);
-  }
-}
-
-/* styles external links with no class applied */
-a[href*="//"]:not([class]):not([href*="johnmeguerian.com"]) {
-  &::after {
-    content: ' ↗';
-  }
+main {
+  padding: 3.5vmin 7vmin;
 }
 
 nav {
-  border-bottom: 2px solid var(--black);
-
-  padding: 0 24px;
-  height: 88px;
-
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media (min-width: 640px) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 64px;
-  }
-}
-
-.nav_links li {
-  display: inline;
-
-  &:not(:first-child) {
-    margin-left: 24px;
-  }
-}
-
-.nav_link:before {
-  content: '/';
-}
-
-.nav_link.disabled {
-  text-decoration: line-through;
-  pointer-events: none;
-  color: var(--mid-grey);
-}
-
-.home_header {
-  border-bottom: 2px solid var(--black);
-
-  height: calc(100vh - 88px - 2px);
-  padding: 24px;
-
-  display: flex;
-  align-items: center;
-
-  @media (min-width: 640px) {
-    padding: 64px;
-  }
-}
-
-.home_header h1 {
-  max-width: 20ch;
-}
-
-section {
-  border-bottom: 2px solid var(--black);
-
-  min-height: 100vh;
-}
-
-section.projects {
-  @media (min-width: 640px) {
-    display: grid;
-    grid-template-columns: [left-start] 1fr [left-end right-start] 1fr [right-end];
-  }
-}
-
-.project {
-  padding: 24px;
-
-  height: 50vh;
-
-  @media (min-width: 640px) {
-    padding: 64px;
-    height: 100%;
-  }
-
-  transition: 0.2s;
-}
-
-@media (min-width: 640px) {
-  .project:first-child {
-    border-right: 2px solid var(--black);
-  }
-}
-
-.project:hover {
-  background: var(--black);
-  color: white;
-}
-
-.project_text-wrap {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  padding: 2rem 7vmin;
+}
+
+nav li {
+  margin-left: 1rem;
+  transition: color 0.8s ease-out;
+
+  @media (min-width: 450px) {
+    display: inline-block;
+  }
+}
+
+nav li a:hover {
+  color: @black;
+}
+
+nav li .disabled {
+  text-decoration: line-through;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+header[role='banner'] {
   height: 100%;
-}
-
-.labs {
-  @media (min-width: 640px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.lab {
-  border-right: 2px solid var(--black);
-
-  height: 25vh;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-  transition: 0.2s;
+.big-list {
+  margin-bottom: 7vmin;
+}
 
-  @media (min-width: 640px) {
-    height: 100%;
+.big-list_item {
+  border-bottom: 2px solid @mid-grey;
+  padding: 1.5rem 0;
+
+  @media (min-width: 788px) {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
   }
 }
 
-.lab:nth-child(-n + 3) {
-  border-bottom: 2px solid var(--black);
+.big-list_title {
+  margin-right: auto;
 }
 
-.lab:hover {
-  color: white;
-  background: var(--black);
+.icon-after:after {
+  --icon-after-icon: '¬';
+  content: var(--icon-after-icon);
+  padding-left: 0.25em;
 }
 
-.lab_title {
-  text-align: center;
-}
-
-.lab_title::after {
-  content: ' ↗';
-}
-
-footer {
-  height: 50vh;
-  padding: 0 24px;
-
-  display: grid;
-  grid-template-rows: 1fr [content] auto 1fr;
-  grid-template-columns: 1fr 1fr;
-
-  background: var(--black);
-  color: white;
-
-  @media (min-width: 640px) {
-    padding: 0 64px;
+.big-list_meta {
+  @media (min-width: 788px) {
+    margin-left: 2rem;
   }
 }
 
-footer > * {
-  grid-row: content;
-}
-
-footer .social-link::after {
-  content: ' ↗';
-}
-
-footer .colophon {
-  align-self: end;
-  justify-self: end;
-}
-
-article {
+article.project {
   display: grid;
   grid-template-columns:
     [page-start main-start]
-    minmax(auto, 76.4rem)
+    minmax(auto, 43em)
     [main-end]
     1fr
     [page-end];
+  margin: 0;
+}
 
-  padding: 24px 24px 64px;
+article.project header {
+  margin-bottom: 4rem;
+}
 
-  @media (min-width: 640px) {
-    padding: 64px 64px 128px;
+article.project > * {
+  grid-column: main-start / main-end;
+}
+
+article.project > figure {
+  grid-column: main-start / page-end;
+  margin: 4rem 0;
+}
+
+article.post {
+  display: grid;
+  grid-template-columns:
+    [page-start]
+    1fr
+    [main-start]
+    minmax(auto, 43em)
+    [main-end]
+    1fr
+    [page-end];
+  grid-column-gap: 1.5em;
+  margin: 0;
+
+  & > * {
+    grid-column: main-start / main-end;
+    color: @mid-grey;
+  }
+
+  & > figure,
+  & > pre {
+    grid-column: page-start / page-end;
+  }
+
+  & > *:not(h1, h2, h3) {
+    margin-bottom: 2em;
   }
 }
 
-article > * {
-  grid-column: main-start / main-end;
-  margin-bottom: 24px;
-}
-
-article.post_wrapper li {
-  margin: 0 0 8px 1em;
-  list-style: disc;
-}
-
-article.post_wrapper pre {
-  border: 2px solid var(--black);
-  padding: 48px;
-
-  font-family: 'Input', monospace;
-  font-size: 14px;
-}
-
-article.project_wrapper figure,
-article.project_wrapper code {
-  grid-column: page-start / page-end;
-  margin: 48px 0;
-}
-
-article.project_wrapper figure + figure {
-  margin: 24px 0;
-}
-
-article.project_wrapper header {
-  color: var(--mid-grey);
-  margin: 48px 0 64px;
-}
-
-.project_wrapper header {
-  grid-column: page-start / page-end;
+article.post .post_header {
+  margin-bottom: 4rem;
 }
 
 .about {
-  display: grid;
-  @media (min-width: 960px) {
-    grid-template-columns: [image] 1fr [content] 1fr;
-  }
+  height: 100%;
 
-  min-height: calc(100vh - 88px - 2px);
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .about figure {
-  grid-column: image;
-  height: calc(100vh - 88px - 2px - 2px);
+  height: 100%;
+  padding: 0vmin 7vmin 7vmin 0vmin;
 }
 
-.about img {
+.about figure img {
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
 
 .about_content {
-  grid-column: content;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  padding: 24px;
-
-  @media (min-width: 640px) {
-    padding: 64px;
+  transition: border 0.8s ease-out, color 0.8s ease-out;
+  @media (min-width: 1024px) {
+    padding: 0 7vmin;
   }
-}
 
-.about_content p {
-  margin-bottom: 48px;
-}
+  & p {
+    margin-bottom: 2rem;
+  }
 
-.about_links a {
-  display: block;
+  & a:hover {
+    border-bottom: 2px solid @black;
+    color: black;
+  }
 }

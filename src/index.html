@@ -3,33 +3,7 @@ layout: default
 id: home
 ---
 
-<header class="home_header">
-  <h1>Product Designer and Developer in NYC</h1>
+<header role="banner">
+  <h1 class="fz-fluid fz-xl ff-display c-black">John Meguerian</h1>
+  <p class="fz-fluid fz-sm ff-text">Product designer and developer in NYC</p>
 </header>
-<section class="projects">
-  <a class="wrap" href="/equinox">
-    <div class="project">
-      <h1 class="project_text-wrap">
-        <span class="project_title">Equinox Personal Training</span>
-        <span class="project_slug">/equinox</span>
-      </h1>
-    </div>
-  </a>
-  <a class="wrap" href="/samsung">
-    <div class="project">
-      <h1 class="project_text-wrap">
-        <span class="project_title">Samsung Retail Experience</span>
-        <span class="project_slug">/samsung</span>
-      </h1>
-    </div>
-  </a>
-</section>
-<section class="labs">
-  {% for entry in experiments %}
-  <a class="wrap" href="{{ entry.link }}">
-    <div class="lab">
-      <h2 class="lab_title">{{ entry.name }}</h2>
-    </div>
-  </a>
-  {% endfor %}
-</section>

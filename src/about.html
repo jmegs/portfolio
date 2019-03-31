@@ -6,18 +6,23 @@ layout: default
   {% image "john" "a picture of John sitting outside against a brick wall" %}
 
   <div class="about_content">
-    <p class="h2">
-      Right now I'm a Product Designer at
-      <a href="https://squarespace.com">Squarespace NYC</a> helping people make
-      their creative ideas a reality. Before that, I did experience design and
-      strategic planning at <a href="https://rga.com">R/GA</a> and other digital
+    <p class="fz-fluid fz-sm">
+      I'm currently a Product Designer at
+      <a href="https://squarespace.com" class="icon-after">Squarespace</a>
+      helping people make their creative ideas a reality. Before that, I did
+      experience design and strategic planning for big companies like Samsung,
+      Chase, Equinox, and Verizon while at
+      <a href="https://rga.com" class="icon-after">R/GA</a> and other digital
       agencies.
     </p>
 
-    <div class="h2 about_links">
+    <div class="fz-fluid fz-sm">
       {% for entry in social-links %}
-
-      <a href="{{ entry.url }}">{{ entry.name }}</a>
+      <ul class="about_links">
+        <li class="about_link">
+          <a href="{{ entry.url }}" class="icon-after">{{ entry.name }}</a>
+        </li>
+      </ul>
 
       {% endfor %}
     </div>

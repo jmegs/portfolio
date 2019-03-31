@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rebuilding this is site without React
+title: Rebuilding this site without React
 meta: May 11, 2018
 id: test-post
 ---

@@ -2,6 +2,10 @@
 layout: default
 ---
 
-<article class="post_wrapper">
+<article class="post">
+  <header class="post_header">
+    <h1 class="fz-fluid fz-lg ff-display">{{ title }}</h1>
+    <span class="post_meta">{{ date }}</span>
+  </header>
   {{ content }}
 </article>

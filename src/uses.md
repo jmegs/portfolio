@@ -5,8 +5,6 @@ title: What I Use
 meta: Things I use, updated when I change them
 ---
 
-# Uses
-
 As a huge fan of tools, process, and self-education I always love when fellow internet humans share the whats, hows and whys of what the use to do their work. Here's me being the nerd I wish to see in the world.
 
 ## Design Tools
