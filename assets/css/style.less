@@ -7,13 +7,29 @@
 @mid-grey: #535663;
 
 // Typography
-
-.fz-fluid,
 h1,
 h2,
-h3 {
-  --fluid-type-min-size: 1;
-  --fluid-type-max-size: 2;
+h3,
+h4 {
+  font-family: @display;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+h1, .h1 {font-size: 4rem;}
+h2,.h2 {font-size: 2rem;}
+h3,.h3 {font-size: 1.5rem;}
+h4,.h4 {font-size: 1.125rem;}
+
+pre, 
+code {
+  font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+}
+
+.h-mega {
+  --fluid-type-min-size: 4;
+  --fluid-type-max-size: 6;
   --fluid-type-min-screen: 20;
   --fluid-type-max-screen: 88;
 
@@ -26,49 +42,6 @@ h3 {
   );
 }
 
-.ff-text {
-  font-family: @text;
-}
-.ff-display {
-  font-family: @display;
-}
-
-.fz-xl {
-  --fluid-type-min-size: 2;
-  --fluid-type-max-size: 4;
-
-  line-height: 1.25;
-
-  @media (min-width: 480px) {
-    --fluid-type-min-size: 4;
-    --fluid-type-max-size: 6;
-  }
-}
-
-.fz-lg,
-h1 {
-  --fluid-type-min-size: 2;
-  --fluid-type-max-size: 4;
-
-  line-height: 1.25;
-}
-
-.fz-md,
-h2 {
-  --fluid-type-min-size: 1;
-  --fluid-type-max-size: 2;
-}
-
-.fz-sm,
-h3 {
-  --fluid-type-min-size: 1;
-  --fluid-type-max-size: 1.5;
-}
-
-.fz-normal {
-  font-size: 1rem;
-}
-
 .c-mid-grey {
   color: @mid-grey;
 }
@@ -78,24 +51,16 @@ h3 {
 }
 
 body {
-  .c-mid-grey;
-  .ff-text;
-  .fz-normal;
-  background: #fafafa;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: normal;
-}
-// layout
-
-body {
   display: grid;
   grid-template-rows: [header] auto [content] 1fr;
   min-height: calc(100vh - var(--vh-offset, 0px));
+  
+  font-family: @text;
+  font-size: 1.125rem;
   line-height: 1.875;
+
+  color: @mid-grey;
+  background: #fafafa;
 }
 
 main {
@@ -137,6 +102,10 @@ header[role='banner'] {
 
 .big-list {
   margin-bottom: 7vmin;
+}
+
+.big-list_heading {
+  font-family: @text;
 }
 
 .big-list_item {
@@ -194,9 +163,7 @@ article.project > figure {
 article.post {
   display: grid;
   grid-template-columns:
-    [page-start]
-    1fr
-    [main-start]
+    [page-start main-start]
     minmax(auto, 43em)
     [main-end]
     1fr

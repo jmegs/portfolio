@@ -5,8 +5,6 @@ meta: May 11, 2018
 id: test-post
 ---
 
-# This is the level 1 heading
-
 For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much — the wheel, New York, wars and so on — whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man — for precisely the same reasons.
 
 ## This is the level 2 heading
