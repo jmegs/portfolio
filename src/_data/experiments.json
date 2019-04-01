@@ -1,12 +1,12 @@
 [
   {
-    "name": "Aspect",
+    "name": "Aspect Ratio Tool",
     "desc": "Aspect ratio calucator for designers",
     "link": "https://aspect.netlify.com",
     "source": "https://github.com/jmegs/aspect-ratio"
   },
   {
-    "name": "Easing",
+    "name": "Easing Curves",
     "desc": "Easing curve reference guide",
     "link": "https://easing.netlify.com",
     "source": "https://github.com/jmegs/easing-curves",
@@ -25,7 +25,7 @@
     "source": "https://github.com/jmegs/static-starter"
   },
   {
-    "name": "TPL",
+    "name": "TPL CLI",
     "desc": "Quickly start projects from example Github repos",
     "link": "https://www.npmjs.com/package/@jmegs/tpl",
     "source": "https://github.com/jmegs/tpl"
