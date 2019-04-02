@@ -8,7 +8,7 @@
   {
     "name": "Easing Curves",
     "desc": "Easing curve reference guide",
-    "link": "https://easing.netlify.com",
+    "link": "https://easings.netlify.com",
     "source": "https://github.com/jmegs/easing-curves",
     "disabled": true
   },
