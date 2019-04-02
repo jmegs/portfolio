@@ -9,9 +9,13 @@
 
 // Typography
 h1,
+.h1,
 h2,
+.h2,
 h3,
-h4 {
+.h3,
+h4,
+.h4 {
   font-family: @display;
   font-weight: normal;
   line-height: 1.25;
@@ -55,6 +59,9 @@ code {
       (100vw - (var(--fluid-type-min-screen) * 1rem)) /
       (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
   );
+
+  line-height: 1;
+  margin-bottom: 0.25em;
 }
 
 .c-mid-grey {
@@ -114,6 +121,10 @@ header[role='banner'] {
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 2rem;
+
+  & p {
+    font-family: @text;
+  }
 }
 
 .big-list {
@@ -148,6 +159,7 @@ header[role='banner'] {
 
 .big-list_meta {
   color: @light-grey;
+  font-family: @text;
   line-height: 1.25;
   margin-bottom: 0;
   @media (min-width: 788px) {
