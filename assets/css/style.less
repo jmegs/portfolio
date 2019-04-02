@@ -7,6 +7,7 @@
 @black: #171a27;
 @mid-grey: #535663;
 @light-grey: #b8bbc6;
+@wash: #F4F4F6;
 
 // Typography
 h1,
@@ -71,6 +72,19 @@ code {
 
 .c-black {
   color: @black;
+}
+
+a[href^="http"] {
+  /* fully valid URL, likely external link */
+  &:after {
+    --icon-after-icon: '¬';
+    content: var(--icon-after-icon);
+    padding-left: 0.25em;
+  }
+ 
+  &:hover {
+    border-bottom: 0.1em solid;
+  }
 }
 
 // Layout
@@ -138,9 +152,9 @@ header[role='banner'] {
 
 .big-list_item {
   border-bottom: 2px solid @mid-grey;
-  padding: 1.5rem 0;
+  padding: 2.25rem 0;
 
-  @media (min-width: 788px) {
+  @media (min-width: 1132px) {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
@@ -149,21 +163,16 @@ header[role='banner'] {
 
 .big-list_title {
   margin-right: auto;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
 }
 
-.icon-after:after {
-  --icon-after-icon: '¬';
-  content: var(--icon-after-icon);
-  padding-left: 0.25em;
-}
 
 .big-list_meta {
   color: @light-grey;
   font-family: @text;
   line-height: 1.25;
   margin-bottom: 0;
-  @media (min-width: 788px) {
+  @media (min-width: 1132px) {
     margin-left: 2rem;
   }
 }
@@ -226,7 +235,7 @@ article.post .post_header {
 article.post pre {
   overflow-x: auto;
   // @TODO update background color
-  background: #f6f6f6;
+  background: @wash;
   padding: 7vmin;
 }
 
@@ -258,10 +267,5 @@ article.post pre {
 
   & p {
     margin-bottom: 2rem;
-  }
-
-  & a:hover {
-    border-bottom: 2px solid @black;
-    color: black;
   }
 }

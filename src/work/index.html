@@ -29,16 +29,12 @@ title: work
     <h2 class="h1 c-black big-list_title">
       {{ entry.name }}
     </h2>
-    <a href="{{ entry.link }}" class="wrap">
-      <span class="h1 big-list_meta icon-after"
-        >Visit</span
-      >
-    </a>
-    <a href="{{ entry.source }}" class="wrap">
-      <span class="h1 big-list_meta icon-after"
-        >Source</span
-      >
-    </a>
+    <span class="h1 big-list_meta">
+      <a href="{{ entry.link }}" class="wrap">Visit</a>
+    </span>
+    <span class="h1 big-list_meta">
+      <a href="{{ entry.source }}" class="wrap">Source</a>
+    </span>
   </li>
   {% endfor %}
 </ul>
