@@ -1,0 +1,15 @@
+{{ define "main" }}
+<a href="/" class="back-link">Back</a>
+<article class="project" id="{{ .Title | anchorize }}">
+  <header class="project__header">
+    <h1 class="project__meta">
+      {{.Title}}
+    </h1>
+    <h2 class="project__meta">
+      {{.Params.what}}
+    </h2>
+    <h2 class="project__meta">{{.Params.when}} @ {{.Params.where}}</h2>
+  </header>
+  {{ .Content }}
+</article>
+{{ end }}

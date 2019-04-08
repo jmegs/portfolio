@@ -1,15 +1,3 @@
-# MacOS Bullshit
-.DS_Store
-
-# Modules
 node_modules/
-
-# Framework Specific
-.next/
-out/
-
-# Logs
-*.log
-
-# Secrets
-.env
+public/
+resources/

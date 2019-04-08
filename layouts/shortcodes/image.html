@@ -1,0 +1,12 @@
+{{ $baseURL := "https://res.cloudinary.com/jmegs" }}
+
+<!-- prettier-ignore -->
+<figure data-expand="-20">
+  <img
+    class="lazyload" 
+    data-src="{{ $baseURL }}/c_scale,w_1366,f_auto/{{ .Get "id" }}.jpg"
+    data-srcset="{{ $baseURL }}/c_scale,w_640,f_auto/{{ .Get "id" }}.jpg 640w,
+  {{ $baseURL }}/c_scale,w_1366,f_auto/{{ .Get "id" }}.jpg 1366w,
+  {{ $baseURL }}/c_scale,f_auto/{{ .Get "id" }}.jpg 2732w" 
+  alt="{{ .Get "alt" }}" />
+</figure>

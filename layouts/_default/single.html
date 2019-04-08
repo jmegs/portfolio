@@ -1,0 +1,17 @@
+{{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<article class="fadeInUp">
+  <a href="/" class="back-link">Back</a>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <time
+      datetime="{{ .PublishDate }}"
+      >{{ .PublishDate.Format "January 2, 2006" }}</time
+    >
+  </header>
+  <section class="fadeInUp delay1">
+    {{ .Content }}
+  </section>
+</article>
+{{ end }}
