@@ -19,7 +19,9 @@
       src="{{ $secureJS.Permalink | absURL }}"
       integrity="{{ $secureJS.Data.Integrity }}"
     ></script>
-    {{ partial "ga.html" . }}
+    {{ if not .Site.IsServer }}
+      {{ partial "ga.html" . }}
+    {{ end }}
   </head>
   <body>
     <main>
