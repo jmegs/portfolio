@@ -4,14 +4,14 @@ Welcome to the innards of my website.
 
 # The Stack
 
-- Next.js - React app exported as a static website.
-- PostCss – Tomorrow's CSS today.
-- Netlify – Miraculously easy, miraculously free hosting.
+- Hugo.
+- SCSS and PostCSS.
+- Netlify.
 
 # Running Locally
 
 ```sh
-yarn install # install deps
-yarn dev # run site locally
-yarn build # export static assets to out/
+yarn install # install postcss-cli to your environment
+hugo server -D # run site locally with drafts
+hugo --gc --minify # build for production
 ```
