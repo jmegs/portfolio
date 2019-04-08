@@ -1,8 +1,8 @@
 {{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
 {{ define "main" }}
 <a href="/" class="back-link">Back</a>
-<article class="project" id="{{ .Title | anchorize }}">
-  <header class="project__header fadeInUp">
+<article class="project fadeInUp" id="{{ .Title | anchorize }}">
+  <header class="project__header">
     <h1 class="project__meta">
       {{.Title}}
     </h1>
@@ -11,8 +11,6 @@
     </h2>
     <h2 class="project__meta">{{.Params.when}} @ {{.Params.where}}</h2>
   </header>
-  <section class="fadeInUp delay2">
-    {{ .Content }}
-  </section>
+  {{ .Content }}
 </article>
 {{ end }}
