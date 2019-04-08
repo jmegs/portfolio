@@ -162,8 +162,10 @@ h1 {
 }
 
 h1.fluid {
-  font-size: 10vw;
-  margin-bottom: 0.5em;
+  @media (min-width: 35em) {
+    font-size: 10vw;
+    margin-bottom: 0.5em;
+  }
 }
 
 a {
@@ -223,7 +225,10 @@ img {
 }
 
 figure {
-  margin: 3rem 0;
+  margin: 1rem 0;
+  @media (min-width: 35em) {
+    margin: 3rem 0;
+  }
 }
 
 pre {
