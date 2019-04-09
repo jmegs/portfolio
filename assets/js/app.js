@@ -5,8 +5,15 @@ function getRandomInt(max) {
 }
 
 function setRandomHue() {
-  let randomHue = getRandomInt(360)
-  root.style.setProperty("--hue", randomHue)
+  let hue = sessionStorage.getItem("hue")
+
+  if (!hue) {
+    let randomHue = getRandomInt(360)
+    sessionStorage.setItem("hue", randomHue)
+    hue = randomHue
+  }
+
+  root.style.setProperty("--hue", hue)
 }
 
 setRandomHue()
