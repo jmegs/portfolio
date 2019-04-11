@@ -8,6 +8,7 @@
     {{ partial "metadata.html" . }}
     {{$css := resources.Get "css/main.scss" | toCSS }}
     {{$style := $css | resources.PostCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="https://use.typekit.net/orr0eqr.css">
     <link rel="stylesheet" href="{{ $style.Permalink | absURL }}" />
     {{ $sizes := resources.Get "js/lazysizes.min.js" }}
     {{ $app := resources.Get "js/app.js" }}
