@@ -1,5 +1,5 @@
 ---
-title: Samsung Entertainment Experience
+title: Samsung Retail
 what: In-Store Experience, Web Dashboard
 when: 2017
 where: R/GA
