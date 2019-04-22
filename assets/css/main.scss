@@ -77,7 +77,8 @@ $animationDuration: 0.8s;
 
 html {
   font-size: 1em;
-  font-family:  neue-haas-grotesk-text, 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: neue-haas-grotesk-text, 'Helvetica Neue', 'Helvetica', Arial,
+    sans-serif;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -115,7 +116,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: neue-haas-grotesk-display, 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: neue-haas-grotesk-display, 'Helvetica Neue', 'Helvetica', Arial,
+    sans-serif;
   line-height: 1.25;
 }
 
@@ -135,7 +137,6 @@ h1 {
 h1.fluid {
   @media (min-width: 35em) {
     font-size: 10vw;
-    margin-bottom: 0.5em;
   }
 }
 
@@ -214,6 +215,10 @@ pre {
   }
 }
 
+.homepage__title {
+  margin-bottom: 0.5em;
+}
+
 .home-links {
   padding: 0;
 }
@@ -234,13 +239,17 @@ article.project {
   max-width: 100%;
 }
 
-article.project > *:not(figure) {
+article.project p {
   max-width: 45rem;
+}
+
+.project__title {
+  margin-bottom: 3rem;
 }
 
 .project__meta {
   margin: 0;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   font-weight: normal;
   max-width: inherit;

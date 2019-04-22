@@ -3,11 +3,11 @@
 <a href="/" class="back-link">Back</a>
 <article class="project fadeInUp" id="{{ .Title | anchorize }}">
   <header class="project__header">
-    <h1 class="project__meta">
+    <h1 class="fluid project__title">
       {{.Title}}
     </h1>
     <h2 class="project__meta">
-      {{.Params.what}}
+      {{.Params.what | title}}
     </h2>
     <h2 class="project__meta">{{.Params.when}} @ {{.Params.where}}</h2>
   </header>
