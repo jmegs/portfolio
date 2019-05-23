@@ -1,11 +1,7 @@
 {
   "name": "johnmeguerian.com",
-  "version": "9.0",
+  "version": "10",
   "description": "john meguerian's personal site",
   "author": "jmegs",
-  "license": "MIT",
-  "devDependencies": {
-    "postcss-cli": "^6.1.2",
-    "postcss-preset-env": "^6.6.0"
-  }
+  "license": "MIT"
 }

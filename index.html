@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zxl1qaw.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      main {
+        color: #121018;
+        height: 100vh;
+        text-align: center;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .name,
+      .links {
+        font-family: acumin-pro-wide, sans-serif;
+        font-size: 18px;
+      }
+
+      .panic {
+        font-family: titling-gothic-fb-compressed, sans-serif;
+        text-transform: uppercase;
+        font-size: 88px;
+      }
+
+      .links {
+        display: grid;
+        grid-column-gap: 24px;
+        grid-auto-flow: column;
+        max-width: 360px;
+        align-self: center;
+      }
+
+      .links a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .links a:hover {
+        color: var(--hover-color, #ebebeb);
+      }
+
+      #github {
+        --hover-color: #6e5494;
+      }
+
+      #twitter {
+        --hover-color: #1da1f2;
+      }
+
+      #linkedin {
+        --hover-color: #0077b5;
+      }
+    </style>
+  </head>
+  <body>
+    <main role="main">
+      <h1 class="name">John Meguerian</h1>
+      <h2 role="presentation" class="panic">Don't Panic.</h2>
+      <div class="links">
+        <a id="twitter" href="http://twitter.com/jmegs">Twitter</a>
+        <a id="github" href="http://github.com/jmegs">Github</a>
+        <a id="linkedin" href="http://linkedin.com/in/johnmeguerian"
+          >Linkedin</a
+        >
+      </div>
+    </main>
+  </body>
+</html>
