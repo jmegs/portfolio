@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>John Meguerian – Product Designer</title>
+    <meta
+      name="description"
+      content="John Meguerian in a Product Designer in NYC and ape-descended life form who still things digital watches are a pretty neat idea."
+    />
     <link rel="stylesheet" href="https://use.typekit.net/zxl1qaw.css" />
     <script src="https://unpkg.com/vh-check/dist/vh-check.min.js"></script>
     <script>
@@ -15,6 +19,10 @@
       * {
         box-sizing: border-box;
         margin: 0;
+      }
+
+      ::selection {
+        background: yellow;
       }
 
       main {
@@ -29,12 +37,12 @@
         justify-content: space-between;
       }
 
-      @media (prefers-color-scheme: dark) {
+      /* @media (prefers-color-scheme: dark) {
         main {
-          color: fff;
+          color: #fff;
           background: #121018;
         }
-      }
+      } */
 
       .name,
       .links {
@@ -64,6 +72,10 @@
 
       .links a:hover {
         color: var(--hover-color, #ebebeb);
+      }
+
+      .links a::selection {
+        background: var(--hover-color);
       }
 
       #github {
