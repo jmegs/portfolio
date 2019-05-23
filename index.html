@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="https://use.typekit.net/zxl1qaw.css" />
+    <script src="https://unpkg.com/vh-check/dist/vh-check.min.js"></script>
+    <script>
+      ;(function() {
+        let test = vhCheck()
+      })()
+    </script>
     <style>
       * {
         box-sizing: border-box;
@@ -12,13 +18,22 @@
       }
 
       main {
-        color: #121018;
+        color: #fff;
+        background: #121018;
         height: 100vh;
+        height: calc(100vh - var(--vh-offset, 0px));
         text-align: center;
         padding: 24px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        main {
+          color: fff;
+          background: #121018;
+        }
       }
 
       .name,
