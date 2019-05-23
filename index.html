@@ -48,6 +48,7 @@
       .links {
         font-family: acumin-pro-wide, sans-serif;
         font-size: 18px;
+        font-weight: 400;
       }
 
       .panic {
@@ -89,13 +90,33 @@
       #linkedin {
         --hover-color: #0077b5;
       }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      .fadeIn {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: fadeIn;
+      }
+
+      .delay {
+        animation-delay: 0.5s;
+      }
     </style>
   </head>
   <body>
     <main role="main">
-      <h1 class="name">John Meguerian</h1>
-      <h2 role="presentation" class="panic">Don't Panic.</h2>
-      <div class="links">
+      <h1 class="name fadeIn delay">John Meguerian</h1>
+      <h2 role="presentation" class="panic fadeIn">Don't Panic.</h2>
+      <div class="links fadeIn delay">
         <a id="twitter" href="http://twitter.com/jmegs">Twitter</a>
         <a id="github" href="http://github.com/jmegs">Github</a>
         <a id="linkedin" href="http://linkedin.com/in/johnmeguerian"
