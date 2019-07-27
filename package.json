@@ -1,11 +1,27 @@
 {
   "name": "johnmeguerian.com",
-  "version": "9.0",
+  "version": "10.0.0",
   "description": "john meguerian's personal site",
   "author": "jmegs",
   "license": "MIT",
   "devDependencies": {
-    "postcss-cli": "^6.1.2",
-    "postcss-preset-env": "^6.6.0"
+    "@11ty/eleventy": "latest",
+    "gulp": "latest",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "latest",
+    "postcss-preset-env": "latest",
+    "postcss-easy-import": "latest",
+    "del": "latest",
+    "browser-sync": "latest",
+    "npm-run-all": "latest"
+  },
+  "scripts": {
+    "build:assets": "gulp build",
+    "build:site": "eleventy",
+    "dev:site": "eleventy --watch",
+    "dev:assets": "gulp",
+    "dev:serve": "browser-sync start -s dist -f dist --no-open --no-notify",
+    "start": "run-p dev:*",
+    "build": "run-s build:site build:assets"
   }
 }

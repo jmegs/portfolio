@@ -1,7 +1,0 @@
-languageCode = "en-us"
-title = "John Meguerian"
-disableKinds = ["taxonomy", "taxonomyTerm"]
-
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-pygmentsStyle = "xcode"

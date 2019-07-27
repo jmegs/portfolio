@@ -1,4 +1,24 @@
+# Built output
+dist/
+
+# Dependency directories
 node_modules/
-public/
-resources/
-functions/
+
+# Temporary files
+.cache
+.npm
+.yarn-integrity
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment variables shhh
+.env
+
+# Mac shit
+.DS_Store
