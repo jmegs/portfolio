@@ -4,15 +4,14 @@ Welcome to the innards of my website.
 
 # The Stack
 
-- Eleventy.
-- PostCSS.
-- Gulp.
+- Hugo.
+- SCSS and PostCSS.
 - Netlify.
 
 # Running Locally
 
 ```sh
 yarn install # install postcss-cli to your environment
-yarn start # local dev
-yarn build # build for prod
+hugo server -D # run site locally with drafts
+hugo --gc --minify # build for production
 ```

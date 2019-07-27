@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "metadata.html" . }}
+    {{$css := resources.Get "css/main.scss" | toCSS }}
+    {{$style := $css | resources.PostCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="https://use.typekit.net/orr0eqr.css">
+    <link rel="stylesheet" href="{{ $style.Permalink | absURL }}" />
+    {{ $sizes := resources.Get "js/lazysizes.min.js" }}
+    {{ $app := resources.Get "js/app.js" }}
+    {{ $js := slice $sizes $app | resources.Concat "js/bundle.js" }}
+    {{ $secureJS := $js | minify | fingerprint }}
+    <script
+      defer
+      type="text/javascript"
+      src="{{ $secureJS.Permalink | absURL }}"
+      integrity="{{ $secureJS.Data.Integrity }}"
+    ></script>
+    {{ if not .Site.IsServer }}
+      {{ partial "ga.html" . }}
+    {{ end }}
+  </head>
+  <body>
+    <main>
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+  </body>
+</html>
