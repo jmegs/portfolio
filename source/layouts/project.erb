@@ -1,6 +1,6 @@
 <% wrap_layout :layout do %>
   <article class="project">
-    <div class="project-info">
+
       <header>
         <h1 class="measure-tight"><%= current_page.data.title %></h1>
         <dl class="meta">
@@ -16,7 +16,7 @@
       <section class="intro stack measure-narrow">
         <%= yield %>
       </section>
-    </div>
+
 
     <section class="gallery">
       <% current_page.data.images.each do |img| %>
