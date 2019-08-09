@@ -1,0 +1,16 @@
+<% cloudinary = "https://res.cloudinary.com/jmegs" %>
+
+<figure data-expand="-20">
+  <img
+    class="lazyload" 
+    src="<%= cloudinary %>/c_scale,w_640,f_auto/<%= id %>.jpg"
+    data-src="<%= cloudinary %>/c_scale,w_1366,f_auto/<%= id %>.jpg"
+    data-srcset="<%= cloudinary %>/c_scale,w_640,f_auto/<%= id %>.jpg 640w,
+  <%= cloudinary %>/c_scale,w_1366,f_auto/<%= id %>.jpg 1366w,
+  <%= cloudinary %>/c_scale,f_auto/<%= id %>.jpg 2732w" 
+  alt="<%= caption if defined? caption %>" />
+  
+  <% if caption %>
+    <figcaption><%= caption %></figcaption>
+  <% end %>
+</figure>
