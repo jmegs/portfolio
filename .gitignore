@@ -1,0 +1,7 @@
+# javascript things
+node_modules
+.tmp 
+.cache
+
+# middleman output
+build

@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "10.0.0",
+  "description": "John Meguerian's personal site",
+  "author": "John Meguerian <johnmeguerian@gmail.com>",
+  "scripts": {
+    "start": "NODE_ENV=development webpack -d --watch --config ./webpack.config.js --color --display-error-details",
+    "build": "NODE_ENV=production webpack -p --config ./webpack.config.js --progress --color --display-error-details --bail"
+  },
+  "dependencies": {
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
