@@ -31,16 +31,34 @@
 }
 
 main {
-  padding-top: calc(50vh - 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-main.index {
-  padding-top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.work-index-item {
+  font-size: $heading-2;
+  line-height: $line-height-headings;
+  font-weight: 500;
+}
+
+.work-index-item a {
+  text-decoration: none;
+
+  &:hover { text-decoration: underline;}
+}
+
+.work-index-item span {
+  font-size: $text-body;
+  color: $oc-gray-6;
+
+  @media (max-width: $screen-large) {
+    display: block;
+    margin-top: 0.25em;
+    margin-bottom: 2rem;
+  }
 }
 
 .social-links li {
@@ -49,6 +67,7 @@ main.index {
 }
 
 .project {
+  padding-top: $top-align;
   @media(min-width: $screen-large) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
