@@ -1,5 +1,5 @@
 ---
-title: Equinox Personal Training
+title: Samsung Entertainment Experience
 what: Interactive retail installation, web dashboard
 when: 2018
 where: "R/GA"
