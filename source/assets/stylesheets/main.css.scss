@@ -1,4 +1,5 @@
 @import 'base';
+@import 'grid';
 @import 'theme';
 
 .container {
@@ -34,8 +35,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: $global-gutter;
+  padding-right: $global-gutter;
 }
 
 .work-index-item {

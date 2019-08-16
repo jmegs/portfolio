@@ -13,6 +13,8 @@ $text-body: 1.125rem;
 $line-height-headings: 1.25;
 $line-height-text: 1.4;
 
+$global-gutter: 3.5vmin;
+
 $measure: 66ch;
 $measure-narrow: 50ch;
 $measure-tight: 20ch;
@@ -20,6 +22,7 @@ $measure-tight: 20ch;
 $top-align: calc(50vh - 8rem);
 
 $screen-large: 60rem;
+$screen-not-small: 48rem;
 
 .measure { max-width: $measure; }
 .measure-narrow { max-width: $measure-narrow; }
