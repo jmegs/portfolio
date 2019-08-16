@@ -1,21 +1,18 @@
 <% wrap_layout :layout do %>
-  <article class="project">
+  <article class="project grid-split">
 
-      <header>
-        <h1 class="measure-tight"><%= current_page.data.title %></h1>
-        <dl class="meta">
-          <dt>What</span>
-          <dd><%= current_page.data.what %></dd>
-          <dt>When</span>
-          <dd><%= current_page.data.when %></dd>
-          <dt>Where</dt>
-          <dd><%= current_page.data.where %></dd>
-        </dl>
-      </header>
+    <header>
+      <h1 class="measure-tight"><%= current_page.data.title %></h1>
+      <ul class="meta">
+        <li class="meta__item"><%= current_page.data.what %></li>
+        <li class="meta__item"><%= current_page.data.when %></li>
+        <li class="meta__item"><%= current_page.data.where %></li>
+      </ul>
+    </header>
 
-      <section class="intro stack measure-narrow">
-        <%= yield %>
-      </section>
+    <section class="intro stack measure-narrow">
+      <%= yield %>
+    </section>
 
 
     <section class="gallery">
@@ -23,5 +20,6 @@
         <%= partial "partials/image", :locals => {:id => img.id, :caption => img.caption} %>
       <% end %>
     </section>
+    
   </article>
 <% end %>

@@ -19,7 +19,7 @@ $measure: 66ch;
 $measure-narrow: 50ch;
 $measure-tight: 20ch;
 
-$top-align: calc(50vh - 8rem);
+$top-align: calc(50vh - 12rem);
 
 $screen-large: 60rem;
 $screen-not-small: 48rem;
@@ -48,7 +48,12 @@ h3, .h3 {
   font-weight: 500;
 }
 
-h1, .h1 { font-size: $heading-1; }
+h1, .h1 { 
+  font-size: $heading-1; 
+  @media(max-width: $screen-not-small) {
+    font-size: 3rem;
+  }
+}
 
 p { font-size: $text-body; }
 

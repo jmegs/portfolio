@@ -1,6 +1,6 @@
 // any class containing "grid-" displays as grid above 768px
 // below that, displays as a vertical stack of elements
-[class^="grid-"] {
+[class*="grid-"] {
   display: grid;
   grid-column-gap: $global-gutter;
   padding: 0 $global-gutter;

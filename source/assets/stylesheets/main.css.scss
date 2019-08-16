@@ -1,34 +1,50 @@
 @import 'base';
-@import 'grid';
 @import 'theme';
+@import 'grid';
 
 .container {
   min-height: 100vh;
   height: 100%;
   display: grid;
-  grid-template-rows: 4rem 1fr 4rem;
-}
+  grid-template-rows: min-content 1fr min-content;
+} 
 
-.global-header,
+.global-header, 
 .global-footer {
-  padding: 0 2rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  a:hover { text-decoration: underline; }
+  padding: $global-gutter;
 }
 
-.global-header > a {
+.global-header__item {
   display: flex;
-  align-content: center;
+  color: inherit;
+  text-decoration: none;
+}
 
-  svg { margin-right: 0.5rem; }
+.global-header__text {
+  margin-left: 0.5rem;
+}
+
+.global-footer__links  {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 0.5rem;
+}
+
+@media(max-width: $screen-not-small) {
+  .global-header__text {
+    display: none;
+  }
+
+  .global-footer {
+    display: block;
+
+    & > * + * {
+      margin-top: $global-gutter;
+    }
+  }
 }
 
 main {
@@ -39,52 +55,33 @@ main {
   padding-right: $global-gutter;
 }
 
-.work-index-item {
-  font-size: $heading-2;
+.work-index__item {
+  font-size: 4rem;
   line-height: $line-height-headings;
-  font-weight: 500;
-}
-
-.work-index-item a {
-  text-decoration: none;
-
-  &:hover { text-decoration: underline;}
-}
-
-.work-index-item span {
-  font-size: $text-body;
-  color: $oc-gray-6;
-
-  @media (max-width: $screen-large) {
-    display: block;
-    margin-top: 0.25em;
-    margin-bottom: 2rem;
+  @media(max-width: $screen-not-small) {
+    font-size: 2rem;
   }
-}
 
-.social-links li {
-  display: inline-block;
-  margin-left: 2rem;
+  & a {
+    text-decoration: none;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
 }
 
 .project {
   padding-top: $top-align;
-  @media(min-width: $screen-large) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-  }
 }
 
-.project header {
-  grid-column: 1;
-  h1 {margin-bottom: 2rem;}
-  dd {margin-bottom: 1.5rem;}
+.project h1 {
+  margin-bottom: 2rem;
 }
 
-.project .intro {
-  padding-top: 2rem;
-  grid-column : 2;
+.project .meta__item {
+  margin-bottom: 0.5rem;
+  color: $oc-gray-6;
 }
 
 .gallery {
