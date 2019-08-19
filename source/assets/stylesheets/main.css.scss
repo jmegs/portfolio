@@ -8,6 +8,11 @@ html {
   line-height: $line-height-text;
   color: $black;
   background-color: $white;
+  
+  @media(prefers-color-scheme: dark) {
+    color: $white;
+    background-color: $black;
+  }
 }
 
 h1,
