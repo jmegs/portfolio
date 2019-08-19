@@ -1,8 +1,8 @@
 <% cloudinary = "https://res.cloudinary.com/jmegs" %>
 
-<figure data-expand="-20">
+<figure class="gallery-item" data-expand="-20">
   <img
-    class="lazyload" 
+    class="lazyload gallery-item__img" 
     src="<%= cloudinary %>/c_scale,w_640,f_auto/<%= id %>.jpg"
     data-src="<%= cloudinary %>/c_scale,w_1366,f_auto/<%= id %>.jpg"
     data-srcset="<%= cloudinary %>/c_scale,w_640,f_auto/<%= id %>.jpg 640w,
@@ -11,6 +11,6 @@
   alt="<%= caption if defined? caption %>" />
   
   <% if caption %>
-    <figcaption><%= caption %></figcaption>
+    <figcaption class="gallery-item__caption"><%= caption %></figcaption>
   <% end %>
 </figure>
