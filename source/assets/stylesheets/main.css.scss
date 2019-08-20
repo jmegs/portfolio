@@ -36,6 +36,10 @@ h2 {
   font-size: $font-size-h2;
 }
 
+h3 {
+  font-size: $font-size-h3;
+}
+
 // Global Layout
 .container {
   padding: $squishy-space;
@@ -96,6 +100,7 @@ h2 {
 }
 
 .teaser__img {
+  max-width: 100%;
   grid-area: image;
   margin-bottom: 1rem;
   box-shadow: $shadow-image;
@@ -163,4 +168,91 @@ h2 {
   font-size: $font-size-small;
   font-style: italic;
   max-width: 66ch;
+}
+
+// Post Layout
+.post {
+  --flow-space: 1.5rem;
+  max-width: 50rem;
+  padding: 8rem 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include not-small {
+    padding: 16rem 0;
+  }
+}
+
+.post > * + * {
+  margin-top: var(--flow-space);
+}
+
+.post img,
+.post figure,
+.post video,
+.post pre,
+.post .full-bleed {
+  width: 100vw;
+  max-width: 60rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  // width: 100%;
+  // grid-column: media-start / media-end;
+  // margin-top: .5rem;
+  // margin-bottom: 2rem;
+  // margin-bottom: 3.5rem;
+}
+
+.post figure, .post figure + *, .post pre > code, .post video, .post img, .post img + * {
+  --flow-space: 4rem;
+}
+
+.post__header {
+  margin-bottom: 4rem;
+}
+
+.post__title {
+  margin-bottom: 1rem;
+}
+
+.post__time {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.post__time, .post__tags {
+  font-size: 1rem;
+}
+
+.post p {
+ margin-bottom: 1.5em; 
+}
+
+.post h2, .post h3, .post h4 {
+  margin-bottom: 0.5em;
+}
+
+.post blockquote {
+  font-size: 1.25rem;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: .125rem;
+    height: calc(100% - 1.5em);
+    left: -2rem;
+    background-color: $black;
+
+    @media(prefers-color-scheme: dark) {
+      background-color: $white;
+    }
+  }
+}
+
+.post pre {
+  padding: $squishy-space;
+  background-color: $oc-gray-1;
+  overflow-x: scroll;
 }
