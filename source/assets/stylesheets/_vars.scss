@@ -1,0 +1,35 @@
+@import 'open-color';
+
+@mixin not-small {
+  @media(min-width: 768px) { @content; }
+}
+
+@mixin only-small {
+  @media(max-width: 767px) { @content; }
+}
+
+// Type
+$font-headings: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica, Arial,
+  sans-serif;
+$font-text: neue-haas-grotesk-text, 'Helvetica Neue', Helvetica, Arial,
+  sans-serif;
+
+$font-size-display-lg: 4rem;
+$font-size-display-sm: 2.25rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.5rem;
+$font-size-body: 1.125rem;
+$font-size-small: 0.875rem;
+
+$line-height-headings: 1.25;
+$line-height-text: 1.4;
+
+// Spacing
+$squishy-space: 3.5vmin;
+
+// Color
+$black: $oc-gray-9;
+$white: $oc-gray-0;
+
+// Shadow
+$shadow-image: 0px 16px 30px rgba(0, 0, 0, 0.1);

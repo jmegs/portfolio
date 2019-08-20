@@ -1,25 +1,26 @@
 <% wrap_layout :layout do %>
-  <article class="project grid-split">
+  <article class="project">
+    <div class="project__intro">
+      <header class="project__header">
+        <h1 class="project__title"><%= current_page.data.title %></h1>
+        <ul class="project__meta">
+          <li><%= current_page.data.what %></li>
+          <li><%= current_page.data.when %></li>
+          <li><%= current_page.data.where %></li>
+        </ul>
+      </header>
+    
+      <div class="project__text">
+        <%= yield %>
+      </div>
+    </div>
 
-    <header>
-      <h1 class="measure-tight"><%= current_page.data.title %></h1>
-      <ul class="meta">
-        <li class="meta__item"><%= current_page.data.what %></li>
-        <li class="meta__item"><%= current_page.data.when %></li>
-        <li class="meta__item"><%= current_page.data.where %></li>
-      </ul>
-    </header>
 
-    <section class="intro stack measure-narrow">
-      <%= yield %>
-    </section>
-
-
-    <section class="gallery">
+    <section class="project__gallery">
       <% current_page.data.images.each do |img| %>
         <%= partial "partials/image", :locals => {:id => img.id, :caption => img.caption} %>
       <% end %>
     </section>
-    
+
   </article>
 <% end %>

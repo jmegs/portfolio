@@ -9,13 +9,13 @@
     <%= stylesheet_link_tag "main" %>
     <%= javascript_include_tag 'main' %>
   </head>
-  <body>
+  <body class="<%= page_classes %>">
     <div class="container">
-        <%= partial "partials/global-header" %>
-        <main class="<%= page_classes %>" role="main">
-          <%= yield %>
-        </main>
-        <%= partial "partials/global-footer" %>
+        <%= partial "partials/navbar" %>
+          <main>
+            <%= yield %>
+          </main>
+        <%= partial "partials/footer" %>
     </div>
     <% if build? %>
       <%= partial "partials/analytics" %>

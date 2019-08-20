@@ -1,0 +1,14 @@
+<% wrap_layout :layout do %>
+  <article class="post">
+    <header class="post__header">
+      <h1 class="post__title"><%= current_page.data.title %></h1>
+      <time class="post__time"><%= current_page.data.date %></time>
+      <ul class="post__tags">
+        <% current_page.data.tags.each do |tag| %>
+          <li class="post__tag"><%= tag %></li>
+        <% end %>
+      </ul>
+    </header>
+    <%= yield %>
+  </article>
+<% end %>
