@@ -3,6 +3,12 @@
 
 // Typography
 
+:root {
+  // enables responsive scaling
+  // never less than 16px, scales from there by vmax
+  font-size: $root-scale-factor;
+}
+
 html {
   font-family: $font-text;
   line-height: $line-height-text;
@@ -24,12 +30,8 @@ h4 {
 }
 
 h1 {
-  font-size: $font-size-display-sm;
+  font-size: $font-size-display;
   max-width: 20ch;
-
-  @include not-small {
-    font-size: $font-size-display-lg;
-  }
 }
 
 h2 {
@@ -117,7 +119,7 @@ h3 {
 }
 
 .teaser__img {
-  max-width: 100%;
+  width: 100%;
   grid-area: image;
   margin-bottom: 1rem;
   box-shadow: $shadow-image;

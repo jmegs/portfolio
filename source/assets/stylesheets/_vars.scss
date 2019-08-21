@@ -14,8 +14,8 @@ $font-headings: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica, Arial,
 $font-text: neue-haas-grotesk-text, 'Helvetica Neue', Helvetica, Arial,
   sans-serif;
 
-$font-size-display-lg: 4rem;
-$font-size-display-sm: 2.25rem;
+$root-scale-factor: calc(100% + 0.25vmax);
+$font-size-display: 5vmax; 
 $font-size-h2: 2rem;
 $font-size-h3: 1.5rem;
 $font-size-body: 1.125rem;
