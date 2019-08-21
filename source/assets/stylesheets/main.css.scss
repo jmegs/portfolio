@@ -204,7 +204,7 @@ h3 {
   // margin-bottom: 3.5rem;
 }
 
-.post figure, .post figure + *, .post pre > code, .post video, .post img, .post img + * {
+.post figure, .post figure + *, .post pre > code, .post video, .post img, .post img + *, .post blockquote, .post blockquote + * {
   --flow-space: 4rem;
 }
 
@@ -235,20 +235,30 @@ h3 {
 
 .post blockquote {
   font-size: 1.25rem;
+  padding: 2rem 0;
   position: relative;
 
   &:before {
     content: "";
     position: absolute;
     width: .125rem;
-    height: calc(100% - 1.5em);
-    left: -2rem;
+    height: 100%;
+    top: 0;
+    left: -$squishy-space;
     background-color: $black;
 
     @media(prefers-color-scheme: dark) {
       background-color: $white;
     }
   }
+}
+
+.post blockquote p {
+  margin-bottom: 0;
+}
+
+.post blockquote p + p {
+  margin-top: 1.5em
 }
 
 .post pre {
