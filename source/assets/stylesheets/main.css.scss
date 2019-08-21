@@ -52,6 +52,23 @@ h3 {
 
 .navbar__name { text-decoration: none; }
 
+.navbar__emoji {
+  display: inline-block;
+  transform-origin: center center;
+  transform: rotate(0deg);
+  transition: transform 300ms ease;
+}
+
+.navbar__name:hover,
+.navbar__name:active,
+.navbar__name:focus {
+.navbar__emoji {
+  transform: rotate(180deg);
+  transition: transform 300ms ease;
+}
+}
+  
+
 .social > * + * {
   margin-left: 1rem;
 }

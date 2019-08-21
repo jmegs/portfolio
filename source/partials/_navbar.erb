@@ -1,4 +1,6 @@
 <header class="navbar">
-  <%= link_to " 🙃  John Meguerian", "/", :class => "navbar__name" %>
+  <% link_to "/", :class => "navbar__name" do %>
+    <span class="navbar__emoji">🙃 </span> John Meguerian
+  <% end %>
   <span class="navbar__tagline">Don't Panic.</span>
 </header>
