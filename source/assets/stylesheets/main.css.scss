@@ -55,16 +55,16 @@ h3 {
 .navbar__emoji {
   display: inline-block;
   transform-origin: center center;
-  transform: rotate(0deg);
-  transition: transform 300ms ease;
+  transform: translateY(0);
+  transition: transform 180ms ease;
 }
 
 .navbar__name:hover,
 .navbar__name:active,
 .navbar__name:focus {
 .navbar__emoji {
-  transform: rotate(180deg);
-  transition: transform 300ms ease;
+  transform: translateY(-0.25em);
+  transition: transform 180ms ease;
 }
 }
   
