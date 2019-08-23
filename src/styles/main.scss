@@ -8,16 +8,24 @@ html {
   line-height: $line-height-text;
   color: $black;
   background-color: $white;
+  ::selection {
+    background-color: $oc-yellow-4;
+  }
+  
   
   @media(prefers-color-scheme: dark) {
     color: $white;
     background-color: $black;
+    ::selection {
+      background-color: $oc-yellow-5;
+    }
   }
 }
 
 body {
   font-size: $type-scale-factor;
 }
+
 
 h1,
 h2,
