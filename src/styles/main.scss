@@ -3,12 +3,6 @@
 
 // Typography
 
-:root {
-  // enables responsive scaling
-  // never less than 16px, scales from there by vmax
-  font-size: $root-scale-factor;
-}
-
 html {
   font-family: $font-text;
   line-height: $line-height-text;
@@ -19,6 +13,10 @@ html {
     color: $white;
     background-color: $black;
   }
+}
+
+body {
+  font-size: $type-scale-factor;
 }
 
 h1,
