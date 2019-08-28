@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -16,6 +17,10 @@ module.exports = {
           id: 'kre8rmj'
         }
       }
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: { apiToken: `3522e309c7ef7cf5d939b4a053a4a5` }
     }
   ]
 }
