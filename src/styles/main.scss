@@ -35,22 +35,32 @@ h4 {
   line-height: $line-height-headings;
 }
 
-h1 {
+h1, .h1 {
   font-size: $font-size-display;
   max-width: 20ch;
 }
 
-h2 {
+h2, .h2 {
   font-size: $font-size-h2;
 }
 
-h3 {
+h3, .h3 {
   font-size: $font-size-h3;
+}
+
+.u-box {
+  border: 1px solid $black;
+}
+
+.u-grid {
+  @include not-small {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 // Global Layout
 .container {
-  border: 1px solid $black;
   min-height: 100vh;
 }
 
@@ -58,7 +68,6 @@ h3 {
   padding: $squishy-space;
   display: flex;
   justify-content: space-between;
-  border: 1px solid $black;
 }
 
 .navbar__name { text-decoration: none; }
@@ -90,60 +99,17 @@ h3 {
   display: flex;
   align-items: flex-end;
   padding: $squishy-space;
-  border: 1px solid $black;
-
-  @include not-small {
-    padding: $squishy-space;
-  }
+  // border: 1px solid $black;
 }
 
-.teasers {
-  margin-bottom: 8rem;
-
-  @include not-small {
-    margin-bottom: 16rem;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: $squishy-space;
-  }
-}
-
-.teasers > * + * {
-  margin-top: 8rem;
-}
-
-.teaser {
-  grid-column: span 3;
-
-  @include not-small {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: $squishy-space;
-    grid-template-areas:
-      'image image'
-      'title text';
-  }
-
-  // Stagger the teasers so every other one is aligned right
-  &:nth-of-type(2) {
-    grid-column: 2 / span 3;
-  }
-}
-
-.teaser__img {
-  width: 100%;
-  grid-area: image;
-  margin-bottom: 1rem;
-  box-shadow: $shadow-image;
-}
-
-.teaser__link {
-  display: block;
-}
-
-.teaser__text > * + * {
-  margin-top: 1em;
+.internal-card {
+  height: 100%;
+  min-height: 100vmin;
+  padding: $squishy-space;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
 }
 
 // Project Page Layout
