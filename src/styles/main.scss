@@ -50,12 +50,15 @@ h3 {
 
 // Global Layout
 .container {
-  padding: $squishy-space;
+  border: 1px solid $black;
+  min-height: 100vh;
 }
 
 .navbar {
+  padding: $squishy-space;
   display: flex;
   justify-content: space-between;
+  border: 1px solid $black;
 }
 
 .navbar__name { text-decoration: none; }
@@ -82,11 +85,15 @@ h3 {
 }
 
 // Homepage Layout
-.introduction {
-  margin: 8rem 0;
+.intro {
+  height:   75vh;
+  display: flex;
+  align-items: flex-end;
+  padding: $squishy-space;
+  border: 1px solid $black;
 
   @include not-small {
-    margin: 12rem 0;
+    padding: $squishy-space;
   }
 }
 

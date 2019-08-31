@@ -1,24 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Teaser from '../components/teaser'
 
 import Layout from '../components/layout'
+import Intro from '../components/home/Intro'
 
 const Index = ({ data }) => {
   return (
     <Layout>
-      <section className="introduction">
-        <h1>
-          John Meguerian is a product designer based in NYC. Currently at{' '}
-          <a href="https://squarespace.com">Squarespace</a>.
-        </h1>
-      </section>
-
-      <section className="teasers">
-        {data.allDatoCmsProject.edges.map(node => (
-          <Teaser data={node.node} key={node.node.title} />
-        ))}
-      </section>
+      <Intro />
     </Layout>
   )
 }
