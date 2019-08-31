@@ -89,6 +89,9 @@ h3, .h3 {
 }
 }
   
+.social {
+  padding: $squishy-space;
+}
 
 .social > * + * {
   margin-left: 1rem;
