@@ -5,6 +5,13 @@ import Layout from '../components/layout'
 import Grid from '../components/Grid'
 import Intro from '../components/home/Intro'
 import InternalCard from '../components/home/InternalCard';
+import ListCard from '../components/home/ListCard';
+
+const TEMPORARY_URL_LIST = [
+  {name: "Aspect", url: "https://aspect.netlify.com"},
+  {name: "Easings", url: "https://easings.netlify.com"},
+  {name: "Spacerator", url: "https://spacerator.netlify.com"}
+]
 
 const Index = ({ data }) => {
   return (
@@ -14,6 +21,7 @@ const Index = ({ data }) => {
         <InternalCard title="Equinox Personal Training" slug="/equinox" to="/" />
         <InternalCard title="Samsung Entertainment Experience" slug="/samsung" to="/" />
       </Grid>
+      <ListCard title="Open Source Projects" items={TEMPORARY_URL_LIST} />
     </Layout>
   )
 }
