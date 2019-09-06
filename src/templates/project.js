@@ -3,11 +3,13 @@ import { graphql } from 'gatsby'
 
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const ProjectLayout = ({ data }) => {
   const {project} = data
   return (
     <Layout>
+      <SEO pageTitle={project.title} pageDescription={project.summary} />
       <article className="project">
         <div className="project__intro">
           <header className="project__header">
@@ -39,6 +41,7 @@ export const query = graphql`
       what
       when
       where
+      summary
       contentNode {
         childMarkdownRemark {
           html
