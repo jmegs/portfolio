@@ -3,7 +3,7 @@ import {Link} from 'gatsby'
 
 const NavBar = () => {
   return ( 
-    <header className="u-box navbar">
+    <header className="navbar">
       <Link to="/" className="navbar__name">
         <span className="navbar__emoji" role="img" aria-label="emoji">🙃 </span> John Meguerian
       </Link>

@@ -1,27 +1,24 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Teaser from '../components/teaser'
 
 import Layout from '../components/layout'
-import Grid from '../components/Grid'
-import Intro from '../components/home/Intro'
-import InternalCard from '../components/home/InternalCard';
-import ListCard from '../components/home/ListCard';
-
-const TEMPORARY_URL_LIST = [
-  {name: "Aspect", url: "https://aspect.netlify.com"},
-  {name: "Easings", url: "https://easings.netlify.com"},
-  {name: "Spacerator", url: "https://spacerator.netlify.com"}
-]
 
 const Index = ({ data }) => {
   return (
     <Layout>
-      <Intro />
-      <Grid type="split">
-        <InternalCard title="Equinox Personal Training" slug="/equinox" to="/" />
-        <InternalCard title="Samsung Entertainment Experience" slug="/samsung" to="/" />
-      </Grid>
-      <ListCard title="Open Source Projects" items={TEMPORARY_URL_LIST} />
+      <section className="introduction">
+        <h1>
+          John Meguerian is a product designer based in NYC. Currently at{' '}
+          <a href="https://squarespace.com">Squarespace</a>.
+        </h1>
+      </section>
+
+      <section className="teasers">
+        {data.allDatoCmsProject.edges.map(node => (
+          <Teaser data={node.node} key={node.node.title} />
+        ))}
+      </section>
     </Layout>
   )
 }

@@ -8,7 +8,7 @@ import "../styles/main.scss"
 
 const Layout = ({children}) => {
   return ( 
-    <div className="u-box container">
+    <div className="container">
       <NavBar />
       <main>
         {children}

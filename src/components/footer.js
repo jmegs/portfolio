@@ -5,7 +5,7 @@ const Footer = () => {
   const { social } = useSiteMeta()
 
   return (
-    <footer className="u-box social">
+    <footer className="social">
       {social.map(service => (
         <a className="social__link" href={service.url} key={service.name}>
           {service.name}
