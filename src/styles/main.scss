@@ -119,7 +119,7 @@ h3 {
   }
 
   // Stagger the teasers so every other one is aligned right
-  &:nth-of-type(2) {
+  &:nth-of-type(2n) {
     grid-column: 2 / span 3;
   }
 }
@@ -128,7 +128,7 @@ h3 {
   width: 100%;
   grid-area: image;
   margin-bottom: 1rem;
-  box-shadow: $shadow-image;
+  // box-shadow: $shadow-image;
 }
 
 .teaser__link {

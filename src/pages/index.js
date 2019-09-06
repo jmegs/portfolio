@@ -1,9 +1,14 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Teaser from '../components/teaser'
+import SEO from '../components/seo'
+
 import Layout from '../components/layout'
 
 const Index = ({ data }) => {
   return (
     <Layout>
+      <SEO />
       <section className="introduction">
         <h1>
           John Meguerian is a product designer based in NYC. Currently at{' '}
@@ -12,66 +17,45 @@ const Index = ({ data }) => {
       </section>
 
       <section className="teasers">
-        <div className="teaser">
-          <img
-            className="teaser__img"
-            src="https://picsum.photos/1500/1000?grayscale"
-            alt=""
-          />
-          <h2 className="teaser__title">Cool Project</h2>
-          <div className="teaser__text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores eligendi quis, possimus velit ea similique voluptas
-              magni consequatur quia iure incidunt recusandae voluptatibus
-              repellat, vero assumenda molestias magnam laboriosam ipsam!
-            </p>
-            <a className="teaser__link" href="#">
-              See More
-            </a>
-          </div>
-        </div>
-        <div className="teaser">
-          <img
-            className="teaser__img"
-            src="https://picsum.photos/1500/1000?grayscale"
-            alt=""
-          />
-          <h2 className="teaser__title">Cool Project</h2>
-          <div className="teaser__text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores eligendi quis, possimus velit ea similique voluptas
-              magni consequatur quia iure incidunt recusandae voluptatibus
-              repellat, vero assumenda molestias magnam laboriosam ipsam!
-            </p>
-            <a className="teaser__link" href="#">
-              See More
-            </a>
-          </div>
-        </div>
-        <div className="teaser">
-          <img
-            className="teaser__img"
-            src="https://picsum.photos/1500/1000?grayscale"
-            alt=""
-          />
-          <h2 className="teaser__title">Cool Project</h2>
-          <div className="teaser__text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores eligendi quis, possimus velit ea similique voluptas
-              magni consequatur quia iure incidunt recusandae voluptatibus
-              repellat, vero assumenda molestias magnam laboriosam ipsam!
-            </p>
-            <a className="teaser__link" href="#">
-              See More
-            </a>
-          </div>
-        </div>
+        {data.allDatoCmsProject.edges.map(node => (
+          <Teaser data={node.node} key={node.node.title} />
+        ))}
       </section>
     </Layout>
   )
 }
 
 export default Index
+
+export const query = graphql`
+  query HomepageQuery {
+    datoCmsHome {
+      headingNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+    allDatoCmsProject(sort: { fields: [position], order: ASC }) {
+      edges {
+        node {
+          title
+          slug
+          featuredImage {
+            alt
+            fluid(maxWidth: 1680) {
+              ...GatsbyDatoCmsFluid
+            }
+          }
+          isExternal
+          externalLink
+          summaryNode {
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
+      }
+    }
+  }
+`
