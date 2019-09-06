@@ -1,12 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Teaser from '../components/teaser'
+import SEO from '../components/seo'
 
 import Layout from '../components/layout'
 
 const Index = ({ data }) => {
   return (
     <Layout>
+      <SEO />
       <section className="introduction">
         <h1>
           John Meguerian is a product designer based in NYC. Currently at{' '}
