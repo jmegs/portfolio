@@ -14,8 +14,7 @@ const ProjectLayout = ({ data }) => {
             <h1 className="project__title">{project.title}</h1>
             <ul className="project__meta">
               <li>{project.what}</li>
-              <li>{project.when}</li>
-              <li>{project.where}</li>
+              <li>{project.when}&nbsp;@&nbsp;{project.where}</li>
             </ul>
           </header>
           <div className="project__text" dangerouslySetInnerHTML={{__html: project.contentNode.childMarkdownRemark.html}}></div>
