@@ -1,0 +1,116 @@
+@import 'base';
+
+@mixin not-small {
+  @media (min-width: 720px) {
+    @content;
+  }
+}
+
+body {
+  font-family: plantin, serif;
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+
+a {
+  color: inherit;
+}
+
+.sans {
+  font-family: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica,
+    sans-serif;
+    line-height: 1;
+}
+
+.serif {
+  font-family: plantin, Georgia, 'Times New Roman', Times, serif;
+}
+
+a.link {
+  text-decoration: none;
+  transition: opacity 180ms ease-in;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+a.disabled {
+  pointer-events: none;
+  text-decoration: line-through;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+
+  @include not-small {
+    font-size: 5rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 1.125rem;
+  font-family: neue-haas-grotesk-display;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.intro,
+.lists {
+  padding-left: 8vmin;
+  padding-right: 8vmin;
+}
+
+.intro {
+  margin-top: 4vmin;
+  margin-bottom: 12vmin;
+  line-height: 1.25;
+}
+
+.lists {
+  @include not-small {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+
+.lists > * + * {
+  margin-top: 1rem;
+
+  @include not-small {
+    margin-top: unset;
+  }
+}
+
+.list li:not([class='block']) {
+  display: inline;
+}
+
+.list li:not(:last-of-type)::after {
+  content: ' / ';
+}
+
+.list__heading {
+  margin-bottom: 1rem;
+}
+
+article {
+  max-width: 50em;
+  margin: auto;
+}
