@@ -4,6 +4,8 @@ activate :inline_svg
 activate :directory_indexes
 activate :livereload
 
+set :site_title, "John Meguerian"
+
 set :css_dir,    "assets/stylesheets"
 set :fonts_dir,  "asssets/fonts"
 set :images_dir, "assets/images"

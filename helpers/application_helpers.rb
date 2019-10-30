@@ -18,9 +18,9 @@ module ApplicationHelpers
   def page_title
     current_page_title = current_page.data.title
     if current_page_title.nil?
-      "John Meguerian"
+      config[:site_title]
     else
-      "#{current_page_title} | John Meguerian"
+      "#{current_page_title} | #{config[:site_title]}"
     end
   end
 end
