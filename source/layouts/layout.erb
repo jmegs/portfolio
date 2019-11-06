@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Middleman Template</title>
+    <%= partial "partials/meta" %>
     <link rel="stylesheet" href="https://use.typekit.net/zvr1ifc.css">
     <%= stylesheet_link_tag "main" %>
     <%= javascript_include_tag 'main', defer: true %>
   </head>
   <body class="<%= page_classes %>">
     <div class="container">
-      <nav><a href="/"><span class="sans">—JM</span></a><div>Don't <span class="sans">Panic.</span></div></nav>
+      <%= partial "partials/nav" %>
       <main>
         <%= yield %>
       </main>

@@ -1,9 +1,21 @@
 @import 'base';
 
+// *:not(path):not(g) {
+//   color: hsla(210, 100%, 100%, 0.9) !important;
+//   background: hsla(210, 100%, 50%, 0.5) !important;
+//   outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+//   box-shadow: none !important;
+// }
+
 @mixin not-small {
   @media (min-width: 720px) {
     @content;
   }
+}
+
+::selection,
+mark {
+  background-color: #ffd43b;
 }
 
 body {
@@ -19,7 +31,7 @@ a {
 .sans {
   font-family: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica,
     sans-serif;
-    line-height: 1;
+  line-height: 1;
 }
 
 .serif {
@@ -41,7 +53,7 @@ a.disabled {
 
 h1,
 .h1 {
-  font-size: 2.5rem;
+  font-size: 2.125rem;
   font-weight: normal;
 
   @include not-small {
@@ -58,6 +70,7 @@ h2,
 .container {
   max-width: 1500px;
   margin: auto;
+  margin-bottom: 8vmin;
 }
 
 nav {
@@ -77,8 +90,8 @@ nav a {
 }
 
 .intro {
-  margin-top: 4vmin;
-  margin-bottom: 12vmin;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
   line-height: 1.25;
 }
 
