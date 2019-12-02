@@ -1,4 +1,14 @@
-node_modules/
-public/
-resources/
-functions/
+# javascript things
+node_modules
+.tmp 
+.cache
+
+# ruby things
+.bundle
+.sass-cache
+
+# mac things
+.DS_store
+
+# middleman output
+build/
