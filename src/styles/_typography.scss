@@ -1,0 +1,47 @@
+/* Text Utils */
+body {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-text);
+  line-height: var(--line-height);
+  letter-spacing: -0.014em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: inherit;
+  color: var(--colors-foreground);
+}
+
+h1,
+.heading-lg {
+  font-size: var(--heading-lg);
+  letter-spacing: -0.03em;
+}
+
+h2,
+.heading-md {
+  font-size: var(--heading-md);
+  letter-spacing: -0.02em;
+}
+
+h3,
+.heading-sm {
+  font-size: var(--heading-sm);
+  letter-spacing: -0.017em;
+}
+
+h4,
+p,
+.paragraph {
+  font-size: var(--paragraph);
+}
+
+.small {
+  font-size: var(--small);
+  letter-spacing: -0.009em;
+}

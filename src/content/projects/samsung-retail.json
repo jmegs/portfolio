@@ -1,0 +1,81 @@
+{
+  "title": "Samsung Retail",
+  "slug": "samsung-retail",
+  "date": "2017–2018",
+  "blurb": "A unified user experience and management platform for TV retail installations at over 1000 locations nationwide. Made through a highly collaborative design process and rapid physical prototyping.",
+  "thumbnail": "/img/samsung/thumbnail.png",
+  "heroImage": "/img/samsung/hero.png",
+  "summary": {
+    "role": [
+      "Experience Design",
+      "Physical Prototyping",
+      "Ersatz Cable Manager"
+    ],
+    "team": [
+      "Shank Raval 👉 Creative Director",
+      "Liz Watts 👉 Producer",
+      "Kai Tier 👉 Dev Lead",
+      "Jodha Kandola 👉 QA Lead",
+      "James Dick 👉 Video Lead"
+    ],
+    "challenge": "Samsung maintains a TV demo area in every Best Buy store in the country. As the experience grew over time without a standardized interaction model, it became increasingly hard for customers to understand and for Samsung to maintain. To solve this problem my team had to not only design a more intuitive interaction model, but do so in a way that Samsung could replicate and maintain at over 1,000 locations.",
+    "approach": "I led a highly collaborative design process that relied on rapid physical prototyping and close collaboration with hardware and software engineers. We built and iterated on a full-scale replica of the installation at the office to go from paper sketch to physical experience in no time flat.",
+    "outcomes": "After rolling out nationwide, the resulting new experience has doubled consumer understanding of product features in-store while a maintaining 98% average uptime."
+  },
+  "sections": [
+    {
+      "title": "Exploration",
+      "blurb": "Understanding how salespeople and customers interact in the physical space was the number one priority for exploration. To validate the spatial and content approaches, I led the team through live action roleplaying exercises between salesperson and customer. The key takeaway: keep a flat hierarchy. Going more than one level deep in an interface to make something happen derails the conversation.",
+      "content": [
+        {
+          "type": "image",
+          "src": "/img/samsung/larp.png"
+        },
+        {
+          "type": "image",
+          "src": "/img/samsung/test-pad.png",
+          "caption": "We constructed a full-scale working replica of the experience to test ideas in physical space"
+        }
+      ]
+    },
+
+    {
+      "title": "Iteration",
+      "blurb": "The hallmark of this project was an extremely fast design/dev cycle. By laying paper over capacitive button boards, I was able to rapidly validate physical interface ideas for each element of the experience. The prototyping approach was so successful that we used a variant of the technique for the production build.",
+      "content": [
+        {
+          "type": "image",
+          "src": "/img/samsung/button-board.png"
+        },
+        {
+          "type": "image",
+          "src": "/img/samsung/proto-hand.png",
+          "caption": "By laying printed vinyl interface over the installation in-store, our team could literally 'ship' updates to the physical interface by mail without incurring any downtime."
+        }
+      ]
+    },
+
+    {
+      "title": "Monitoring",
+      "blurb": "Because of our standardized, networked solution we were able to give our clients data and observability where there was none before. The  dashboard lets Samsung employees monitor the health of the system in real time, get insights into what content was most popular, and manage promotional content on the fly.",
+      "content": [
+        {
+          "type": "screenshot",
+          "src": "/img/samsung/dash-home.png"
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/samsung/dash-store.png"
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/samsung/dash-content.png"
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/samsung/dash-analytics.png"
+        }
+      ]
+    }
+  ]
+}

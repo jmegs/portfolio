@@ -1,11 +1,25 @@
 {
   "name": "johnmeguerian.com",
-  "version": "9.0",
+  "version": "10.0.0",
   "description": "john meguerian's personal site",
-  "author": "jmegs",
-  "license": "MIT",
-  "devDependencies": {
-    "postcss-cli": "^6.1.2",
-    "postcss-preset-env": "^6.6.0"
+  "author": "John Meguerian <johnmeguerian@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "date-fns": "^2.13.0",
+    "gray-matter": "^4.0.2",
+    "next": "^9.4.0",
+    "next-seo": "^4.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "remark": "^12.0.0",
+    "remark-html": "^11.0.2",
+    "remark-unwrap-images": "^2.0.0",
+    "sass": "^1.26.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start"
   }
 }

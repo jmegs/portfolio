@@ -1,0 +1,37 @@
+{
+  "title": "John Meguerian – Product Designer",
+  "description": "New York based product designer and developer",
+  "socialLinks": [
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/jmegs"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/jmegs_"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/jmegs"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://linkedin.com/in/johnmeguerian"
+    }
+  ],
+  "colophon": {
+    "font": {
+      "name": "Inter",
+      "url": "https://rsms.me/inter"
+    },
+    "generator": {
+      "name": "Next",
+      "url": "https://nextjs.org"
+    },
+    "host": {
+      "name": "Vercel",
+      "url": "https://vercel.com"
+    },
+    "repo": { "url": "https://github.com/jmegs/www" }
+  }
+}

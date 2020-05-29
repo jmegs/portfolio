@@ -1,0 +1,90 @@
+// breakpoint mixins
+@mixin not-small {
+  @media (min-width: 641px) {
+    @content;
+  }
+}
+
+@mixin only-small {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+/* Spacing Scale */
+:root {
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 32px;
+  --space-5: 64px;
+
+  @include not-small {
+    --space-0: 0px;
+    --space-1: 4px;
+    --space-2: 12px;
+    --space-3: 24px;
+    --space-4: 48px;
+    --space-5: 96px;
+  }
+}
+
+/* Sizes */
+:root {
+  --size-container: 1440px;
+  --size-avatar: 512px;
+}
+
+/* Fonts */
+:root {
+  --font-sans: Inter, system-ui;
+  --font-mono: "SFMono-Regular", Menlo, monospace;
+}
+
+/* Font Sizes */
+:root {
+  --heading-lg: 30px;
+  --heading-md: 25px;
+  --heading-sm: 20px;
+  --paragraph: 18px;
+  --small: 15px;
+}
+
+/* Font Weights */
+:root {
+  --font-weight-text: 400;
+  --font-weight-bold: 600;
+}
+
+/* Leading */
+:root {
+  --line-height: 1.5;
+}
+
+/* Colors */
+:root {
+  --colors-background: #fff;
+  --colors-foreground: #212529;
+  --colors-text: #6f777f;
+  --colors-wash: #f1f3f5;
+
+  @media (prefers-color-scheme: dark) {
+    // TODO temporary measure until I can implement a full dark mode preference with local storage and stuff.
+    --colors-background: #212529;
+    --colors-foreground: #ffffff;
+    --colors-text: #848c94;
+    --colors-wash: #30363c;
+  }
+}
+
+/* Animation */
+:root {
+  --transition-short: 250ms ease;
+}

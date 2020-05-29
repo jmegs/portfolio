@@ -1,0 +1,58 @@
+//
+// Utility Styles
+//
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+img.bg {
+  background-color: var(--colors-wash);
+}
+
+.divider {
+  border-top: 1px solid var(--colors-text);
+  padding-top: var(--space-3);
+}
+
+.grid {
+  display: grid;
+  grid-gap: var(--space-3);
+
+  @include not-small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.plain-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    transition: var(--transition-short);
+  }
+}
+
+/* Assume external links contain "//" in their href */
+/* http://jayfreestone.com/writing/wrapping-and-inline-pseudo-elements */
+a[href*="//"]
+{
+  font-size: inherit;
+  font-weight: var(--font-weight-bold);
+  color: var(--colors-foreground);
+  &::after {
+    content: " \2197";
+  }
+}
+
+/* Color Utils */
+.color-fg {
+  color: var(--colors-foreground);
+}
+
+.color-text {
+  color: var(--colors-text);
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "title": "tinytools.design",
+    "description": "Little tools for frustrating, repetitive design tasks",
+    "repo": "https://github.com/jmegs/tiny-tools",
+    "url": "https://tinytools.design"
+  },
+  {
+    "title": "Static Starter",
+    "description": "Modern static site boilerplate with no JS framework",
+    "repo": "https://github.com/jmegs/static-starter"
+  },
+  {
+    "title": "In the Beginning was the Command Line",
+    "description": "Fresh typesetting of Neal Stephenson's classic essay",
+    "repo": "https://github.com/jmegs",
+    "url": "https://in-the-beginning-was-the-command-line.netlify.com"
+  }
+]

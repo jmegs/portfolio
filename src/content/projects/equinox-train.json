@@ -1,0 +1,92 @@
+{
+  "title": "Equinox Personal Training",
+  "slug": "equinox-train",
+  "date": "2018–2019",
+  "blurb": "A new progressive web app that consolidates existing performance tracking, scheduling, fitness programming, and adminstrative workflows into a single destination and gives trainers new abilites to set, track, and share goals with their clients.",
+  "thumbnail": "/img/equinox/thumbnail.png",
+  "heroImage": "/img/equinox/clients.png",
+  "summary": {
+    "role": [
+      "Experience Design",
+      "UX Research"
+    ],
+    "team": [
+      "Ben Downard 👉 Visual Design",
+      "Shank Raval 👉 Creative Director",
+      "Monica Jones 👉 Producer",
+      "Frank Yandolino 👉 Dev Lead"
+    ],
+    "challenge": "Equinox customers pay a premium for access to world-class fitness instruction, but Equinox trainers were using spreadsheets, personal text messages, and an ancient web app to manage their clients and track workouts. The lack of a seamless client experience meant customers weren’t seeing enough value to renew their subscriptions, causing the training business to decline year over year. My team’s challenge was to create new value for training clients by reducing the administrative overhead for trainers.",
+    "approach": "The project started with a 6 week immersive research & discovery phase – getting deep into personal training and the existing Equinox technical architecture. We then executed our solution in two week sprints, each ending with a prototype reviewed by a panel of personal trainers.",
+    "outcomes": "After a pilot period in one club, the resulting web app had a phased rollout to all Equinox clubs in the US. Companion features were also added to the consumer Equinox app. In early feedback, trainers rated the new experience highly and confirmed that it was adding value for their clients."
+  },
+  "sections": [
+    {
+      "title": "Final Designs",
+      "content": [
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/home.png"
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/clients.png"
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/goals.png"
+        }
+      ]
+    },
+    {
+      "title": "Research",
+      "blurb": "Equinox was seeing dropoff in retention of their training clients. Immersive research with trainers and clients revealed that scattered, antiquated systems were preventing trainers from giving clients the premium experience they expected for the price.",
+      "content": [
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/before.png",
+          "caption": "The existing system was split across a mix of  first-party apps, third-party apps, and messages from personal devices."
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/journey.png",
+          "caption": "In this journey map, representing each participant in the experience with a different color makes it easy to understand big gaps. Here trainers (blue) are doing extra work for every client interaction (red). At the same time, the brand (black) barely participates at all, except to send purchase reciepts."
+        }
+      ]
+    },
+    {
+      "title": "Architecture",
+      "subtitle": "Build or Buy?",
+      "blurb": "Any solution would need to include a new fitness programming option to replace the current system built on Google docs. Since building this would eat our whole timeline, we found a 3rd party solution that allowed us to build out a full, cohesive experience.",
+      "content": [
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/arch.png",
+          "caption": "Hooks in the new Trainer App lead to web views in the 3rd party app, which we re-skinned and enhanced to blend in. Trainers get a seamless visual experience and shared data across applications."
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/strength-portal.png"
+        }
+      ]
+    },
+    {
+      "title": "Iteration",
+      "blurb": "Working closely with our working group of trainers, we landed on a system to progressively disclose client information and related actions based on the trainer's context. Checking for your next appointment yields a different view of each client then sitting down to work on goals for the next month.",
+      "content": [
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/card-sketch.png"
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/cards.png"
+        },
+        {
+          "type": "screenshot",
+          "src": "/img/equinox/card-extended.png"
+        }
+      ]
+    }
+  ]
+}
